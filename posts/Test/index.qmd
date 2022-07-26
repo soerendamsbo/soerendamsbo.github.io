@@ -1,0 +1,7 @@
+---
+title: "Test"
+description: "Empty post"
+author: "Søren Damsbo-Svendsen"
+date: today
+draft: false
+---

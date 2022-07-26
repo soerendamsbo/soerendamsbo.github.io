@@ -1,0 +1,28 @@
+---
+title: "Søren Damsbo-Svendsen"
+image: "media/soren.png"
+about:
+  template: solana
+  links:
+    - icon: envelope
+      text: Email
+      href: mailto:sdas@ifs.ku.dk
+    - icon: twitter
+      text: Twitter
+      href: https://twitter.com/soerendamsbo
+    - icon: github
+      text: Github
+      href: https://github.com/soerendamsbo
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/s%C3%B8ren-damsbo-svendsen-a63051170/
+    - text: <img src="media/google-scholar.png" width="18" height="18"> Google Scholar
+      href: https://scholar.google.com/citations?user=TeuKGQ0AAAAJ&hl=en&oi=sra
+    - text: <img src="media/ku_segl.png" width="18" height="18">  UCPH researcher profile
+      href: https://politicalscience.ku.dk/staff/phd/?pure=en/persons/457325
+# backgroundcolor: black
+---
+
+# Bio
+
+Søren Damsbo-Svendsen is a PhD fellow at the [Department of Political Science, University of Copenhagen (UCPH)](https://politicalscience.ku.dk/) studying public opinion on climate change.
