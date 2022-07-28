@@ -4,7 +4,12 @@ $theme: "solar" !default;
 
 // custom
 
-$font-size-root:  1.1em;
+// font size
+
+$font-size-root:  .9em;
+$h1-font-size: 1.5em;
+$h2-font-size: 1.1em;
+$h3-font-size: .9em;
 
 //
 // Color system
@@ -21,9 +26,9 @@ $gray-600: #839496 !default;
 $gray-700: #495057 !default;
 $gray-800: #073642 !default;
 $gray-900: #002b36 !default;
-$black:    #000 !default;
+$black:    #212225 !default;
 
-$sand:    #F2E4D5 !default;
+$sand:    #EEE9C8 !default;
 $grayn:   #34484A !default;
 $blue:    #b58900 !default;
 $indigo:  #6610f2 !default;

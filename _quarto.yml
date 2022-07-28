@@ -2,17 +2,18 @@ project:
   type: website
 
 website:
-  title: "soerendamsbo.github.io"
+  title: "Søren Damsbo-Svendsen"
   search: false
-  navbar: 
+  navbar:
     right:
-        - ""
-      # - about.qmd
-      # - blog.qmd
-      # - icon: github
-      #   href: https://github.com/
-      # - icon: twitter
-      #   href: https://twitter.com
+      - text: "Home"
+        file: index.qmd
+      - research.qmd
+  #     - blog.qmd
+  #     - icon: github
+  #       href: https://github.com/
+  #     - icon: twitter
+  #       href: https://twitter.com
 
 format:
   html:
