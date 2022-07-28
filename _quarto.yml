@@ -17,7 +17,7 @@ website:
 
 format:
   html:
-    theme: theme.scss
+    theme: ./theme.scss
 
 
 
