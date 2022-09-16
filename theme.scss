@@ -29,6 +29,7 @@ $gray-900: #002b36 !default;
 $black:    #212225 !default;
 
 $sand:    #EEE9C8 !default;
+$newbg:  #F8F8FF !default;
 $grayn:   #34484A !default;
 $blue:    #b58900 !default;
 $indigo:  #6610f2 !default;
@@ -54,7 +55,7 @@ $min-contrast-ratio:   2.5 !default;
 
 // Body
 
-$body-bg:                   $sand !default;
+$body-bg:                   $newbg !default;
 $body-color:                $black !default;
 
 // Links
