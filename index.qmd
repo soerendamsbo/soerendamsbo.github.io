@@ -21,7 +21,7 @@ about:
       href: mailto:sdas@ifs.ku.dk
 ---
 
-Hi there! I am a PhD fellow at the [Department of Political Science, University of Copenhagen (UCPH)](https://politicalscience.ku.dk/) studying political behavior and public opinion on climate change. You can read about my research [here](https://soerendamsbo.github.io/research.html). ...
+Hi there! I am a PhD fellow at the [Department of Political Science, University of Copenhagen (UCPH)](https://politicalscience.ku.dk/) studying political behavior and public opinion on climate change. You can read about my research [here](https://soerendamsbo.github.io/research.html).
 
 {{< fa person >}} Søren Damsbo-Svendsen  
 {{< fa map-marker >}} Copenhagen, Denmark  
