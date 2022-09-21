@@ -1,0 +1,14 @@
+{
+  "hash": "d94e039f54279016d3027d91afc9f992",
+  "result": {
+    "markdown": "---\ntitle: \"Research\"\n---\n\n::: {.cell}\n\n```{.r .cell-code .code-overflow-wrap  code-fold=\"true\" code-summary=\"Show the code\"}\n\"A proin potenti malesuada dapibus dui congue metus nunc natoque senectus, aptent suscipit posuere adipiscing montes commodo velit platea praesent. Praesent tempor facilisi a sit dui purus eleifend volutpat ullamcorper amet parturient libero blandit cubilia eros maecenas hendrerit, consectetur sociosqu magna ex tristique quis dis etiam torquent cras ac faucibus curabitur inceptos venenatis. Torquent aptent vulputate neque quam platea placerat congue massa ligula, class ex eu mauris pharetra hendrerit fusce. Hendrerit aliquam fames litora vehicula libero morbi tincidunt neque vestibulum consequat ante, rhoncus turpis quis est netus arcu nec pellentesque integer mi. Vivamus himenaeos suspendisse feugiat ligula amet augue etiam ornare, ultricies neque metus facilisis ad efficitur. Maximus sit imperdiet diam fames platea quisque nam metus netus purus, dolor varius sociosqu faucibus vulputate facilisis conubia felis hendrerit per parturient, phasellus eget ipsum consectetur ligula hac a ultricies adipiscing. Commodo mollis integer convallis tempor malesuada platea justo netus dolor penatibus purus ut litora, ac lacus ornare lectus consequat efficitur velit tellus suscipit fermentum sit.\"\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n[1] \"A proin potenti malesuada dapibus dui congue metus nunc natoque senectus, aptent suscipit posuere adipiscing montes commodo velit platea praesent. Praesent tempor facilisi a sit dui purus eleifend volutpat ullamcorper amet parturient libero blandit cubilia eros maecenas hendrerit, consectetur sociosqu magna ex tristique quis dis etiam torquent cras ac faucibus curabitur inceptos venenatis. Torquent aptent vulputate neque quam platea placerat congue massa ligula, class ex eu mauris pharetra hendrerit fusce. Hendrerit aliquam fames litora vehicula libero morbi tincidunt neque vestibulum consequat ante, rhoncus turpis quis est netus arcu nec pellentesque integer mi. Vivamus himenaeos suspendisse feugiat ligula amet augue etiam ornare, ultricies neque metus facilisis ad efficitur. Maximus sit imperdiet diam fames platea quisque nam metus netus purus, dolor varius sociosqu faucibus vulputate facilisis conubia felis hendrerit per parturient, phasellus eget ipsum consectetur ligula hac a ultricies adipiscing. Commodo mollis integer convallis tempor malesuada platea justo netus dolor penatibus purus ut litora, ac lacus ornare lectus consequat efficitur velit tellus suscipit fermentum sit.\"\n```\n:::\n:::",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
