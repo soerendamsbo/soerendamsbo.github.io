@@ -1,5 +1,5 @@
 ---
-image: media/soren.png
+image: media/soren6.png
 about:
   template: jolla
   links:
