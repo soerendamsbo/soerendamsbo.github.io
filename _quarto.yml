@@ -6,7 +6,7 @@ website:
   title: "Søren Damsbo-Svendsen"
   search: false
   page-footer: | 
-    This website is powered by [![](https://quarto.org/quarto.png){height=15}](https://quarto.org/) and <a href="https://pages.github.com" style="text-decoration: none">{{< fa brands github >}} GitHub Pages</a>.
+    This website is powered by [![Quarto](https://quarto.org/quarto.png){height=15}](https://quarto.org/) and <a alt="GitHub Pages" href="https://pages.github.com" style="text-decoration: none">{{< fa brands github >}} GitHub Pages</a>.
   navbar:
     right:
       - text: "Home"
