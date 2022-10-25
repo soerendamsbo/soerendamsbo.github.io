@@ -1,36 +1,36 @@
 ---
-title: "Media"
+title: Media
 ---
 
-### __Klima er vigtigt, men...__
+### {{< fa newspaper >}} __Klima er vigtigt, men...__
 
 *Interview, Weekendavisen, 13-10-2022* [_[link to paywalled article](https://www.weekendavisen.dk/2022-41/ideer/klima-er-vigtigt-men-...)_]
 
-### __Forskere om vælgernes holdning til klima: De fleste er stadig klimatosser – bare ikke lige så meget som ved valget i ’19__
+### {{< fa newspaper >}} __Forskere om vælgernes holdning til klima: De fleste er stadig klimatosser – bare ikke lige så meget som ved valget i ’19__
 
 *Op-ed with Jakob Dreyer, Børsen, 12-10-2022* [_[link to article](https://borsen.dk/nyheder/opinion/danskerne-har-ikke-glemt-alt-om-klimaet-paa-fire-aar)_]
 
-### __Katastroferne er væltet ind over 2021 – sådan påvirker de os__
+### {{< fa newspaper >}} __Katastroferne er væltet ind over 2021 – sådan påvirker de os__
 
 *Interview, Berlingske, 30-10-2021* [_[link to paywalled article](https://www.berlingske.dk/videnskab/katastroferne-er-vaeltet-ind-over-2021-saadan-paavirker-de-os)_]
 
-### __Ekstremt vejr gør os mere klimabevidste. Og det smitter af på politik__
+### {{< fa newspaper >}} __Ekstremt vejr gør os mere klimabevidste. Og det smitter af på politik__
 
 *Interview, Zetland, 12-08-2021* [_[link to article](https://www.zetland.dk/historie/s8aL9gRY-aO0E1wr0-4a36b)_]
 
-### __P1 Morgen: Ny IPCC-rapport__
+### {{< fa radio >}} __P1 Morgen: Ny IPCC-rapport__
 
 *Interview, DR P1, 09-08-2021*
 
-### __Ekstremt vejr får os til at ændre holdning til klimaforandringerne__
+### {{< fa newspaper >}} __Ekstremt vejr får os til at ændre holdning til klimaforandringerne__
 
 *Interview, Videnskab.dk, 26-11-2020* [_[link to article](https://videnskab.dk/kultur-samfund/ekstremt-vejr-faar-os-til-at-aendre-holdning-til-klimaforandringerne)_]
 
-### __Ekstremt vejr gør os til klimatosser – men det hjælper os ikke med at løse klimakrisen__
+### {{< fa podcast >}} __Ekstremt vejr gør os til klimatosser – men det hjælper os ikke med at løse klimakrisen__
 
 *Podcast, Den Grønne Løsning, Information, 17-11-2020* [_[link to episode](https://www.information.dk/indland/2020/11/ekstremt-vejr-goer-klimatosser-hjaelper-loese-klimakrisen)_]
 
-### __Forsker: Når vejret er varmt, er vi alle klimatosser__
+### {{< fa newspaper >}} __Forsker: Når vejret er varmt, er vi alle klimatosser__
 
 *Op-ed, Altinget, 26-10-2020* [_[link to article](https://www.altinget.dk/energi/artikel/forsker-naar-vejret-er-varmt-er-vi-alle-klimatosser)_]
 
