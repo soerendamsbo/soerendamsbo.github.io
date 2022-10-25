@@ -3,6 +3,13 @@ image: media/soren6.png
 about:
   template: jolla
   links:
+    - icon: envelope
+      text: Email
+      href: mailto:sdas@ifs.ku.dk
+    - text: <img src="media/google-scholar.png" width="15" height="15"> Google Scholar
+      href: https://scholar.google.com/citations?user=TeuKGQ0AAAAJ&hl=en&oi=sra
+    - text: <img src="media/ku_segl.png" width="15" height="15">  UCPH researcher profile
+      href: https://politicalscience.ku.dk/staff/phd/?pure=en/persons/457325
     - icon: twitter
       text: Twitter
       href: https://twitter.com/soerendamsbo
@@ -12,13 +19,6 @@ about:
     - icon: linkedin
       text: LinkedIn
       href: https://www.linkedin.com/in/s%C3%B8ren-damsbo-svendsen-a63051170/
-    - text: <img src="media/google-scholar.png" width="15" height="15"> Google Scholar
-      href: https://scholar.google.com/citations?user=TeuKGQ0AAAAJ&hl=en&oi=sra
-    - text: <img src="media/ku_segl.png" width="15" height="15">  UCPH researcher profile
-      href: https://politicalscience.ku.dk/staff/phd/?pure=en/persons/457325
-    - icon: envelope
-      text: Email
-      href: mailto:sdas@ifs.ku.dk
 ---
 
 Hi there! I am a PhD fellow at the [Department of Political Science, University of Copenhagen (UCPH)](https://politicalscience.ku.dk/) studying political behavior and public opinion on climate change. You can read about my research [here](https://soerendamsbo.github.io/research.html).

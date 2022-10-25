@@ -12,11 +12,10 @@ website:
       - text: "Home"
         file: index.qmd
       - research.qmd
-  #     - blog.qmd
-  #     - icon: github
-  #       href: https://github.com/
-  #     - icon: twitter
-  #       href: https://twitter.com
+      - media.qmd
+      # - blog.qmd
+      - icon: twitter
+        href: https://twitter.com/soerendamsbo
 
 format:
   html:
