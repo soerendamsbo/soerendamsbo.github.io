@@ -4,7 +4,6 @@ project:
 
 website:
   title: "Søren Damsbo-Svendsen"
-  twitter-card: true
   favicon: media/soren2.png
   search: false
   page-footer: | 
