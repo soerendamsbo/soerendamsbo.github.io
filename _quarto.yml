@@ -4,6 +4,8 @@ project:
 
 website:
   title: "Søren Damsbo-Svendsen"
+  twitter-card: true
+  favicon: media/soren2.png
   search: false
   page-footer: | 
     This website is powered by [![Quarto](https://quarto.org/quarto.png){height=15}](https://quarto.org/) and <a alt="GitHub Pages" href="https://pages.github.com" style="text-decoration: none">{{< fa brands github >}} GitHub Pages</a>.
@@ -16,6 +18,15 @@ website:
       # - blog.qmd
       - icon: twitter
         href: https://twitter.com/soerendamsbo
+  sidebar:
+    alignment: right
+    logo: media/soren1.png
+    contents: 
+      - " "
+    footer: | 
+      | {{< fa person >}} Søren Damsbo-Svendsen
+      | {{< fa map-marker >}} Copenhagen, Denmark
+      | {{< fa envelope >}} sdas@ifs.ku.dk
 
 format:
   html:
