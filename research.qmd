@@ -4,7 +4,7 @@ title: Research
 
 ### __1. When the election rains out and how bad weather excludes marginal voters from turning out__ with [Kasper M. Hansen](https://www.kaspermhansen.eu)
 
-*Published online in Electoral Studies (2022)* [_[link to article](https://sciencedirect.com/science/article/pii/S0261379422001299)_]
+*Published in Electoral Studies (2023)* [_[link to article](https://sciencedirect.com/science/article/pii/S0261379422001299)_]
 
 **Abstract:** Ostensibly random and trivial experiences of everyday life, e.g., local weather, can have significant political consequences. First, we present a comprehensive meta-analysis of 34 studies of electoral turnout and rainfall – the vast majority demonstrating a negative association. Secondly, we present a new analysis of a voter panel with validated turnout for a complete electorate merged with fine-grained meteorological observations to show that Election Day rainfall reduces turnout by 0.95 percentage points per centimeter, while more sunshine increases turnout. Marginal voters (young voters) are up to six times more susceptible to bad weather and respond more positively to pleasant weather. Thus, bad weather exacerbates unequal democratic participation by pushing low-propensity voters to abstain. Efforts to include marginal voters therefore ought to be intensified during poor weather, and elections could even be moved to seasons with more pleasant weather to improve participatory equality.
 
