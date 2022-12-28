@@ -2,23 +2,23 @@
 title: Research
 ---
 
-### __1. Mass media influence on the rapid rise of climate change__
+### __1. When the election rains out and how bad weather excludes marginal voters from turning out__ with [Kasper M. Hansen](https://www.kaspermhansen.eu)
+
+*Published online in Electoral Studies (2022)* [_[link to article](https://sciencedirect.com/science/article/pii/S0261379422001299)_]
+
+**Abstract:** Ostensibly random and trivial experiences of everyday life, e.g., local weather, can have significant political consequences. First, we present a comprehensive meta-analysis of 34 studies of electoral turnout and rainfall – the vast majority demonstrating a negative association. Secondly, we present a new analysis of a voter panel with validated turnout for a complete electorate merged with fine-grained meteorological observations to show that Election Day rainfall reduces turnout by 0.95 percentage points per centimeter, while more sunshine increases turnout. Marginal voters (young voters) are up to six times more susceptible to bad weather and respond more positively to pleasant weather. Thus, bad weather exacerbates unequal democratic participation by pushing low-propensity voters to abstain. Efforts to include marginal voters therefore ought to be intensified during poor weather, and elections could even be moved to seasons with more pleasant weather to improve participatory equality.
+
+### __2. Mass media influence on the rapid rise of climate change__
 
 *Published in International Journal of Public Opinion Research (2022)* [_[link to article](https://doi.org/10.1080/01402382.2020.1792731)_]
 
 **Abstract:** When a political issue rises to the top of the public agenda, it puts pressure on decisionmakers, shifts power to actors engaging with the issue, and opens a window of opportunity. This article shows that online mass media contributed to the rapid rise of climate change on European public agendas in and around 2019. It also suggests that issue publics, i.e., particularly concerned and interested citizens, were influenced most. Conversely, citizens without strong climate opinions are not subject to influence from intensive media coverage. The results come from vector autoregression (VAR) models that take advantage of unique daily salience time series. The time series are constructed from weekly repeated nationally representative surveys of the public (N=25,445) and online news articles (N=6,905) by a dominant mass media news outlet that boasts a particularly large, trustful, and diverse audience. Traditional mass media can retain a powerful agenda-setting role even in increasingly fragmented media environments. But the target of their influence depends on the issue and the composition of corresponding issue publics, plausibly due in part to individual differences in use and processing of information about the issue.
 
-### __2. How weather experiences strengthen climate opinions in Europe__
+### __3. How weather experiences strengthen climate opinions in Europe__
 
 *Published in West European Politics (2021)* [_[link to article](https://doi.org/10.1093/ijpor/edac009)_]
 
 **Abstract:** Previous research has shown that we believe more in the reality of climate change when we experience warmer-than-usual temperatures. This reflects a psychological process in which easily accessible information from personal weather experiences is used as a heuristic to form climate opinions. This paper replicates and extends upon a research design and results of Egan and Mullin to provide the first systematic European study of the Local Warming Effect. Based on data from 12 European countries, the analysis shows that when objective temperatures increase by two standard deviations (5°C) relative to normal temperatures, climate opinions are strengthened by around 0.5–1.0 percentage points – comparable to the effect of a full step to the left on a 0–10 political ideology scale.
-
-### __3. When the election rains out and how bad weather excludes marginal voters from turning out__ with [Kasper M. Hansen](https://www.kaspermhansen.eu)
-
-*Accepted for publication in Electoral Studies*
-
-**Abstract:** Ostensibly random and trivial experiences of everyday life, e.g., local weather, can have significant political consequences. First, we present a comprehensive meta-analysis of 34 studies of electoral turnout and rainfall – the vast majority demonstrating a negative association. Secondly, we present a new analysis of a voter panel with validated turnout for a complete electorate merged with fine-grained meteorological observations to show that Election Day rainfall reduces turnout by 0.95 percentage points per centimeter, while more sunshine increases turnout. Marginal voters (young voters) are up to six times more susceptible to bad weather and respond more positively to pleasant weather. Thus, bad weather exacerbates unequal democratic participation by pushing low-propensity voters to abstain. Efforts to include marginal voters therefore ought to be intensified during poor weather, and elections could even be moved to seasons with more pleasant weather to improve participatory equality.
 
 ### __4. Voting for pro-climate parties and candidates in response to extreme flooding experience__ 
 
