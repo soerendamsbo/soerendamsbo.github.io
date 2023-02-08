@@ -2,6 +2,10 @@
 title: Media
 ---
 
+### {{< fa newspaper >}} __Regn får unge til at blive væk fra stemmeboksen__
+
+*Interview, Videnskab.dk, 07-02-2023* [_[link to article](https://videnskab.dk/kultur-samfund/regn-faar-unge-til-at-blive-vaek-fra-stemmeboksen)_]
+
 ### {{< fa newspaper >}} __Klima er vigtigt, men...__
 
 *Interview, Weekendavisen, 13-10-2022* [_[link to paywalled article](https://www.weekendavisen.dk/2022-41/ideer/klima-er-vigtigt-men-...)_]
