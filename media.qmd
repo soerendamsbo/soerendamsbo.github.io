@@ -2,6 +2,10 @@
 title: Media
 ---
 
+### {{< fa newspaper >}} __Et gråt spørgsmål spøger ofte ved valg, og nu har forskere et svar__
+
+*Interview, Jyllands-Posten, 21-02-2023* [_[link to paywalled article](https://jyllands-posten.dk/indland/ECE15105747/et-graat-spoergsmaal-spoeger-ofte-ved-valg-og-nu-har-forskere-et-svar/)_]
+
 ### {{< fa newspaper >}} __Regn får unge til at blive væk fra stemmeboksen__
 
 *Interview, Videnskab.dk, 07-02-2023* [_[link to article](https://videnskab.dk/kultur-samfund/regn-faar-unge-til-at-blive-vaek-fra-stemmeboksen)_]
