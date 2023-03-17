@@ -42,21 +42,21 @@ title: Media
 
 *Op-ed, Altinget, 26-10-2020* [_[link to article](https://www.altinget.dk/energi/artikel/forsker-naar-vejret-er-varmt-er-vi-alle-klimatosser)_]
 
-***
+<!-- *** -->
 
-# Tweets
+<!-- # Tweets -->
 
-::: {layout-ncol=2}
+<!-- ::: {layout-ncol=2} -->
 
-[![](media/tweets/1.png)](https://twitter.com/soerendamsbo/status/1610217200463351809)
+<!-- [![](media/tweets/1.png)](https://twitter.com/soerendamsbo/status/1610217200463351809) -->
 
-[![](media/tweets/2.png)](https://twitter.com/soerendamsbo/status/1586043056507080704)
+<!-- [![](media/tweets/2.png)](https://twitter.com/soerendamsbo/status/1586043056507080704) -->
 
-[![](media/tweets/3.png)](https://twitter.com/soerendamsbo/status/1577899264323239937)
+<!-- [![](media/tweets/3.png)](https://twitter.com/soerendamsbo/status/1577899264323239937) -->
 
-[![](media/tweets/4.png)](https://twitter.com/soerendamsbo/status/1553023973839044609)
+<!-- [![](media/tweets/4.png)](https://twitter.com/soerendamsbo/status/1553023973839044609) -->
 
-:::
+<!-- ::: -->
 
 
 
