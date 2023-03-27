@@ -10,6 +10,10 @@ title: Media
 
 *Interview, Videnskab.dk, 07-02-2023* [_[link to article](https://videnskab.dk/kultur-samfund/regn-faar-unge-til-at-blive-vaek-fra-stemmeboksen)_]
 
+### {{< fa newspaper >}} __Skal vi juble eller græde, når usædvanlig varme rammer?__
+
+*Interview, TV2, 09-11-2022* [_[link to article](https://nyheder.tv2.dk/samfund/2022-11-09-skal-vi-juble-eller-graede-naar-usaedvanlig-varme-rammer)_]
+
 ### {{< fa newspaper >}} __Klima er vigtigt, men...__
 
 *Interview, Weekendavisen, 13-10-2022* [_[link to paywalled article](https://www.weekendavisen.dk/2022-41/ideer/klima-er-vigtigt-men-...)_]
