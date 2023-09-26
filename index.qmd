@@ -22,7 +22,13 @@ about:
       href: https://www.linkedin.com/in/s%C3%B8ren-damsbo-svendsen-a63051170/
 ---
 
-Hi there! I am a PhD fellow at the [Department of Political Science, University of Copenhagen (UCPH)](https://politicalscience.ku.dk/) studying political behavior, voters, and public opinion on climate change. You can read about my research [here](https://soerendamsbo.github.io/research.html).
+Hi there! Until I handed in my PhD dissertation in September 2023, I was a PhD fellow at the [Department of Political Science, University of Copenhagen (UCPH)](https://politicalscience.ku.dk/), where I have been studying political behavior, voters, and public opinion on climate change.
+
+[![PhD dissertation 2023](media/cover.png){width="120"}](https://soerendamsbo.github.io/media/cover.png)
+
+My PhD thesis is titled '*Political Weather: How experiencing climate change shapes our political lives*'. It was submitted in September 2023 and will be defended in January 2024 at the University of Copenhagen.
+
+Currently, I am working with Kasper M. Hansen as a research assistant on The Danish Turnout Project. You can read more about my research [here](https://soerendamsbo.github.io/research.html).
 
 {{< fa person >}} Søren Damsbo-Svendsen  
 {{< fa map-marker >}} Copenhagen, Denmark  

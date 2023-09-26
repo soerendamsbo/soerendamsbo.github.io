@@ -20,9 +20,9 @@ title: Research
 
 **Abstract:** Previous research has shown that we believe more in the reality of climate change when we experience warmer-than-usual temperatures. This reflects a psychological process in which easily accessible information from personal weather experiences is used as a heuristic to form climate opinions. This paper replicates and extends upon a research design and results of Egan and Mullin to provide the first systematic European study of the Local Warming Effect. Based on data from 12 European countries, the analysis shows that when objective temperatures increase by two standard deviations (5°C) relative to normal temperatures, climate opinions are strengthened by around 0.5–1.0 percentage points – comparable to the effect of a full step to the left on a 0–10 political ideology scale.
 
-### More
+### Submitted manuscripts
 
-In addition, I currently have three manuscripts under consideration at journals. They are currently removed from the list of my research to facilitate blind peer-review. 
+In addition, I currently have three manuscripts under consideration at academic journals. They are hidden from the list at the moment to facilitate blind peer-review. 
 
 <!-- ### __4. Pro-climate voting in response to local flooding__  -->
 
