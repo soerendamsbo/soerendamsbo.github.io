@@ -24,9 +24,9 @@ about:
 
 Hi there! Until I handed in my PhD dissertation in September 2023, I was a PhD fellow at the [Department of Political Science, University of Copenhagen (UCPH)](https://politicalscience.ku.dk/), where I have been studying political behavior, voters, and public opinion on climate change.
 
-[![PhD dissertation 2023](media/cover.png){width="125"}](https://web.tresorit.com/l/aaPc9#k8uymX77GQKNWTFFhGq_Vw)
+My PhD thesis, titled '*Political Weather: How experiencing climate change shapes our political lives*', was submitted in September 2023 and is defended in January 2024 at the University of Copenhagen. The 330-page thesis can be downloaded [here](https://web.tresorit.com/l/aaPc9#k8uymX77GQKNWTFFhGq_Vw) with the password *climatechange*.
 
-My PhD thesis, titled '*Political Weather: How experiencing climate change shapes our political lives*', was submitted in September 2023 and is defended in January 2024 at the University of Copenhagen. The 330-page thesis can be downloaded [here](https://web.tresorit.com/l/aaPc9#k8uymX77GQKNWTFFhGq_Vw) with the password *climatechange*.  
+[![PhD dissertation 2023](media/cover.png){width="125"}](https://web.tresorit.com/l/aaPc9#k8uymX77GQKNWTFFhGq_Vw)
 
 Currently, I am working with professor Kasper M. Hansen on The Danish Turnout Project. You can read more about my research [here](https://soerendamsbo.github.io/research.html).
 
