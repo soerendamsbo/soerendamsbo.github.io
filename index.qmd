@@ -22,13 +22,9 @@ about:
       href: https://www.linkedin.com/in/s%C3%B8ren-damsbo-svendsen-a63051170/
 ---
 
-Hi there! I was a PhD fellow at the [Department of Political Science](https://politicalscience.ku.dk/), University of Copenhagen (UCPH), where I studied political behavior, voters, and public opinion on climate change until I handed in my PhD dissertation in September 2023. 
+Hi there! I am a researcher at the [Department of Political Science](https://politicalscience.ku.dk/), University of Copenhagen, who is interested in political behavior, voters, and public opinion, especially in the context of climate change. Currently, I am working with professor Kasper M. Hansen on [The Danish Turnout Project](https://www.kaspermhansen.eu/Research.html). You can read more about my research [here](https://soerendamsbo.github.io/research.html).
 
-My PhD dissertation, titled '*Political Weather: How experiencing climate change shapes our political lives*', will be publicly defended on January 9, 2024 ([event link](https://politicalscience.ku.dk/events/soeren-damsbo-svendsen-defends-his-phd-thesis)). The 330-page thesis can be downloaded [here](https://web.tresorit.com/l/aaPc9#k8uymX77GQKNWTFFhGq_Vw) with the password "*climatechange*".
-
-[![](media/cover.png){width="128"}](https://web.tresorit.com/l/aaPc9#k8uymX77GQKNWTFFhGq_Vw)
-
-Currently, I am working with professor Kasper M. Hansen on The Danish Turnout Project. You can read more about my research [here](https://soerendamsbo.github.io/research.html).
+I defended my PhD dissertation, '*Political Weather: How experiencing climate change shapes our political lives*', on January 9, 2024. You can read the abstract or download the thesis [here](https://soerendamsbo.github.io/phd-thesis.html).
 
 {{< fa person >}} Søren Damsbo-Svendsen  
 {{< fa map-marker >}} Copenhagen, Denmark  

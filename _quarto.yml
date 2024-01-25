@@ -13,6 +13,7 @@ website:
       - text: "Home"
         file: index.qmd
       - research.qmd
+      - phd-thesis.qmd
       - media.qmd
       # - blog.qmd
       - icon: twitter
