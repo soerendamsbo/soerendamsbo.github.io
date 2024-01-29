@@ -8,7 +8,7 @@ title: PhD thesis
 
 ::: {.columns}
 ::: {.column width="50%"}
-- Submitted in September 2023, defended in January 2024
+- Submitted September 2023, defended January 2024
 - Supervisors: Kasper M. Hansen and Frederik Hjorth
 - Department of Political Science, University of Copenhagen
 - The thesis can be downloaded [here](https://web.tresorit.com/l/aaPc9#k8uymX77GQKNWTFFhGq_Vw) with the password "*climatechange*".
