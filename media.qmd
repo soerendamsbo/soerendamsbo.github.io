@@ -2,6 +2,10 @@
 title: Media
 ---
 
+### {{< fa newspaper >}} __Tabuet er brudt. Atomkraft vinder frem hos vælgerne__
+
+*Interview, Altinget, 22-02-2024* [_[link to article](https://www.altinget.dk/artikel/naesten-hver-anden-vaelger-mener-atomkraft-kan-blive-noedvendigt)_]
+
 ### {{< fa newspaper >}} __Et gråt spørgsmål spøger ofte ved valg, og nu har forskere et svar__
 
 *Interview, Jyllands-Posten, 21-02-2023* [_[link to paywalled article](https://jyllands-posten.dk/indland/ECE15105747/et-graat-spoergsmaal-spoeger-ofte-ved-valg-og-nu-har-forskere-et-svar/)_]
