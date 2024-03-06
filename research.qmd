@@ -2,6 +2,8 @@
 title: Research
 ---
 
+## Research articles
+
 ### __1. When the election rains out and how bad weather excludes marginal voters from turning out__ with [Kasper M. Hansen](https://www.kaspermhansen.eu)
 
 *Published in Electoral Studies (2023)* [_[link to open access article](https://sciencedirect.com/science/article/pii/S0261379422001299)_]
@@ -20,9 +22,9 @@ title: Research
 
 **Abstract:** Previous research has shown that we believe more in the reality of climate change when we experience warmer-than-usual temperatures. This reflects a psychological process in which easily accessible information from personal weather experiences is used as a heuristic to form climate opinions. This paper replicates and extends upon a research design and results of Egan and Mullin to provide the first systematic European study of the Local Warming Effect. Based on data from 12 European countries, the analysis shows that when objective temperatures increase by two standard deviations (5°C) relative to normal temperatures, climate opinions are strengthened by around 0.5–1.0 percentage points – comparable to the effect of a full step to the left on a 0–10 political ideology scale.
 
-### Submitted manuscripts
+### __4. Submitted manuscripts__
 
-In addition, I currently have three manuscripts under consideration at academic journals. They are hidden from the list at the moment to facilitate blind peer-review. 
+In addition, I currently have three manuscripts that have received an R&R at an academic journal. They are hidden from the list at the moment to facilitate blind peer-review.  
 
 <!-- ### __4. Pro-climate voting in response to local flooding__  -->
 
@@ -45,3 +47,14 @@ In addition, I currently have three manuscripts under consideration at academic 
 <!-- ### __7. Using maps in climate change communication: second-order opinions and map biases__ with Peter D. Howe, Forest K. Cook, and Jace Colby -->
 
 <!-- *Work in progress* -->
+
+## Book chapters (in Danish)
+
+### __1. Næsten fuld plade på politiske emner: Socialdemokratiet får medvind fra emneejerskab over klima og sundhed__ with Henrik B. Seeberg
+
+*In Hansen, K.M. & Stubager, R. Partiledernes kamp om midten: Folketingsvalget 2022 (2024)* [_[link to book](https://djoefforlag.dk/products/partiledernes-kamp-om-midten)_]
+
+### __2. Klima er vigtigt for vælgerne, især i fremtiden__ with Johannes Andersen
+
+*In Hansen, K.M. & Stubager, R. Partiledernes kamp om midten: Folketingsvalget 2022 (2024)* [_[link to book](https://djoefforlag.dk/products/partiledernes-kamp-om-midten)_]
+
