@@ -22,7 +22,7 @@ about:
       href: https://www.linkedin.com/in/s%C3%B8ren-damsbo-svendsen-a63051170/
 ---
 
-Hi there! I am a postdoctoral researcher at the [Department of Political Science](https://politicalscience.ku.dk/), University of Copenhagen, who is interested in political behavior, voters, public opinion, and representation, especially in the context of climate change. Currently, I am working with professor Kasper M. Hansen on [The Danish Turnout Project](https://www.kaspermhansen.eu/Research.html). You can read more about my research [here](https://soerendamsbo.github.io/research.html).
+Hi there! I am a postdoctoral researcher at the [Department of Political Science](https://politicalscience.ku.dk/), University of Copenhagen, who is interested in political behavior, voters, public opinion, and representation, especially in the context of climate change. Currently, I am working with Karina Kosiara-Pedersen and Christina Fiig on The Democratic Implications of Political Harassment and Sexism (DIPAS). I am also collaborating with Kasper M. Hansen on The Danish Turnout Project. You can read more about my research [here](https://soerendamsbo.github.io/research.html).
 
 I defended my PhD dissertation, '*Political Weather: How experiencing climate change shapes our political lives*', on January 9, 2024. You can read the abstract or download the thesis [here](https://soerendamsbo.github.io/phd-thesis.html).
 
