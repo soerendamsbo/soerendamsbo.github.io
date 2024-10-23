@@ -18,7 +18,7 @@ title: Research
 
 ### __3. Anxious but Hesitant to Act: The impact of Concurrent Priming of the Climate Crisis and the War in Ukraine on Public Support__
 
-*Forthcoming in International Journal of Public Opinion Research, co-authored with Jakob Dreyer*
+*Published in International Journal of Public Opinion Research, co-authored with Jakob Dreyer* [_[link to article](https://academic.oup.com/ijpor/article-abstract/36/4/edae054/7831234)_]
 
 **Abstract:** Decision-makers and commentators are calling Europe’s present political predicament a polycrisis: a period of overlapping, urgent, and mutually reinforcing crises with climate change and Russia’s invasion of Ukraine as key challenges. Our knowledge about how citizens perceive and respond to polycrisis is limited. This paper presents a preregistered survey experiment from Denmark with 4,017 nationally representative respondents. We study crisis perceptions and willingness to act for the climate and Ukraine after concurrently priming both issues. Overall, threat perceptions increase but so does inaction. Climate change drives increases in threat perception and worry, while the war in Ukraine drives a reduction in willingness to act and pay. The results challenge the ‘finite pool of worry’ hypothesis, which presupposes that worry about new, urgent threats will crowd out worry about existing problems, especially in case of climate change. Rather willingness to act under polycrisis is issue-specific and shaped by concrete pocketbook costs, as our experimental evidence illustrates. The results also have important policy implications at a time when decision-makers frequently justify political action through polycrisis discourse.
 
