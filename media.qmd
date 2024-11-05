@@ -2,6 +2,14 @@
 title: Media
 ---
 
+### {{< fa newspaper >}} __In a Tight Election, Can the Weather Cast a Deciding Vote?__
+
+*Reference, New York Times, 26-10-2024* [_[link to article](https://www.nytimes.com/2024/10/26/weather/election-day-weather.html)_]
+
+### {{< fa newspaper >}} __Måling: Ét emne topper vælgernes dagsorden ved EU-valget__
+
+*Interview, Altinget, 06-06-2024* [_[link to article](https://www.altinget.dk/klima/artikel/ny-maaling-foer-eu-valg-krig-og-klima-dominerer-vaelgernes-dagsorden)_]
+
 ### {{< fa newspaper >}} __Tabuet er brudt. Atomkraft vinder frem hos vælgerne__
 
 *Interview, Altinget, 22-02-2024* [_[link to article](https://www.altinget.dk/artikel/naesten-hver-anden-vaelger-mener-atomkraft-kan-blive-noedvendigt)_]
