@@ -7,13 +7,12 @@ about:
     - icon: envelope
       text: Email
       href: mailto:sdas@ifs.ku.dk
-    - text: <img src="media/google-scholar.png" width="15" height="15"> Google Scholar
+    - text: <img src="media/google-scholar.png" height="15"> Google Scholar
       href: https://scholar.google.com/citations?user=TeuKGQ0AAAAJ&hl=en&oi=sra
-    - text: <img src="media/ku_segl.png" width="15" height="15">  UCPH researcher profile
+    - text: <img src="media/ku_segl.png" height="15">  UCPH researcher profile
       href: https://politicalscience.ku.dk/staff/phd/?pure=en/persons/457325
-    - icon: twitter
-      text: Twitter
-      href: https://twitter.com/soerendamsbo
+    - text: <img src="media/Bluesky_Logo_grey.png" height="15">  Bluesky
+      href: https://bsky.app/profile/soerendamsbo.bsky.social
     - icon: github
       text: Github
       href: https://github.com/soerendamsbo
@@ -22,11 +21,11 @@ about:
       href: https://www.linkedin.com/in/s%C3%B8ren-damsbo-svendsen-a63051170/
 ---
 
-Hi there! I am a postdoctoral researcher at the [Department of Political Science](https://politicalscience.ku.dk/), University of Copenhagen, who is interested in political behavior, voters, public opinion, and representation, especially in the context of climate change. 
+Hi there! I am a postdoctoral researcher at the [Department of Political Science](https://politicalscience.ku.dk/), University of Copenhagen, who is interested in political behavior, voters, public opinion, and representation, especially in a **climate** context. 
 
-I defended my PhD dissertation, '*Political Weather: How experiencing climate change shapes our political lives*', in January 2024. You can read the abstract or download the thesis [here](https://soerendamsbo.github.io/phd-thesis.html).
+I defended my PhD dissertation, '*Political Weather: How experiencing climate change shapes our political lives*', in January 2024. Read the abstract or download the **thesis** [here](https://soerendamsbo.github.io/phd-thesis.html).
 
-Currently, I am working with Karina Kosiara-Pedersen and Christina Fiig on The Democratic Implications of Political Harassment and Sexism (DIPAS). I am also collaborating with Kasper M. Hansen on The Danish Turnout Project. You can read more about my research [here](https://soerendamsbo.github.io/research.html).
+Currently, I work with Karina Kosiara-Pedersen and Christina Fiig on the *Democratic Implications of Political Harassment and Sexism (DIPAS)*. I also collaborate with Kasper M. Hansen on the *Danish Turnout Project*. Find my **research** [here](https://soerendamsbo.github.io/research.html).
 
 {{< fa person >}} Søren Damsbo-Svendsen  
 {{< fa map-marker >}} Copenhagen, Denmark  

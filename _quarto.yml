@@ -16,8 +16,8 @@ website:
       - phd-thesis.qmd
       - media.qmd
       # - blog.qmd
-      - icon: twitter
-        href: https://twitter.com/soerendamsbo
+      #- icon: twitter
+      #  href: https://twitter.com/soerendamsbo
   sidebar:
     alignment: right
     logo: media/soren1.png
