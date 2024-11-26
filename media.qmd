@@ -2,6 +2,10 @@
 title: Media
 ---
 
+### {{< fa newspaper >}} __Klimachok: Sådan flyttede stormen Bodil danske vælgere__
+
+*Interview, Videnskab.dk, 26-11-2024* [_[link to article](https://videnskab.dk/kultur-samfund/klimachok-saadan-flyttede-stormen-bodil-danske-vaelgere/)_]
+
 ### {{< fa newspaper >}} __In a Tight Election, Can the Weather Cast a Deciding Vote?__
 
 *Reference, New York Times, 26-10-2024* [_[link to article](https://www.nytimes.com/2024/10/26/weather/election-day-weather.html)_]
