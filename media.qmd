@@ -2,6 +2,14 @@
 title: Media
 ---
 
+### {{< fa newspaper >}} __200.000 danskere dukkede op til Klimahandledag. Så kan det passe, at danskerne er blevet klimatrætte?__
+
+*Interview, Information, 24-04-2025* [_[link to article](https://www.information.dk/indland/2025/04/200000-danskere-dukkede-klimahandledag-saa-kan-passe-danskerne-blevet-klimatraette)_]
+
+### {{< fa newspaper >}} __Trump sætter spor i ny meningsmåling: Vælgerne går nu mere op i forsvar end klima__
+
+*Interview, Altinget, 02-04-2025* [_[link to article](https://www.altinget.dk/artikel/trump-saetter-spor-i-ny-meningsmaaling-vaelgerne-gaar-nu-mere-op-i-forsvar-end-klima)_]
+
 ### {{< fa newspaper >}} __Klimachok: Sådan flyttede stormen Bodil danske vælgere__
 
 *Interview, Videnskab.dk, 26-11-2024* [_[link to article](https://videnskab.dk/kultur-samfund/klimachok-saadan-flyttede-stormen-bodil-danske-vaelgere/)_]
