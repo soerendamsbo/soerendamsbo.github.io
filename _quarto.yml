@@ -14,8 +14,8 @@ website:
         file: index.qmd
       - research.qmd
       - phd-thesis.qmd
-      - cv.qmd
       - media.qmd
+      - cv.qmd
       # - blog.qmd
       #- icon: twitter
       #  href: https://twitter.com/soerendamsbo
