@@ -2,9 +2,7 @@
 title: Research
 ---
 
-## Research articles
-
-### Published
+## Published journal articles
 
 #### __1. Ineffectiveness of priming and contextualizing personal weather experiences: Evidence from a survey experiment on summer heat__
 
@@ -42,19 +40,7 @@ title: Research
 
 **Abstract:** Previous research has shown that we believe more in the reality of climate change when we experience warmer-than-usual temperatures. This reflects a psychological process in which easily accessible information from personal weather experiences is used as a heuristic to form climate opinions. This paper replicates and extends upon a research design and results of Egan and Mullin to provide the first systematic European study of the Local Warming Effect. Based on data from 12 European countries, the analysis shows that when objective temperatures increase by two standard deviations (5°C) relative to normal temperatures, climate opinions are strengthened by around 0.5–1.0 percentage points – comparable to the effect of a full step to the left on a 0–10 political ideology scale.
 
-### Work in progress
-
-#### __1. Must political candidates have thicker skin? How candidates’ perceptions of harassment in politics and their attitude shifts differ from ordinary citizens’__
-
-*Co-authored with Karina Kosiara-Pedersen*
-
-#### __2. “Young and Naïve”: Ageism, sexism, and harassment of young political candidates and representatives__
-
-*Co-authored with Karina Kosiara-Pedersen & Christina Fiig. Under review at Comparative Political Studies*
-
 ## Book chapters
-
-### Published
 
 #### __1. Næsten fuld plade på politiske emner: Socialdemokratiet får medvind fra emneejerskab over klima og sundhed__
 
@@ -64,3 +50,12 @@ title: Research
 
 *Co-authored with Johannes Andersen (2024). In K.M. Hansen & R. Stubager, Partiledernes kamp om midten: Folketingsvalget 2022* [_[link to book](https://djoefforlag.dk/products/partiledernes-kamp-om-midten)_]
 
+## Working papers
+
+#### __1. Must political candidates have thicker skin? How candidates’ perceptions of harassment in politics and their attitude shifts differ from ordinary citizens’__
+
+*Co-authored with Karina Kosiara-Pedersen*
+
+#### __2. “Young and Naïve”: Ageism, sexism, and harassment of young political candidates and representatives__
+
+*Co-authored with Karina Kosiara-Pedersen & Christina Fiig.*
