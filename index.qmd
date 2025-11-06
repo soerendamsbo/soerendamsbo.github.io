@@ -1,5 +1,5 @@
 ---
-image: media/soren1.png
+image: media/soren2.png
 sidebar: false
 about:
   template: jolla
