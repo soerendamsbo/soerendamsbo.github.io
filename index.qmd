@@ -23,7 +23,7 @@ about:
       href: https://www.linkedin.com/in/s%C3%B8ren-damsbo-svendsen-a63051170/
 ---
 
-Hi there! I am a postdoctoral researcher at the [Department of Political Science](https://politicalscience.ku.dk/), University of Copenhagen, who is interested in political behavior, voters, public opinion, and representation, especially in the **climate** context. 
+Hi there! I am a postdoctoral researcher at the [Department of Political Science](https://politicalscience.ku.dk/), University of Copenhagen, who is interested in political behavior, voters and elections, public opinion, and representation, especially from a **climate** perspective. 
 
 I defended my PhD dissertation, '*Political Weather: How experiencing climate change shapes our political lives*', in January 2024. Read the abstract or download the **thesis** [here](https://soerendamsbo.github.io/phd-thesis.html).
 

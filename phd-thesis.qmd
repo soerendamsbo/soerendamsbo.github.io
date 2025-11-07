@@ -12,6 +12,7 @@ title: PhD thesis
 - Department of Political Science, University of Copenhagen
 - Supervisors: Kasper M. Hansen and Frederik Hjorth
 - The thesis can be downloaded from [here](https://web.tresorit.com/l/Hk1AI#iJCuKFJev4lXCJejdiUzbA) using the password '*poliweather*'.
+- You can also take a look at the [slides from my PhD defense](https://soerendamsbo.github.io/misc-slides/phd-defense_updated.html)
 :::
 ::: {.column width="10%"}
 :::
