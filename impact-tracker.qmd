@@ -1,0 +1,158 @@
+---
+title: "Accurate Scientific Impact and Citations Tracker"
+format: html
+execute: 
+    echo: false
+    cache: true
+---
+
+This application tracks the scientific impact of leading scholars in political science. Data is retrieved from Google Scholar and updated `r lubridate::today()`.
+
+Existing impact metrics such as **Total Citations** can be wildly misleading (Damsbo-Svendsen 2025), which has led to the invention of novel, much more accurate measures:
+
+- The **Effective Citations Index™️** (Damsbo-Svendsen 2025) deflates artificially high raw citations numbers for co-authored publications by the number of co-authors, yielding the effective number of citations per person
+- The **Pivotal Contributor™️** (Damsbo-Svendsen 2025) highlights significant and pivotal contributions to science. It is calculated as the share of publication, where an author is lead-author.
+- The **Pioneer Index™️** (Damsbo-Svendsen 2025) is a method for identifying field-leading scholarly efforts. It is calculated as the share of publications, which an author has created independently and *cutting-edgedly* based on their own brilliant ideas, without disturbance from co-authors.
+
+```{r}
+
+pacman::p_load(tidyverse, scholar, kableExtra)
+
+################################################################
+## frederik ----
+################################################################
+id <- "2jFLHrgAAAAJ" # scholar ID
+fkk_stats <- lst()    # empty results list
+
+# Count articles
+fkk_stats$n_articles <- get_num_articles(id)
+
+# Retrieve cite report
+fkk_tmp_stats <- get_profile(id)
+
+# Save cite report
+fkk_stats$total_cites <- fkk_tmp_stats$total_cites
+fkk_stats$h_index <- fkk_tmp_stats$h_index
+fkk_stats$i10_index <- fkk_tmp_stats$i10_index
+
+# Retrieve publications and calculate author order and number
+fkk_pubs <- get_publications(id) |>
+  mutate(
+    pub_no = row_number(),
+    n_authors = str_count(author, ",") + 1,
+    .before = 1
+  ) |>
+  separate_longer_delim(cols = author, delim = ",") |>
+  group_by(pub_no) |>
+  mutate(author_no = row_number()) |>
+  ungroup() |>
+  filter(str_detect(author, "Larsen|Kjøller"))
+
+# Calculate Effective CitationsTM
+fkk_stats$effective_cites <- fkk_pubs |>
+  group_by(pub_no) |>
+  mutate(effective = cites / n_authors) |>
+  ungroup() |> 
+  summarise(effective_sum = sum(effective)) |>
+  pull(effective_sum)
+
+# Calculate Very Important First-Author Share IndexTM
+fkk_stats$first_author <- fkk_pubs |>
+  summarise(first_share = 100 * sum(author_no == 1) / n()) |>
+  mutate(first_share = replace_na(first_share, 0)) |> 
+  pull(first_share)
+
+# Calculate Very Important Single-Author Share IndexTM
+fkk_stats$single_author <- fkk_pubs |>
+    summarise(single_share = 100 * sum(n_authors == 1) / n()) |>
+  mutate(single_share = replace_na(single_share, 0)) |> 
+  pull(single_share)
+
+################################################################
+## søren ----
+################################################################
+id <- "TeuKGQ0AAAAJ" # scholar ID
+sds_stats <- lst()    # empty results list
+
+# Count articles
+sds_stats$n_articles <- get_num_articles(id)
+
+# Retrieve cite report
+sds_tmp_stats <- get_profile(id)
+
+# Save cite report
+sds_stats$total_cites <- sds_tmp_stats$total_cites
+sds_stats$h_index <- sds_tmp_stats$h_index
+sds_stats$i10_index <- sds_tmp_stats$i10_index
+
+# Retrieve publications and calculate author order and number
+sds_pubs <- get_publications(id) |>
+  mutate(
+    pub_no = row_number(),
+    n_authors = str_count(author, ",") + 1,
+    .before = 1
+  ) |>
+  separate_longer_delim(cols = author, delim = ",") |>
+  group_by(pub_no) |>
+  mutate(author_no = row_number()) |>
+  ungroup() |>
+  filter(str_detect(author, "Damsbo"))
+
+# Calculate Effective CitationsTM
+sds_stats$effective_cites <- sds_pubs |>
+  group_by(pub_no) |>
+  mutate(effective = cites / n_authors) |>
+  ungroup() |>
+  summarise(effective_sum = sum(effective)) |>
+  pull(effective_sum)
+
+# Calculate Very Important First-Author Share IndexTM
+sds_stats$first_author <- sds_pubs |>
+    summarise(first_share = 100 * sum(author_no == 1) / n()) |>
+  mutate(first_share = replace_na(first_share, 0)) |> 
+  pull(first_share)
+
+sds_stats$single_author <- sds_pubs |>
+    summarise(single_share = 100 * sum(n_authors == 1) / n()) |>
+  mutate(single_share = replace_na(single_share, 0)) |> 
+  pull(single_share)
+
+```
+
+## Impact
+
+We recommend relying *only* relying on the latter three indices, which provide a much more accurate picture of a researcher's impact, integrity, and overall character than out-dated metrics.
+
+```{r}
+ready_stats <- bind_rows(
+    bind_rows(sds_stats) |> 
+    mutate(person = "Søren Damsbo-Svendsen", .before = 1),
+    bind_rows(fkk_stats) |> 
+    mutate(person = "Frederik Klaaborg Kjøller", .before = 1)) |> 
+    pivot_longer(cols = where(is.numeric), names_to = "stat", values_to = "val") |> 
+    pivot_wider(names_from = "person", values_from = "val")
+
+
+ready_stats |> 
+    mutate(stat = case_match(stat, 
+            "n_articles" ~ "No. Articles",
+            "total_cites" ~ "Total Citations",
+            "h_index" ~ "h-index",
+            "i10_index" ~"i10-index",
+            "effective_cites" ~ "Effective Citations Index™️",
+            "first_author" ~ "Pivotal Contributor Index™️",
+            "single_author"~"Pioneer Index™️")) |> 
+    rename('Impact Metric' = stat) |> 
+    kable(format = "html",digits = 0)
+
+
+```
+
+## Google Scholar Profile links
+
+- [Søren Damsbo-Svendsen](https://scholar.google.com/citations?user=TeuKGQ0AAAAJ&hl=en&oi=sra)
+- [Frederik Klaaborg Kjøller](https://scholar.google.com/citations?user=2jFLHrgAAAAJ&hl=da)
+
+## References
+
+None, because it's a joke.
