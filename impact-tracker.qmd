@@ -3,7 +3,7 @@ title: "Accurate Scientific Impact and Citations Tracker"
 format: html
 execute: 
     echo: false
-    cache: true
+    cache: false
 ---
 
 This application tracks the scientific impact of leading scholars in political science. Data is retrieved from Google Scholar and updated `r lubridate::today()`.
@@ -132,6 +132,7 @@ ready_stats <- bind_rows(
     pivot_longer(cols = where(is.numeric), names_to = "stat", values_to = "val") |> 
     pivot_wider(names_from = "person", values_from = "val")
 
+write_csv(ready_stats, here::here("Data", paste0("impact-tracker_", lubridate::today(), ".csv")))
 
 ready_stats |> 
     mutate(stat = case_match(stat, 
