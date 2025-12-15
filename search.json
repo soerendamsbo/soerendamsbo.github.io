@@ -116,7 +116,7 @@
     "href": "research.html#working-papers",
     "title": "Research",
     "section": "Working papers",
-    "text": "Working papers\n\n1. Raising awareness of harassment against politicians: Experimental evidence of disengagement among likely future candidates\nCo-authored with Karina Kosiara-Pedersen. Under review at British Journal of Political Science.\n\n\n2. “Young and Naïve”: Sexism and Ageism shape Harassment against Young Candidates and Representatives\nCo-authored with Karina Kosiara-Pedersen & Christina Fiig. Under review at European Journal of Political Science.\n\n\n3. Type or Target: What determines citizens‘ perceptions of political harassment?\nCo-authored with Karina Kosiara-Pedersen\n\n\n4. A Decade of GOTV Impact: Unequal long‑term effects of inducing young people to vote\nCo-authored with Kasper M. Hansen\n\n\n5. No Habit Formation but a Lot of Boost: How the first election after enfranchisement shapes voter turnout trajectories\nCo-authored with Kasper M. Hansen & Esther Bastholm\n\n\n__6. Persuasion in Practice: How party cues and persuasive messaging interact in voters’ opinion formation\nCo-authored with Christoffer Dausgaard\n\n\n7. Retrospective voting after a sudden rise in human death rates\nCo-authored with Christoffer Dausgaard"
+    "text": "Working papers\n\n1. Raising awareness of harassment against politicians: Experimental evidence of disengagement among likely future candidates\nCo-authored with Karina Kosiara-Pedersen. Under review at British Journal of Political Science.\n\n\n2. “Young and Naïve”: Sexism and Ageism shape Harassment against Young Candidates and Representatives\nCo-authored with Karina Kosiara-Pedersen & Christina Fiig. Under review at European Journal of Political Science.\n\n\n3. Type or Target: What determines citizens‘ perceptions of political harassment?\nCo-authored with Karina Kosiara-Pedersen\n\n\n4. A Decade of GOTV Impact: Unequal long‑term effects of inducing young people to vote\nCo-authored with Kasper M. Hansen\n\n\n5. No Habit Formation but a Lot of Boost: How the first election after enfranchisement shapes voter turnout trajectories\nCo-authored with Kasper M. Hansen & Esther Bastholm\n\n\n6. Persuasion in Practice: How party cues and persuasive messaging interact in voters’ opinion formation\nCo-authored with Christoffer Dausgaard\n\n\n7. Retrospective voting after a sudden rise in human death rates\nCo-authored with Christoffer Dausgaard"
   },
   {
     "objectID": "scholar-tracker.html",
@@ -144,7 +144,7 @@
     "href": "impact-tracker.html#references",
     "title": "Accurate Scientific Impact and Citations Tracker",
     "section": "References",
-    "text": "References\nDamsbo-Svendsen, S. (2025). Accurate Scientific Impact and Citations Tracker. Personal website of Søren Damsbo-Svendsen. https://soerendamsbo.github.io/impact-tracker.html"
+    "text": "References\nDamsbo-Svendsen, S. (2025). Accurate Scientific Impact and Citations Tracker. Personal website of Søren Damsbo-Svendsen. https://soerendamsbo.github.io/impact-tracker.html1"
   },
   {
     "objectID": "impact-tracker.html#impact",
@@ -158,6 +158,13 @@
     "href": "impact-tracker.html#methodology",
     "title": "Accurate Scientific Impact and Citations Tracker",
     "section": "Methodology",
-    "text": "Methodology\nOut-dated impact metrics such as Total Citations can be wildly misleading (Damsbo-Svendsen 2025), which has led to the invention of novel, much more accurate measures:\n\nThe Effective Citations Index™️ (Damsbo-Svendsen 2025) deflates artificially high raw citations numbers for co-authored publications by the number of co-authors, yielding the effective personal number of citations.\nThe Pivotal Contributor Index™️ (Damsbo-Svendsen 2025) highlights significant and pivotal contributions to science. It is calculated as the share of publication, where an author is lead-author.\nThe Pioneer Index™️ (Damsbo-Svendsen 2025) is a method for identifying field-leading scholarly efforts. It is calculated as the share of publications, which an author has created independently and cutting-edgedly based on their own brilliant ideas, without disturbance from co-authors.\n\nNote that references from within this site are not included in the estimated impact."
+    "text": "Methodology\nOut-dated impact metrics such as Total Citations can be wildly misleading (Damsbo-Svendsen 2025), which has led to the invention of novel, much more accurate measures:\n\nThe Effective Citations Index™️ (Damsbo-Svendsen 2025) deflates artificially high raw citations numbers for co-authored publications by the number of co-authors, yielding the effective personal number of citations.\nThe Pivotal Contributor Index™️ (Damsbo-Svendsen 2025) highlights significant and pivotal contributions to science. It is calculated as the share of publication, where an author is lead-author.\nThe Pioneer Index™️ (Damsbo-Svendsen 2025) is a method for identifying field-leading scholarly efforts. It is calculated as the share of publications, which an author has created independently and cutting-edgedly based on their own brilliant ideas, without disturbance from co-authors."
+  },
+  {
+    "objectID": "impact-tracker.html#footnotes",
+    "href": "impact-tracker.html#footnotes",
+    "title": "Accurate Scientific Impact and Citations Tracker",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nBeware that references from within this site are not included in the impact estimates.↩︎"
   }
 ]

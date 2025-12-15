@@ -212,8 +212,6 @@ Out-dated impact metrics such as Total Citations can be wildly misleading (Damsb
 - The **Pivotal Contributor Index™️** (Damsbo-Svendsen `r lubridate::year(lubridate::today())`) highlights significant and pivotal contributions to science. It is calculated as the share of publication, where an author is lead-author.
 - The **Pioneer Index™️** (Damsbo-Svendsen `r lubridate::year(lubridate::today())`) is a method for identifying field-leading scholarly efforts. It is calculated as the share of publications, which an author has created independently and *cutting-edgedly* based on their own brilliant ideas, without disturbance from co-authors.
 
-Note that references from within this site are not included in the estimated impact.
-
 ## Google Scholar profile links
 
 - [Søren Damsbo-Svendsen](https://scholar.google.com/citations?user=TeuKGQ0AAAAJ&hl=en&oi=sra)
@@ -222,5 +220,5 @@ Note that references from within this site are not included in the estimated imp
 
 ## References
 
-Damsbo-Svendsen, S. (`r lubridate::year(lubridate::today())`). Accurate Scientific Impact and Citations Tracker. Personal website of Søren Damsbo-Svendsen. https://soerendamsbo.github.io/impact-tracker.html
+Damsbo-Svendsen, S. (`r lubridate::year(lubridate::today())`). Accurate Scientific Impact and Citations Tracker. Personal website of Søren Damsbo-Svendsen. https://soerendamsbo.github.io/impact-tracker.html^[Beware that references from within this site are not included in the impact estimates.]
 
