@@ -166,8 +166,6 @@ chd_stats$single_author <- chd_pubs |>
 
 ```
 
-## Impact
-
 ```{r}
 ready_stats <- bind_rows(
     bind_rows(sds_stats) |> 
@@ -177,34 +175,46 @@ ready_stats <- bind_rows(
     bind_rows(chd_stats) |> 
     mutate(person = "Christoffer H. Dausgaard", .before = 1)) |> 
     pivot_longer(cols = where(is.numeric), names_to = "stat", values_to = "val") |> 
-    pivot_wider(names_from = "person", values_from = "val")
-
-write_csv(ready_stats, here::here("Data", paste0("impact-tracker_", lubridate::today(), ".csv")))
-
-ready_stats |> 
-    mutate(stat = case_match(stat, 
+    pivot_wider(names_from = "person", values_from = "val") |> 
+    mutate(stat_lab = case_match(stat, 
             "n_articles" ~ "No. Articles",
             "total_cites" ~ "Total Citations",
             "h_index" ~ "h-index",
             "i10_index" ~"i10-index",
             "effective_cites" ~ "Effective Citations Index™️",
             "first_author" ~ "Pivotal Contributor Index™️",
-            "single_author"~"Pioneer Index™️")) |> 
-    rename('Impact Metric' = stat) |> 
-    kable(format = "html",digits = 0) |> 
-    footnote(general_title = "", general = "We strongly recommend relying *only* relying on the latter three indices, which provide a much more accurate picture of a researcher's impact, integrity, and overall character than out-dated metrics. Note that references from this site are not included in the above impact estimates.")
+            "single_author"~"Pioneer Index™️"), .after = stat)
+
+write_csv(ready_stats, here::here("Data", paste0("impact-tracker_", lubridate::today(), ".csv")))
+
+stats_ratio <- ready_stats |> 
+  rowwise() |> 
+   transmute(stat_lab, ratio = `Søren Damsbo-Svendsen` / max(c(`Frederik K. Kjøller`, `Christoffer H. Dausgaard`))) |> 
+   ungroup()
+
+  stats_ratio_max <- stats_ratio |> 
+    filter(ratio == max(ratio))
+
+ready_stats |> 
+  select(-stat) |> 
+    rename('Impact Metric' = stat_lab) |> 
+    kable(format = "html", digits = 0) 
 
 ```
 
+Note that we *strongly* recommend relying primarily on `r stats_ratio_max$stat_lab`, which provides the most accurate picture of a researcher's impact, integrity, and overall character and is highly superior to existing metrics. 
+
 ## Methodology
 
-Existing impact metrics such as **Total Citations** can be wildly misleading (Damsbo-Svendsen 2025), which has led to the invention of novel, much more accurate measures:
+Out-dated impact metrics such as Total Citations can be wildly misleading (Damsbo-Svendsen `r lubridate::year(lubridate::today())`), which has led to the invention of novel, much more accurate measures:
 
-- The **Effective Citations Index™️** (Damsbo-Svendsen 2025) deflates artificially high raw citations numbers for co-authored publications by the number of co-authors, yielding the effective *personal* number of citations.
-- The **Pivotal Contributor Index™️** (Damsbo-Svendsen 2025) highlights significant and pivotal contributions to science. It is calculated as the share of publication, where an author is lead-author.
-- The **Pioneer Index™️** (Damsbo-Svendsen 2025) is a method for identifying field-leading scholarly efforts. It is calculated as the share of publications, which an author has created independently and *cutting-edgedly* based on their own brilliant ideas, without disturbance from co-authors.
+- The **Effective Citations Index™️** (Damsbo-Svendsen `r lubridate::year(lubridate::today())`) deflates artificially high raw citations numbers for co-authored publications by the number of co-authors, yielding the effective *personal* number of citations.
+- The **Pivotal Contributor Index™️** (Damsbo-Svendsen `r lubridate::year(lubridate::today())`) highlights significant and pivotal contributions to science. It is calculated as the share of publication, where an author is lead-author.
+- The **Pioneer Index™️** (Damsbo-Svendsen `r lubridate::year(lubridate::today())`) is a method for identifying field-leading scholarly efforts. It is calculated as the share of publications, which an author has created independently and *cutting-edgedly* based on their own brilliant ideas, without disturbance from co-authors.
 
-## Google Scholar Profile links
+Note that references from within this site are not included in the estimated impact.
+
+## Google Scholar profile links
 
 - [Søren Damsbo-Svendsen](https://scholar.google.com/citations?user=TeuKGQ0AAAAJ&hl=en&oi=sra)
 - [Frederik Klaaborg Kjøller](https://scholar.google.com/citations?user=2jFLHrgAAAAJ&hl=da)
@@ -212,4 +222,5 @@ Existing impact metrics such as **Total Citations** can be wildly misleading (Da
 
 ## References
 
-None, because it's a joke.
+Damsbo-Svendsen, S. (`r lubridate::year(lubridate::today())`). Accurate Scientific Impact and Citations Tracker. Personal website of Søren Damsbo-Svendsen. https://soerendamsbo.github.io/impact-tracker.html
+
