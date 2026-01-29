@@ -202,7 +202,7 @@ ready_stats |>
 
 ```
 
-Note that we *strongly* recommend relying primarily on `r stats_ratio_max$stat_lab`, which provides the most accurate picture of a researcher's impact, integrity, and overall character and is highly superior to existing metrics. 
+Note that we recommend relying primarily on `r stats_ratio_max$stat_lab`, which provides the most accurate picture of a researcher's impact, integrity, and overall character and is highly superior to existing metrics. 
 
 ## Methodology
 

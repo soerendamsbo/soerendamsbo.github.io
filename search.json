@@ -130,7 +130,7 @@
     "href": "impact-tracker.html",
     "title": "Accurate Scientific Impact and Citations Tracker",
     "section": "",
-    "text": "This application tracks the scientific impact of leading scholars in political science. Data is retrieved from Google Scholar and updated 2025-12-15.\nImpact Metric\nSøren Damsbo-Svendsen\nFrederik K. Kjøller\nChristoffer H. Dausgaard\n\n\n\n\nNo. Articles\n9\n6\n8\n\n\nTotal Citations\n54\n52\n2\n\n\nh-index\n3\n3\n1\n\n\ni10-index\n2\n1\n0\n\n\nEffective Citations Index™️\n42\n14\n1\n\n\nPivotal Contributor Index™️\n89\n50\n75\n\n\nPioneer Index™️\n44\n17\n50\nNote that we strongly recommend relying primarily on Effective Citations Index™️, which provides the most accurate picture of a researcher’s impact, integrity, and overall character and is highly superior to existing metrics."
+    "text": "This application tracks the scientific impact of leading scholars in political science. Data is retrieved from Google Scholar and updated 2026-01-29.\nImpact Metric\nSøren Damsbo-Svendsen\nFrederik K. Kjøller\nChristoffer H. Dausgaard\n\n\n\n\nNo. Articles\n9\n6\n8\n\n\nTotal Citations\n58\n52\n2\n\n\nh-index\n3\n3\n1\n\n\ni10-index\n2\n1\n0\n\n\nEffective Citations Index™️\n44\n15\n1\n\n\nPivotal Contributor Index™️\n89\n50\n75\n\n\nPioneer Index™️\n44\n17\n50\nNote that we recommend relying primarily on Effective Citations Index™️, which provides the most accurate picture of a researcher’s impact, integrity, and overall character and is highly superior to existing metrics."
   },
   {
     "objectID": "impact-tracker.html#google-scholar-profile-links",
@@ -144,7 +144,7 @@
     "href": "impact-tracker.html#references",
     "title": "Accurate Scientific Impact and Citations Tracker",
     "section": "References",
-    "text": "References\nDamsbo-Svendsen, S. (2025). Accurate Scientific Impact and Citations Tracker. Personal website of Søren Damsbo-Svendsen. https://soerendamsbo.github.io/impact-tracker.html1"
+    "text": "References\nDamsbo-Svendsen, S. (2026). Accurate Scientific Impact and Citations Tracker. Personal website of Søren Damsbo-Svendsen. https://soerendamsbo.github.io/impact-tracker.html1"
   },
   {
     "objectID": "impact-tracker.html#impact",
@@ -158,7 +158,7 @@
     "href": "impact-tracker.html#methodology",
     "title": "Accurate Scientific Impact and Citations Tracker",
     "section": "Methodology",
-    "text": "Methodology\nOut-dated impact metrics such as Total Citations can be wildly misleading (Damsbo-Svendsen 2025), which has led to the invention of novel, much more accurate measures:\n\nThe Effective Citations Index™️ (Damsbo-Svendsen 2025) deflates artificially high raw citations numbers for co-authored publications by the number of co-authors, yielding the effective personal number of citations.\nThe Pivotal Contributor Index™️ (Damsbo-Svendsen 2025) highlights significant and pivotal contributions to science. It is calculated as the share of publication, where an author is lead-author.\nThe Pioneer Index™️ (Damsbo-Svendsen 2025) is a method for identifying field-leading scholarly efforts. It is calculated as the share of publications, which an author has created independently and cutting-edgedly based on their own brilliant ideas, without disturbance from co-authors."
+    "text": "Methodology\nOut-dated impact metrics such as Total Citations can be wildly misleading (Damsbo-Svendsen 2026), which has led to the invention of novel, much more accurate measures:\n\nThe Effective Citations Index™️ (Damsbo-Svendsen 2026) deflates artificially high raw citations numbers for co-authored publications by the number of co-authors, yielding the effective personal number of citations.\nThe Pivotal Contributor Index™️ (Damsbo-Svendsen 2026) highlights significant and pivotal contributions to science. It is calculated as the share of publication, where an author is lead-author.\nThe Pioneer Index™️ (Damsbo-Svendsen 2026) is a method for identifying field-leading scholarly efforts. It is calculated as the share of publications, which an author has created independently and cutting-edgedly based on their own brilliant ideas, without disturbance from co-authors."
   },
   {
     "objectID": "impact-tracker.html#footnotes",
