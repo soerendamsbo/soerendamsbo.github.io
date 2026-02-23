@@ -23,11 +23,15 @@ about:
       href: https://www.linkedin.com/in/s%C3%B8ren-damsbo-svendsen-a63051170/
 ---
 
-Hi there! I am a postdoctoral researcher at the [Department of Political Science](https://politicalscience.ku.dk/), University of Copenhagen, who is interested in political behavior, voters and elections, public opinion, and representation, especially from a **climate** perspective. 
+Hi there! I am a postdoctoral researcher at the [Department of Political Science, University of Copenhagen](https://politicalscience.ku.dk/), who is interested in political behavior, voters and elections, public opinion, and representation, especially from a climate perspective. 
 
-I defended my PhD dissertation, '*Political Weather: How experiencing climate change shapes our political lives*', in January 2024. Read the abstract or download the **thesis** [here](https://soerendamsbo.github.io/phd-thesis.html).
+Starting March 2026, I am a researcher on the project **Climate Adaptation of Democracy (CAD)** led by Professor Kasper M. Hansen and funded by the Independent Research Fund Denmark. The project investigates how climate change threatens democratic institutions, and what we can do about that. Read more about the project on the [CAD website](https://soerendamsbo.github.io/cad).
 
-Currently, I work with Karina Kosiara-Pedersen on the *Democratic Implications of Political Harassment and Sexism (DIPAS)*. I also collaborate with Kasper M. Hansen on the *Danish Turnout Project*. Find my **research** [here](https://soerendamsbo.github.io/research.html).
+I defended my PhD dissertation, *Political Weather: How experiencing climate change shapes our political lives*, in January 2024. You can find the thesis [here](https://soerendamsbo.github.io/phd-thesis.html). I've since worked as a postdoc on the Danish Turnout Project with Kasper M. Hansen and on Democratic Implications of Political Harassment and Sexism (DIPAS) with Karina Kosiara-Pedersen. My research has been published in journals such as *Political Behavior*, *Electoral Studies*, and *West European Politics*. You can find my research [here](https://soerendamsbo.github.io/research.html).
+
+
+
+
 
 {{< fa person >}} Søren Damsbo-Svendsen  
 {{< fa map-marker >}} Copenhagen, Denmark  
