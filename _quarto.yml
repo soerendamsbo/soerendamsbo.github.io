@@ -13,7 +13,10 @@ website:
       - text: "Home"
         file: index.qmd
       - research.qmd
-      - phd-thesis.qmd
+      - text: "CAD"
+        url: https://soerendamsbo.github.io/cad/
+      - text: "PhD"
+        file: phd-thesis.qmd
       - media.qmd
       - cv.qmd
       # - blog.qmd
