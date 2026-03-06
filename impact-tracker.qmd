@@ -4,6 +4,7 @@ format: html
 execute: 
     echo: false
     cache: false
+    warnings: false
 ---
 
 This application tracks the scientific impact of leading scholars in political science. Data is retrieved from Google Scholar and updated `r lubridate::today()`.
