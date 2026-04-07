@@ -7,18 +7,18 @@ website:
   favicon: media/soren1.png
   search: false
   page-footer: | 
-    This website is powered by [![Quarto](https://quarto.org/quarto.png){height=15}](https://quarto.org/) and <a alt="GitHub Pages" href="https://pages.github.com" style="text-decoration: none">{{< fa brands github >}} GitHub Pages</a>. {{< fa camera >}} by Freja Wille.
+    This website is powered by [![Quarto](https://quarto.org/quarto.png){height=15}](https://quarto.org/) and <a alt="GitHub Pages" href="https://pages.github.com" style="text-decoration: none">{{< fa brands github >}} GitHub Pages</a> with {{< fa camera >}} by Freja Wille.
   navbar:
     right:
       - text: "Home"
         file: index.qmd
       - research.qmd
-      - text: "CAD"
-        url: https://soerendamsbo.github.io/cad/
-      - text: "PhD"
-        file: phd-thesis.qmd
-      - media.qmd
       - cv.qmd
+      - text: "PhD"
+        file: phd.qmd
+      - media.qmd
+      - text: "CAD Project"
+        url: https://soerendamsbo.github.io/cad/
       # - blog.qmd
       #- icon: twitter
       #  href: https://twitter.com/soerendamsbo

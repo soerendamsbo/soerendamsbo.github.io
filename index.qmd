@@ -7,7 +7,7 @@ about:
     - icon: envelope
       text: Email
       href: mailto:sdas@ifs.ku.dk
-    - text: <img src="media/google-scholar.png" height="15"> Google Scholar
+    - text: <img src="https://www.freelogovectors.net/wp-content/uploads/2021/08/google-scholar-logo-freelogovectors.net_.png" height="15"> Google Scholar
       href: https://scholar.google.com/citations?user=TeuKGQ0AAAAJ&hl=en&oi=sra
     - text: <img src="media/ku_segl.png" height="15">  UCPH profile
       href: https://researchprofiles.ku.dk/en/persons/41d49521-ceef-4843-867c-43e6816bbf20
@@ -18,8 +18,7 @@ about:
     #   href: https://github.com/soerendamsbo
     - text: <img src="https://orcid.org/favicon.ico" height="15"> ORCID
       href: https://orcid.org/0000-0002-9227-090X
-    - icon: linkedin
-      text: LinkedIn
+    - text: <img src="https://logosmarken.com/wp-content/uploads/2020/04/Linkedin-Emblem.png" height="15"> LinkedIn
       href: https://www.linkedin.com/in/s%C3%B8ren-damsbo-svendsen-a63051170/
 ---
 
