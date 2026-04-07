@@ -2,6 +2,10 @@
 title: Media
 ---
 
+### {{< fa podcast >}} __Valget cementerer en ny klimapolitisk virkelighed__
+
+*Podcast, Aftryk, Altinget, 27-03-2026* [_[link to episode](https://www.altinget.dk/artikel/valget-cementerer-en-ny-klimapolitisk-virkelighed)_]
+
 ### {{< fa newspaper >}} __200.000 danskere dukkede op til Klimahandledag. Så kan det passe, at danskerne er blevet klimatrætte?__
 
 *Interview, Information, 24-04-2025* [_[link to article](https://www.information.dk/indland/2025/04/200000-danskere-dukkede-klimahandledag-saa-kan-passe-danskerne-blevet-klimatraette)_]
@@ -69,23 +73,6 @@ title: Media
 ### {{< fa newspaper >}} __Forsker: Når vejret er varmt, er vi alle klimatosser__
 
 *Op-ed, Altinget, 26-10-2020* [_[link to article](https://www.altinget.dk/energi/artikel/forsker-naar-vejret-er-varmt-er-vi-alle-klimatosser)_]
-
-<!-- *** -->
-
-<!-- # Tweets -->
-
-<!-- ::: {layout-ncol=2} -->
-
-<!-- [![](media/tweets/1.png)](https://twitter.com/soerendamsbo/status/1610217200463351809) -->
-
-<!-- [![](media/tweets/2.png)](https://twitter.com/soerendamsbo/status/1586043056507080704) -->
-
-<!-- [![](media/tweets/3.png)](https://twitter.com/soerendamsbo/status/1577899264323239937) -->
-
-<!-- [![](media/tweets/4.png)](https://twitter.com/soerendamsbo/status/1553023973839044609) -->
-
-<!-- ::: -->
-
 
 
 

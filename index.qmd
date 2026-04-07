@@ -25,9 +25,9 @@ about:
 
 Hi there! I am a postdoctoral researcher at the [Department of Political Science, University of Copenhagen](https://politicalscience.ku.dk/), who is interested in political behavior, voters and elections, public opinion, and representation, especially from a climate perspective. 
 
-I am working on the new research project, **Climate Adaptation of Democracy (CAD)**, led by Professor Kasper M. Hansen and funded by the Independent Research Fund Denmark. The project investigates how climate change threatens core democratic institutions, and what we can do about that. Read more about the project on the [CAD site](https://soerendamsbo.github.io/cad).
+I am working on a new research project, **Climate Adaptation of Democracy (CAD)**, led by Professor Kasper M. Hansen and funded by the Independent Research Fund Denmark. The project investigates how climate change threatens core democratic institutions, and what we can do about that. Read more about the project on the [CAD](https://soerendamsbo.github.io/cad) site.
 
-I defended my PhD dissertation, *Political Weather: How experiencing climate change shapes our political lives*, in January 2024. Find the thesis [here](https://soerendamsbo.github.io/phd-thesis.html). I've since worked as a postdoc on the Danish Turnout Project with Kasper M. Hansen and on Democratic Implications of Political Harassment and Sexism (DIPAS) with Karina Kosiara-Pedersen. My research has been published in journals such as *Political Behavior*, *Electoral Studies*, *Public Opinion Quarterly*, and *West European Politics*. Find out more about my research [here](https://soerendamsbo.github.io/research.html).
+I defended my PhD dissertation, *Political Weather: How experiencing climate change shapes our political lives*, in January 2024. Find the thesis [here](https://soerendamsbo.github.io/phd-thesis.html). I've since worked as a postdoc on the Danish Turnout Project with Kasper M. Hansen and on Democratic Implications of Political Harassment and Sexism (DIPAS) with Karina Kosiara-Pedersen. My research has been published in journals such as *Political Behavior*, *Electoral Studies*, *Public Opinion Quarterly*, and *West European Politics*. Read more about my research [here](https://soerendamsbo.github.io/research.html).
 
 {{< fa person >}} Søren Damsbo-Svendsen  
 {{< fa map-marker >}} Copenhagen, Denmark  
