@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.36">
+<meta name="generator" content="quarto-1.9.37">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -36,7 +36,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap-ff5826a0115f2a2e251bdc53e4c31eee.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
@@ -58,6 +58,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -86,11 +115,11 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Research</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="https://soerendamsbo.github.io/cad/"> 
-<span class="menu-text">CAD</span></a>
+    <a class="nav-link" href="./cv.html"> 
+<span class="menu-text">CV</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./phd-thesis.html"> 
+    <a class="nav-link" href="./phd.html"> 
 <span class="menu-text">PhD</span></a>
   </li>  
   <li class="nav-item">
@@ -98,8 +127,8 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Media</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./cv.html"> 
-<span class="menu-text">CV</span></a>
+    <a class="nav-link" href="https://soerendamsbo.github.io/cad/"> 
+<span class="menu-text">CAD Project</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -165,30 +194,30 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>This application tracks the scientific impact of leading scholars in political science. Data is retrieved from Google Scholar and updated 2026-04-07.</p>
+<p>This application tracks the scientific impact of leading scholars in political science. Data is retrieved from Google Scholar and updated 2026-04-14.</p>
 <div class="cell">
 <div class="cell-output-display">
 <table class="caption-top table table-sm table-striped small">
 <thead>
 <tr class="header">
 <th style="text-align: left;" data-quarto-table-cell-role="th">Impact Metric</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">Søren Damsbo-Svendsen</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">Frederik K. Kjøller</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">Christoffer H. Dausgaard</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th"><a href="https://scholar.google.com/citations?user=TeuKGQ0AAAAJ&amp;hl=en&amp;oi=sra" target="_blank" title="Link to Google Scholar profile">Søren Damsbo-Svendsen</a></th>
+<th style="text-align: right;" data-quarto-table-cell-role="th"><a href="https://scholar.google.com/citations?user=2jFLHrgAAAAJ&amp;hl=da" target="_blank" title="Link to Google Scholar profile">Frederik K. Kjøller</a></th>
+<th style="text-align: right;" data-quarto-table-cell-role="th"><a href="https://scholar.google.com/citations?user=cgRByH8AAAAJ&amp;hl=da" target="_blank" title="Link to Google Scholar profile">Christoffer H. Dausgaard</a></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
+<td style="text-align: left;">Total Citations</td>
+<td style="text-align: right;">64</td>
+<td style="text-align: right;">56</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr class="even">
 <td style="text-align: left;">No. Articles</td>
 <td style="text-align: right;">9</td>
 <td style="text-align: right;">6</td>
 <td style="text-align: right;">9</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Total Citations</td>
-<td style="text-align: right;">63</td>
-<td style="text-align: right;">56</td>
-<td style="text-align: right;">2</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">h-index</td>
@@ -227,35 +256,21 @@ ul.task-list li input[type="checkbox"] {
 <p>Note that we recommend relying primarily on Effective Citations Index™️, which provides the most accurate picture of a researcher’s impact, integrity, and overall character and is highly superior to existing metrics.</p>
 <section id="methodology" class="level2">
 <h2 class="anchored" data-anchor-id="methodology">Methodology</h2>
-<p>Out-dated impact metrics such as Total Citations can be wildly misleading (Damsbo-Svendsen 2026), which has led to the invention of novel, much more accurate measures:</p>
+<p>Out-dated impact metrics such as <em>Total Citations</em> can be wildly misleading (Damsbo-Svendsen 2026), which has led to the invention of novel, much more accurate measures:</p>
 <ul>
-<li>The <strong>Effective Citations Index™️</strong> (Damsbo-Svendsen 2026) deflates artificially high raw citations numbers for co-authored publications by the number of co-authors, yielding the effective <em>personal</em> number of citations.</li>
-<li>The <strong>Pivotal Contributor Index™️</strong> (Damsbo-Svendsen 2026) highlights significant and pivotal contributions to science. It is calculated as the share of publication, where an author is lead-author.</li>
-<li>The <strong>Pioneer Index™️</strong> (Damsbo-Svendsen 2026) is a method for identifying field-leading scholarly efforts. It is calculated as the share of publications, which an author has created independently and <em>cutting-edgedly</em> based on their own brilliant ideas, without disturbance from co-authors.</li>
-</ul>
-</section>
-<section id="google-scholar-profile-links" class="level2">
-<h2 class="anchored" data-anchor-id="google-scholar-profile-links">Google Scholar profile links</h2>
-<ul>
-<li><a href="https://scholar.google.com/citations?user=TeuKGQ0AAAAJ&amp;hl=en&amp;oi=sra">Søren Damsbo-Svendsen</a></li>
-<li><a href="https://scholar.google.com/citations?user=2jFLHrgAAAAJ&amp;hl=da">Frederik Klaaborg Kjøller</a></li>
-<li><a href="https://scholar.google.com/citations?user=cgRByH8AAAAJ&amp;hl=da">Christoffer Hentzer Dausgaard</a></li>
+<li><p>The <strong>Effective Citations Index™️</strong> (Damsbo-Svendsen 2026) deflates artificially high raw citations numbers for co-authored publications by the number of co-authors, yielding the effective <em>personal</em> number of citations: <span class="math display">\[\text{ECI} = \sum_{i=1}^{N} \frac{c_i}{a_i}\]</span> where <span class="math inline">\(c_i\)</span> is the citation count and <span class="math inline">\(a_i\)</span> the number of authors for publication <span class="math inline">\(i\)</span>.</p></li>
+<li><p>The <strong>Pivotal Contributor Index™️</strong> (Damsbo-Svendsen 2026) highlights significant and pivotal contributions to science. It is calculated as the share of publications where an author is lead-author: <span class="math display">\[\text{PCI} = \frac{1}{N}\sum_{i=1}^{N} \mathbf{1}[\text{rank}_i = 1] \times 100\]</span> where <span class="math inline">\(\text{rank}_i = 1\)</span> indicates that the author appears first on publication <span class="math inline">\(i\)</span>.</p></li>
+<li><p>The <strong>Pioneer Index™️</strong> (Damsbo-Svendsen 2026) is a method for identifying field-leading scholarly efforts. It is calculated as the share of publications which an author has created independently and <em>cutting-edgedly</em> based on their own brilliant ideas, without disturbance from co-authors: <span class="math display">\[\text{PI} = \frac{1}{N}\sum_{i=1}^{N} \mathbf{1}[a_i = 1] \times 100\]</span> where <span class="math inline">\(\mathbf{1}[a_i = 1]\)</span> indicates that publication <span class="math inline">\(i\)</span> has a single author.</p></li>
 </ul>
 </section>
 <section id="references" class="level2">
 <h2 class="anchored" data-anchor-id="references">References</h2>
-<p>Damsbo-Svendsen, S. (2026). Accurate Scientific Impact and Citations Tracker. Personal website of Søren Damsbo-Svendsen. https://soerendamsbo.github.io/impact-tracker.html<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<p>Damsbo-Svendsen, S. (2026). Accurate Scientific Impact and Citations Tracker. Personal website of Søren Damsbo-Svendsen. https://soerendamsbo.github.io/impact-tracker.html</p>
 
 
 </section>
 
-
-<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
-
-<ol>
-<li id="fn1"><p>Beware that references from within this site are not included in the impact estimates.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section></div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -663,7 +678,7 @@ ul.task-list li input[type="checkbox"] {
       &nbsp;
     </div>   
     <div class="nav-footer-center">
-<p>This website is powered by <a href="https://quarto.org/"><img src="https://quarto.org/quarto.png" height="15" alt="Quarto"></a> and <a alt="GitHub Pages" href="https://pages.github.com" style="text-decoration: none"><i class="fa-brands fa-github" aria-label="github"></i> GitHub Pages</a>. <i class="fa-solid fa-camera" aria-label="camera"></i> by Freja Wille.</p>
+<p>This website is powered by <a href="https://quarto.org/"><img src="https://quarto.org/quarto.png" height="15" alt="Quarto"></a> and <a alt="GitHub Pages" href="https://pages.github.com" style="text-decoration: none"><i class="fa-brands fa-github" aria-label="github"></i> GitHub Pages</a> with <i class="fa-solid fa-camera" aria-label="camera"></i> by Freja Wille.</p>
 </div>
     <div class="nav-footer-right">
       &nbsp;
