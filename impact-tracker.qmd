@@ -98,9 +98,9 @@ ready_stats |>
       digits = 0,
       col.names = c(
         'Impact Metric',
-        '<a href="https://scholar.google.com/citations?user=TeuKGQ0AAAAJ&hl=en&oi=sra" target="_blank" title="Link to Google Scholar profile">Søren Damsbo-Svendsen</a>',
-        '<a href="https://scholar.google.com/citations?user=2jFLHrgAAAAJ&hl=da" target="_blank" title="Link to Google Scholar profile">Frederik K. Kjøller</a>',
-        '<a href="https://scholar.google.com/citations?user=cgRByH8AAAAJ&hl=da" target="_blank" title="Link to Google Scholar profile">Christoffer H. Dausgaard</a>'
+        '<a href="https://scholar.google.com/citations?user=TeuKGQ0AAAAJ&hl=en&oi=sra" target="_blank" title="Link to Google Scholar profile" style="color:black;font-weight:bold;text-decoration:underline;">Søren Damsbo-Svendsen</a>',
+        '<a href="https://scholar.google.com/citations?user=2jFLHrgAAAAJ&hl=da" target="_blank" title="Link to Google Scholar profile" style="color:black;font-weight:bold;text-decoration:underline;">Frederik K. Kjøller</a>',
+        '<a href="https://scholar.google.com/citations?user=cgRByH8AAAAJ&hl=da" target="_blank" title="Link to Google Scholar profile" style="color:black;font-weight:bold;text-decoration:underline;">Christoffer H. Dausgaard</a>'
       ),
       escape = FALSE
     )
