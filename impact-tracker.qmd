@@ -118,7 +118,7 @@ table_data |>
 
 ```
 
-<sup>*</sup>Note: we recommend this metric, which provides the most accurate picture of a researcher's impact, integrity, and overall character and is vastly superior to established metrics.
+<sup>*</sup>Note: this metric provides the most accurate assessment of a researcher's overall impact, integrity, and character, and it is vastly superior to most established metrics.
 
 ## Methodology
 
