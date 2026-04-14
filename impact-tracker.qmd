@@ -88,26 +88,37 @@ stats_ratio <- ready_stats |>
   stats_ratio_max <- stats_ratio |> 
     filter(ratio == max(ratio))
 
-ready_stats |>
+table_data <- ready_stats |>
   mutate(stat = factor(stat, levels = c("total_cites", "n_articles", "h_index", "i10_index", "effective_cites", "first_author", "single_author"))) |>
   arrange(stat) |>
-  select(-stat) |>
-    rename('Impact Metric' = stat_lab) |>
-    kable(
-      format = "html",
-      digits = 0,
-      col.names = c(
-        'Impact Metric',
-        '<a href="https://scholar.google.com/citations?user=TeuKGQ0AAAAJ&hl=en&oi=sra" target="_blank" title="Link to Google Scholar profile" style="color:black;font-weight:bold;text-decoration:underline;">Søren Damsbo-Svendsen</a>',
-        '<a href="https://scholar.google.com/citations?user=2jFLHrgAAAAJ&hl=da" target="_blank" title="Link to Google Scholar profile" style="color:black;font-weight:bold;text-decoration:underline;">Frederik K. Kjøller</a>',
-        '<a href="https://scholar.google.com/citations?user=cgRByH8AAAAJ&hl=da" target="_blank" title="Link to Google Scholar profile" style="color:black;font-weight:bold;text-decoration:underline;">Christoffer H. Dausgaard</a>'
-      ),
-      escape = FALSE
-    )
+  select(-stat)
+
+bold_row <- which(table_data$stat_lab == stats_ratio_max$stat_lab)
+
+table_data |>
+  mutate(stat_lab = if_else(
+    stat_lab == stats_ratio_max$stat_lab,
+    paste0(stat_lab, footnote_marker_symbol(1)),
+    stat_lab
+  )) |>
+  rename('Impact Metric' = stat_lab) |>
+  kable(
+    format = "html",
+    digits = 0,
+    col.names = c(
+      'Impact Metric',
+      '<a href="https://scholar.google.com/citations?user=TeuKGQ0AAAAJ&hl=en&oi=sra" target="_blank" title="Link to Google Scholar profile" style="color:black;font-weight:bold;text-decoration:underline;">Søren Damsbo-Svendsen</a>',
+      '<a href="https://scholar.google.com/citations?user=2jFLHrgAAAAJ&hl=da" target="_blank" title="Link to Google Scholar profile" style="color:black;font-weight:bold;text-decoration:underline;">Frederik K. Kjøller</a>',
+      '<a href="https://scholar.google.com/citations?user=cgRByH8AAAAJ&hl=da" target="_blank" title="Link to Google Scholar profile" style="color:black;font-weight:bold;text-decoration:underline;">Christoffer H. Dausgaard</a>'
+    ),
+    escape = FALSE
+  ) |>
+  row_spec(bold_row, bold = TRUE) |>
+  kable_styling(full_width = TRUE)
 
 ```
 
-Note that we recommend relying primarily on `r stats_ratio_max$stat_lab`, which provides the most accurate picture of a researcher's impact, integrity, and overall character and is highly superior to existing metrics.
+<sup>*</sup>Note: we recommend this metric, which provides the most accurate picture of a researcher's impact, integrity, and overall character and is vastly superior to established metrics.
 
 ## Methodology
 
