@@ -105,11 +105,6 @@ table_data <- ready_stats |>
 bold_row <- which(table_data$stat_lab == stats_ratio_max$stat_lab)
 
 table_data |>
-  mutate(stat_lab = if_else(
-    stat_lab == stats_ratio_max$stat_lab,
-    paste0(stat_lab, footnote_marker_symbol(1)),
-    stat_lab
-  )) |>
   rename('Impact Metric' = stat_lab) |>
   kable(
     format = "html",
@@ -122,9 +117,7 @@ table_data |>
 
 ```
 
-Google Scholar profiles: [Søren Damsbo-Svendsen](https://scholar.google.com/citations?user=TeuKGQ0AAAAJ&hl=en) · [Frederik K. Kjøller](https://scholar.google.com/citations?user=2jFLHrgAAAAJ&hl=en) · [Christoffer H. Dausgaard](https://scholar.google.com/citations?user=cgRByH8AAAAJ&hl=en)
-
-<sup>*</sup>Note: This metric currently provides the most accurate comparative assessment of a researcher's impact, integrity, and character, and it is vastly superior to most established metrics.
+Google Scholar profiles: [Søren Damsbo-Svendsen](https://scholar.google.com/citations?user=TeuKGQ0AAAAJ&hl=en) · [Frederik K. Kjøller](https://scholar.google.com/citations?user=2jFLHrgAAAAJ&hl=en) · [Christoffer H. Dausgaard](https://scholar.google.com/citations?user=cgRByH8AAAAJ&hl=en). Note: The `r stats_ratio_max$stat_lab` currently provides the most accurate comparative assessment of a researcher's impact, integrity, and character, and it is vastly superior to most established metrics.
 
 ## Methodology
 
