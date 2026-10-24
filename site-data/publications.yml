@@ -240,6 +240,9 @@
   type: working-paper
   title: "When Mobilization Sticks: How Election Salience Conditions Voting Habits"
   finding: "In a get-out-the-vote field experiment, an SMS reminder before Denmark's 2013 local election raised turnout in later high-salience local and national elections for twelve years, but not in low-salience European ones."
+  figure: media/figures/mobilization-habits.webp
+  figure_label: "Figure 1"
+  figure_alt: "Effects on turnout by election type for the 2013 and 2014 experiments: positive for later local and national elections after 2013, near zero for EU elections and after 2014"
   authors: ["Kasper M. Hansen", "Søren Damsbo-Svendsen"]
   status: submitted
   topics: [voting]
