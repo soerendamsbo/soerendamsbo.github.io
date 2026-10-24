@@ -147,4 +147,4 @@ $$\text{PI} = \frac{1}{N}\sum_{i=1}^{N} \mathbf{1}[a_i = 1] \times 100$$
 
 ## References
 
-Damsbo-Svendsen, S. (`r lubridate::year(lubridate::today())`). Accurate Scientific Impact and Citations Tracker. Personal website of Søren Damsbo-Svendsen. https://soerendamsbo.github.io/impact-tracker.html
+Damsbo-Svendsen, S. (`r lubridate::year(lubridate::today())`). High-Accuracy Scientific Impact and Citations Tracker. Personal website of Søren Damsbo-Svendsen. https://soerendamsbo.github.io/impact-tracker.html

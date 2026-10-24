@@ -196,6 +196,7 @@
   type: talk
   title: "The weather and the voters’ climate opinions"
   venue: The Climate Festival, Middelfart
+  no_slides: true   # talk format had no slides (not just unpublished)
   audience: public
 
 - date: 2025-05-01

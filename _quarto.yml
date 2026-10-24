@@ -1,6 +1,9 @@
 project:
   type: website
   output-dir: .
+  render:
+    - "*.qmd"
+    - "!meta/"   # private papers and CV data, never part of the site
 
 website:
   title: "Søren Damsbo-Svendsen"
@@ -29,10 +32,11 @@ website:
     contents: 
       - " "
     footer: | 
-      | {{< fa person >}} Søren Damsbo-Svendsen
-      | {{< fa briefcase >}} Postdoc: political behavior, elections and turnout, public opinion, representation, climate politics
-      | {{< fa map-marker >}} Copenhagen
-      | {{< fa envelope >}} sdas@ifs.ku.dk
+      Søren Damsbo-Svendsen
+
+      Postdoc: political behavior, elections and turnout, public opinion, representation, climate politics
+
+      sdas@ifs.ku.dk
 
 format:
   html:

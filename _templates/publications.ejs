@@ -29,10 +29,12 @@ const authorsHtml = (xs) => joinNames(xs.map((a) => a === me ? "<span class=\"pu
     <% } %>
     </p>
     <div class="pub-actions">
+      <% if (item.finding) { %><button type="button" class="pub-btn pub-toggle" aria-expanded="false" aria-controls="find-<%= item.id %>">Key finding</button><% } %>
       <% if (item.abstract) { %><button type="button" class="pub-btn pub-toggle" aria-expanded="false" aria-controls="abs-<%= item.id %>">Abstract</button><% } %>
       <% if (href) { %><a class="pub-btn" href="<%= href %>"><%= linkLabel %> &#8599;</a><% } %>
       <% if (item.open_access) { %><span class="pub-oa"><i class="fa-solid fa-lock-open" aria-hidden="true"></i> Open access</span><% } %>
     </div>
+    <% if (item.finding) { %><p class="pub-abstract pub-finding" id="find-<%= item.id %>" hidden><%= item.finding %></p><% } %>
     <% if (item.abstract) { %><p class="pub-abstract" id="abs-<%= item.id %>" hidden><%= item.abstract %></p><% } %>
   </div>
 </article>

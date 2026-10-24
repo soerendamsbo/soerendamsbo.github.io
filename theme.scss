@@ -385,6 +385,7 @@ $rule-color: rgba($grayn, .12);
   background: rgba($grayn, .04);
   font-size: .95rem;
 }
+.pub-finding { font-size: 1rem; font-weight: 500; }
 
 @media (max-width: 575.98px) {
   .pub { grid-template-columns: 1fr; gap: .2rem; }
@@ -514,3 +515,17 @@ $rule-color: rgba($grayn, .12);
 @media (max-width: 575.98px) {
   .phd-hero { grid-template-columns: 1fr; img { max-width: 170px; } }
 }
+
+// Sidebar contact block (_quarto.yml sidebar footer): one paragraph per entry,
+// with a little air between entries
+.sidebar-footer-item p { margin: 0 0 .9rem; line-height: 1.5; }
+
+// Danish abstract toggle at the bottom of phd.qmd
+.phd-abstract-da {
+  margin-top: 1.5rem;
+  summary { cursor: pointer; font-size: 1.25rem; font-weight: 600; color: $link-color; }
+  &[open] summary { margin-bottom: .75rem; }
+}
+
+// Navbar: the current page's link in pure white (hover keeps the default tint)
+.navbar .navbar-nav .nav-link.active { color: #fff; }

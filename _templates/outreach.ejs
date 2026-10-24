@@ -25,7 +25,7 @@ let lastYear = null;
   <span class="out-icon out-icon-<%= item.type %>"><i class="fa-solid fa-<%= icons[item.type] || "newspaper" %>" aria-hidden="true"></i></span>
   <div class="out-body">
     <p class="out-title"><% if (item.url) { %><a href="<%= item.url %>"><%= item.title %></a><% } else { %><%= item.title %><% } %><% if (item.language === "en") { %> <span class="out-lang">EN</span><% } %></p>
-    <p class="out-meta"><span class="out-form"><%= form %></span> &middot; <%= source %> &middot; <%= dayMonth %><% if (item.paywalled) { %> &middot; <span class="out-paywall"><i class="fa-solid fa-lock" aria-hidden="true"></i> paywall</span><% } %><% if (item.slides) { %> &middot; <a class="out-related" href="<%= item.slides %>">slides &#8599;</a><% } %><% for (const r of (item.related || [])) { %> &middot; <a class="out-related" href="research.html#pub-<%= r %>">the research &rarr;</a><% } %></p>
+    <p class="out-meta"><span class="out-form"><%= form %></span> &middot; <%= source %> &middot; <%= dayMonth %><% if (item.paywalled) { %> &middot; <span class="out-paywall"><i class="fa-solid fa-lock" aria-hidden="true"></i> paywall</span><% } %><% if (item.slides) { %> &middot; <a class="out-related" href="<%= item.slides %>">slides &#8599;</a><% } %><% if (item.no_slides) { %> &middot; <span class="out-noslides">no slides</span><% } %><% for (const r of (item.related || [])) { %> &middot; <a class="out-related" href="research.html#pub-<%= r %>">the research &rarr;</a><% } %></p>
   </div>
 </div>
 <% } %>
