@@ -1,25 +1,36 @@
-# Publications: single source of truth for research.qmd (and later the CV).
-# Display order within each type = order in this file (newest first).
+# Publications: single source of truth for research.qmd, phd.qmd and the CV.
+# This file is public (served at soerendamsbo.github.io/site-data/publications.yml);
+# the CV repo reads it at build time. Display order within each type = order in
+# this file (newest first).
 #
 # Fields
-#   id          unique slug; referenced from outreach.yml `related`
+#   id          unique, stable slug. Never rename: outreach.yml `related` and the
+#               CV's selection files refer to it
 #   type        article | chapter | dissertation | working-paper
-#   title       sentence case
+#   title       English: Title Case (published titles keep the journal's spelling);
+#               Danish: sentence case
 #   authors     full ordered author list, including me
-#   venue       journal (articles) or target journal (working papers under review)
+#   venue       journal (articles) or target journal (working papers)
 #   year        publication year
 #   volume, issue, pages   citation details (pages = page range or article number)
-#   status      published | rr | under-review | submitted | in-progress
-#               CV includes published, rr, under-review and submitted; in-progress is website only
+#   status      published | accepted | rr | under-review | submitted | in-progress
+#               CV includes everything except in-progress (website only)
 #   doi         DOI without https://doi.org/ prefix
 #   url         only when there is no DOI (or a better landing page)
 #   open_access true when the published version is freely available
-#   abstract    plain text
+#   finding     one-sentence key finding (research page "Key finding" toggle)
+#   figure      path to a web figure (media/figures/<id>.webp); shown only for
+#               published work and status accepted
+#   figure_label, figure_alt   caption label and screen-reader description
+#   abstract    plain text (working papers: R&R and later only)
 #   topics      climate | voting | representation (filters on the research page)
-#   presented   optional list of conferences (working papers)
-#   attached    CV only: full text attached in list-of-publications (asterisk)
+#   presented   optional list of conferences (not shown on the website; the CV
+#               keeps its own conference list)
+#   attached    CV only: full text attached in list-of-publications (asterisk);
+#               to move to the CV repo's selection file
 #   chapters:   book, editors, publisher
 #   dissertation: institution
+#   PhD articles: in_phd, phd_article (1-4), phd_label (phd.qmd cards)
 
 # ---- Journal articles --------------------------------------------------------
 

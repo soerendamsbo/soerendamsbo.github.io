@@ -1,8 +1,11 @@
 # Outreach: media appearances, op-eds, podcasts and talks. Single source of truth for
-# media.qmd (to be renamed Outreach) and later the CV.
+# media.qmd (the Outreach page) and the CV. This file is public (served at
+# soerendamsbo.github.io/site-data/outreach.yml); the CV repo reads it at build time.
 # Sorted by date on the page, so new entries can go anywhere (top is easiest).
 #
 # Fields
+#   id         unique, stable slug: YYYY-MM-DD-<outlet or venue>. Never rename:
+#              the CV's selection file refers to it
 #   date       YYYY-MM-DD
 #   type       interview | op-ed | podcast | radio | reference | talk
 #   label      optional display override for the type (e.g. "Live radio interview")
@@ -14,14 +17,18 @@
 #   paywalled  true if behind a paywall
 #   language   da | en
 #   related    optional list of publication ids from publications.yml
-#   cv         true to include on the CV (the CV shows a curated subset)
+#   cv         true to include on the CV (curated subset); to move to the CV repo's
+#              selection file, then remove here
 #   talks:
 #   venue      event / host (instead of outlet)
 #   slides     optional link to slides
-#   audience   public | policy | practitioner | academic (academic talks are CV-only)
+#   audience   public | policy | practitioner | academic (academic talks are hidden on
+#              the Outreach page; all talks live here, conference papers live in the CV)
+#   no_slides  true when the talk format had no slides
 #   month_only true when only the month is known (date then uses day 01)
 
-- date: 2026-09-22
+- id: 2026-09-22-altinget
+  date: 2026-09-22
   type: interview
   title: "Nawa er i en olie-klemme. Nu viser måling, hvor danskerne står"
   outlet: Altinget
@@ -29,7 +36,8 @@
   paywalled: true
   language: da
 
-- date: 2026-03-27
+- id: 2026-03-27-altinget
+  date: 2026-03-27
   type: podcast
   title: "Valget cementerer en ny klimapolitisk virkelighed"
   outlet: Altinget
@@ -39,7 +47,8 @@
   language: da
   cv: true
 
-- date: 2025-04-24
+- id: 2025-04-24-information
+  date: 2025-04-24
   type: interview
   title: "200.000 danskere dukkede op til Klimahandledag. Så kan det passe, at danskerne er blevet klimatrætte?"
   outlet: Information
@@ -48,7 +57,8 @@
   language: da
   cv: true
 
-- date: 2025-04-02
+- id: 2025-04-02-altinget
+  date: 2025-04-02
   type: interview
   title: "Trump sætter spor i ny meningsmåling: Vælgerne går nu mere op i forsvar end klima"
   outlet: Altinget
@@ -56,7 +66,8 @@
   paywalled: false
   language: da
 
-- date: 2024-11-26
+- id: 2024-11-26-videnskab
+  date: 2024-11-26
   type: interview
   title: "Klimachok: Sådan flyttede stormen Bodil danske vælgere"
   outlet: Videnskab.dk
@@ -66,7 +77,8 @@
   related: [flooding-2025]
   cv: true
 
-- date: 2024-10-26
+- id: 2024-10-26-new-york
+  date: 2024-10-26
   type: reference
   title: "In a Tight Election, Can the Weather Cast a Deciding Vote?"
   outlet: New York Times
@@ -75,7 +87,8 @@
   language: en
   related: [rain-turnout-2023]
 
-- date: 2024-06-06
+- id: 2024-06-06-altinget
+  date: 2024-06-06
   type: interview
   title: "Måling: Ét emne topper vælgernes dagsorden ved EU-valget"
   outlet: Altinget
@@ -83,7 +96,8 @@
   paywalled: false
   language: da
 
-- date: 2024-02-22
+- id: 2024-02-22-altinget
+  date: 2024-02-22
   type: interview
   title: "Tabuet er brudt. Atomkraft vinder frem hos vælgerne"
   outlet: Altinget
@@ -91,7 +105,8 @@
   paywalled: false
   language: da
 
-- date: 2023-02-21
+- id: 2023-02-21-jyllands-posten
+  date: 2023-02-21
   type: interview
   title: "Et gråt spørgsmål spøger ofte ved valg, og nu har forskere et svar"
   outlet: Jyllands-Posten
@@ -100,7 +115,8 @@
   language: da
   related: [rain-turnout-2023]
 
-- date: 2023-02-07
+- id: 2023-02-07-videnskab
+  date: 2023-02-07
   type: interview
   title: "Regn får unge til at blive væk fra stemmeboksen"
   outlet: Videnskab.dk
@@ -110,7 +126,8 @@
   related: [rain-turnout-2023]
   cv: true
 
-- date: 2022-11-09
+- id: 2022-11-09-tv2
+  date: 2022-11-09
   type: interview
   title: "Skal vi juble eller græde, når usædvanlig varme rammer?"
   outlet: TV2
@@ -118,7 +135,8 @@
   paywalled: false
   language: da
 
-- date: 2022-10-13
+- id: 2022-10-13-weekendavisen
+  date: 2022-10-13
   type: interview
   title: "Klima er vigtigt, men…"
   outlet: Weekendavisen
@@ -126,7 +144,8 @@
   paywalled: true
   language: da
 
-- date: 2022-10-12
+- id: 2022-10-12-borsen
+  date: 2022-10-12
   type: op-ed
   title: "Forskere om vælgernes holdning til klima: De fleste er stadig klimatosser – bare ikke lige så meget som ved valget i ’19"
   outlet: Børsen
@@ -136,7 +155,8 @@
   language: da
   cv: true
 
-- date: 2021-10-30
+- id: 2021-10-30-berlingske
+  date: 2021-10-30
   type: interview
   title: "Katastroferne er væltet ind over 2021 – sådan påvirker de os"
   outlet: Berlingske
@@ -144,7 +164,8 @@
   paywalled: true
   language: da
 
-- date: 2021-08-12
+- id: 2021-08-12-zetland
+  date: 2021-08-12
   type: interview
   title: "Ekstremt vejr gør os mere klimabevidste. Og det smitter af på politik"
   outlet: Zetland
@@ -153,7 +174,8 @@
   language: da
   cv: true
 
-- date: 2021-08-09
+- id: 2021-08-09-dr-p1
+  date: 2021-08-09
   type: radio
   label: Live radio interview
   title: "P1 Morgen: Ny IPCC-rapport"
@@ -162,7 +184,8 @@
   language: da
   cv: true
 
-- date: 2020-11-26
+- id: 2020-11-26-videnskab
+  date: 2020-11-26
   type: interview
   title: "Ekstremt vejr får os til at ændre holdning til klimaforandringerne"
   outlet: Videnskab.dk
@@ -170,7 +193,8 @@
   paywalled: false
   language: da
 
-- date: 2020-11-17
+- id: 2020-11-17-information
+  date: 2020-11-17
   type: podcast
   title: "Ekstremt vejr gør os til klimatosser – men det hjælper os ikke med at løse klimakrisen"
   outlet: Information
@@ -180,7 +204,8 @@
   language: da
   cv: true
 
-- date: 2020-10-26
+- id: 2020-10-26-altinget
+  date: 2020-10-26
   type: op-ed
   title: "Forsker: Når vejret er varmt, er vi alle klimatosser"
   outlet: Altinget
@@ -191,7 +216,8 @@
 
 # ---- Talks (non-conference; conference papers stay in the CV) ----------------
 
-- date: 2025-08-01
+- id: 2025-08-01-climate-festival
+  date: 2025-08-01
   month_only: true
   type: talk
   title: "The weather and the voters’ climate opinions"
@@ -199,7 +225,8 @@
   no_slides: true   # talk format had no slides (not just unpublished)
   audience: public
 
-- date: 2025-05-01
+- id: 2025-05-01-public-energy
+  date: 2025-05-01
   month_only: true
   type: talk
   title: "Shifting public support for nuclear power"
@@ -207,7 +234,8 @@
   slides: https://soerendamsbo.github.io/misc-slides/atomkraft.html
   audience: policy
 
-- date: 2024-11-01
+- id: 2024-11-01-delegation-from
+  date: 2024-11-01
   month_only: true
   type: talk
   label: Research presentation
@@ -216,7 +244,8 @@
   slides: https://soerendamsbo.github.io/misc-slides/polycrisis.html
   audience: practitioner
 
-- date: 2024-01-09
+- id: 2024-01-09-university-copenhagen
+  date: 2024-01-09
   type: talk
   label: Public PhD defence
   title: "Political Weather: How experiencing climate change shapes our political lives"
@@ -224,7 +253,8 @@
   slides: https://soerendamsbo.github.io/misc-slides/phd-defense_updated.html # CV linked phd-defense.html
   audience: academic
 
-- date: 2023-01-01
+- id: 2023-01-01-danish-meteorological
+  date: 2023-01-01
   month_only: true
   type: talk
   label: Research presentation
@@ -233,7 +263,8 @@
   slides: https://soerendamsbo.github.io/misc-slides/dmi2023.html
   audience: practitioner
 
-- date: 2022-09-01
+- id: 2022-09-01-utah-state
+  date: 2022-09-01
   month_only: true
   type: talk
   label: Research presentation
@@ -242,7 +273,8 @@
   slides: https://soerendamsbo.github.io/misc-slides/usu-risk.html
   audience: academic
 
-- date: 2022-05-01
+- id: 2022-05-01-university-gothenburg
+  date: 2022-05-01
   month_only: true
   type: talk
   label: Research presentation
