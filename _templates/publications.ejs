@@ -4,7 +4,9 @@
 const me = "Søren Damsbo-Svendsen";
 const joinNames = (xs) => xs.length <= 1 ? (xs[0] || "") : xs.slice(0, -1).join(", ") + " & " + xs[xs.length - 1];
 const linkOf = (item) => item.doi ? "https://doi.org/" + item.doi : item.url;
-const statusLabel = { rr: "R&R", "under-review": "Under review", "in-progress": "Work in progress" };
+const statusLabel = { rr: "R&R", "under-review": "Under review", submitted: "Submitted", "in-progress": "Work in progress" };
+// Working-paper figures stay hidden until (conditional) acceptance
+const showFigure = (item) => item.figure && (item.type !== "working-paper" || item.status === "accepted");
 const authorsHtml = (xs) => joinNames(xs.map((a) => a === me ? "<span class=\"pub-me\">" + a + "</span>" : a));
 %>
 ```{=html}
@@ -34,7 +36,10 @@ const authorsHtml = (xs) => joinNames(xs.map((a) => a === me ? "<span class=\"pu
       <% if (href) { %><a class="pub-btn" href="<%= href %>"><%= linkLabel %> &#8599;</a><% } %>
       <% if (item.open_access) { %><span class="pub-oa"><i class="fa-solid fa-lock-open" aria-hidden="true"></i> Open access</span><% } %>
     </div>
-    <% if (item.finding) { %><p class="pub-abstract pub-finding" id="find-<%= item.id %>" hidden><%= item.finding %></p><% } %>
+    <% if (item.finding) { %><div class="pub-abstract pub-finding" id="find-<%= item.id %>" hidden>
+      <p><%= item.finding %></p>
+      <% if (showFigure(item)) { %><figure class="pub-fig"><img src="<%= item.figure %>" alt="<%- item.figure_alt || "" %>" loading="lazy"><figcaption><%= item.figure_label || "" %> &middot; click to enlarge</figcaption></figure><% } %>
+    </div><% } %>
     <% if (item.abstract) { %><p class="pub-abstract" id="abs-<%= item.id %>" hidden><%= item.abstract %></p><% } %>
   </div>
 </article>

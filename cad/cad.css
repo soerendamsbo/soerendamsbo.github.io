@@ -21,6 +21,14 @@
 }
 
 /* --- Hero banner ---------------------------------------------------------- */
+/* Let the band meet the navbar: drop the empty title block (1rem margin) and
+   the content's 14px top padding that otherwise leave a white strip above it */
+#title-block-header:empty {
+  display: none;
+}
+#quarto-content > main.content {
+  padding-top: 0;
+}
 .cad-hero {
   background: #ebf1fa; /* pale blue */
   border-bottom: 1px solid rgba(27, 42, 74, 0.1);

@@ -9,8 +9,8 @@
 #   venue       journal (articles) or target journal (working papers under review)
 #   year        publication year
 #   volume, issue, pages   citation details (pages = page range or article number)
-#   status      published | rr | under-review | in-progress
-#               CV includes published, rr and under-review; in-progress is website only
+#   status      published | rr | under-review | submitted | in-progress
+#               CV includes published, rr, under-review and submitted; in-progress is website only
 #   doi         DOI without https://doi.org/ prefix
 #   url         only when there is no DOI (or a better landing page)
 #   open_access true when the published version is freely available
@@ -27,6 +27,9 @@
   type: article
   title: "Ineffectiveness of Priming and Contextualizing Personal Weather Experiences: Evidence from a Survey Experiment on Summer Heat"
   finding: "Asking Danes to recall the record-hot summer of 2018 did not raise their support for climate action, and neither did telling them that heat waves are linked to climate change."
+  figure: media/figures/heat-priming-2025.webp
+  figure_label: "Figure 1"
+  figure_alt: "Coefficient plot: effects of recalling the 2018 heat on four climate outcomes, all close to zero"
   authors: ["Søren Damsbo-Svendsen", "Tobias Heide-Jørgensen"]
   venue: Public Opinion Quarterly
   year: 2025
@@ -45,6 +48,9 @@
   type: article
   title: "Pro-climate Voting in Response to Local Flooding"
   finding: "After Denmark's 2013 storm surge, flooded districts voted 2–3 percentage points more for pro-climate parties, and in the hardest-hit districts pro-climate local candidates gained votes too."
+  figure: media/figures/flooding-2025.webp
+  figure_label: "Figure 2"
+  figure_alt: "Line chart, 1998 to 2019: pro-climate party vote share in flooded and control districts, diverging after the 2013 storm surge"
   authors: ["Søren Damsbo-Svendsen"]
   venue: Political Behavior
   year: 2025 # print issue; online first 2024-11-04
@@ -66,6 +72,9 @@
   type: article
   title: "Anxious But Hesitant to Act: The Impact of Concurrent Priming of the Climate Crisis and the War in Ukraine on Public Support"
   finding: "Thinking about climate change and the war in Ukraine at the same time made Danes more worried, especially about climate, but less willing to pay for action, especially on Ukraine."
+  figure: media/figures/polycrisis-2024.webp
+  figure_label: "Figure 2"
+  figure_alt: "Bar and coefficient charts: attitudes and priming effects for climate and Ukraine on willingness to pay, crisis perception and willingness to act"
   authors: ["Jakob Dreyer", "Søren Damsbo-Svendsen"] # order per Crossref
   venue: International Journal of Public Opinion Research
   year: 2024
@@ -84,6 +93,9 @@
   type: article
   title: "When the Election Rains Out and How Bad Weather Excludes Marginal Voters From Turning Out"
   finding: "In Danish local elections, each centimeter of rain on Election Day lowers turnout by about one percentage point on average, and by up to six times as much among young, inexperienced voters."
+  figure: media/figures/rain-turnout-2023.webp
+  figure_label: "Figure 4 (rainfall panel)"
+  figure_alt: "Marginal effect of rainfall on turnout by election cohort, most negative for young voters in their second and third elections"
   authors: ["Søren Damsbo-Svendsen", "Kasper M. Hansen"]
   venue: Electoral Studies
   year: 2023
@@ -104,6 +116,9 @@
   type: article
   title: "Mass Media Influence on the Rapid Rise of Climate Change"
   finding: "In Denmark in 2019, rising climate coverage in the news was followed by more people naming climate the most important problem, and not the other way around."
+  figure: media/figures/media-salience-2022.webp
+  figure_label: "Figure 1"
+  figure_alt: "Time series, January to June 2019: public salience of climate change rising alongside spikes in media coverage"
   authors: ["Søren Damsbo-Svendsen"]
   venue: International Journal of Public Opinion Research
   year: 2022
@@ -125,6 +140,9 @@
   type: article
   title: "How Weather Experiences Strengthen Climate Opinions in Europe"
   finding: "Across 12 European countries, people interviewed in unusually warm weather held slightly stronger climate opinions: about one point on a 100-point scale for a week 5°C warmer than normal."
+  figure: media/figures/local-warming-2021.webp
+  figure_label: "Additional analysis"
+  figure_alt: "Predicted climate opinion index rising slightly with warmer-than-normal weeks, across four models"
   authors: ["Søren Damsbo-Svendsen"]
   venue: West European Politics
   year: 2021
@@ -147,7 +165,10 @@
 - id: issue-ownership-2024
   type: chapter
   title: "Næsten fuld plade på politiske emner: Socialdemokratiet får medvind fra emneejerskab over klima og sundhed"
-  finding: "In 2022, Danish voters saw the Social Democrats as the best party on nearly every major issue, and those who did were markedly more likely to vote for them."
+  finding: "Danish voters see left-wing governments as best on climate, health and the elderly, and right-wing ones on business, defence and tax, but in 2022 these gaps narrowed on most issues."
+  figure: media/figures/issue-ownership-2024.webp
+  figure_label: "Figur 12.3, labels in Danish"
+  figure_alt: "Dot plot: issue-ownership margin between right- and left-wing governments on 15 issues, 2019 and 2022, mostly narrowing in 2022"
   authors: ["Søren Damsbo-Svendsen", "Henrik B. Seeberg"]
   year: 2024
   status: published
@@ -160,7 +181,10 @@
 - id: climate-voters-2024
   type: chapter
   title: "Klima er vigtigt for vælgerne, især i fremtiden"
-  finding: "Despite war and inflation, three in four Danish voters still called climate change the greatest challenge of our time in 2022, but more of them now put their hopes in new technology."
+  finding: "Despite war and inflation, three in four Danish voters still called climate change the greatest challenge of our time in 2022, and a majority (57%) put their hopes in new technology."
+  figure: media/figures/climate-voters-2024.webp
+  figure_label: "Figur 13.2, labels in Danish"
+  figure_alt: "Bar chart: Danish voters' climate attitudes in 2019 and 2022, with 74 percent calling climate change the greatest challenge of our time"
   authors: ["Søren Damsbo-Svendsen", "Johannes Andersen"]
   year: 2024
   status: published
@@ -189,6 +213,10 @@
   type: working-paper
   title: "Raising Awareness of Harassment Against Politicians: Experimental Evidence of Disengagement Among Aspiring Candidates"
   finding: "Stories of harassment against politicians did not put the average citizen off running for office, but made citizens already considering it about four percentage points less willing."
+  abstract: "The risk of harassment comes with the job for political officeholders and candidates, but raising awareness about it can harm the political engagement of citizens and aspiring candidates. Using a preregistered survey experiment in Denmark, replicated in Germany, the UK, and France (n = 8,899), we raise awareness about political harassment by presenting 55 true harassment stories from local politicians. Contrary to existing studies, we find negative conditional effects of around four percentage points on citizens who had expressed consideration of a political career, whereas the average citizen is undeterred from engaging in politics by the threat of harassment. We argue that the distinction between ordinary citizens and aspirants is crucial because personal relevance shapes aspirants' information processing related to costs and benefits of politics. Citizens' attitudinal responses to awareness of harassment are mostly normatively desirable, but the impact on potential candidates has negative implications for recruitment and democratic representation."
+  figure: media/figures/harassment-awareness.webp
+  figure_label: "Figure 3"
+  figure_alt: "Conditional treatment effects on willingness to run for office, turning negative among likely candidates"
   authors: ["Søren Damsbo-Svendsen", "Karina Kosiara-Pedersen"]
   status: rr
   topics: [representation]
@@ -199,6 +227,10 @@
   type: working-paper
   title: "“Young and Naïve”: How Ageism and Sexism Shape Harassment Against Young Candidates and Representatives"
   finding: "Younger Danish politicians report more harassment than older ones, and the gap between women and men is widest among the youngest, especially for sexual harassment."
+  abstract: "Harassment, intimidation, and violence in politics fall disproportionately on women, but whether they also fall on the young, and how gender intersects with age, is rarely examined. Treating age as a key dimension of exposure, this article uses a two-by-two typology of physical and psychological, sexual and nonsexual harassment and combines 23 interviews with young representatives and three elite surveys of Danish candidates and officeholders at the national and local levels (n = 5,395). Younger politicians report more harassment than their older colleagues across all four types of harassment. Both young men and young women are dismissed as inexperienced, but for young women the dismissal is often sexualised, involving comments on their bodies, rape threats, and reproductive harassment. The gender gap is widest among the youngest, especially in sexual harassment, and is absent in nonsexual physical harassment. We argue that ageism and sexism are related mechanisms that police who is entitled to political standing. For young women, their age and gender are mutually reinforcing. By discouraging young people, and young women especially, from entering or remaining in politics, harassment narrows political recruitment precisely where it is already narrowest and inhibits representation."
+  figure: media/figures/young-naive.webp
+  figure_label: "Appendix figure"
+  figure_alt: "Predicted share reporting harassment by age, higher for young women than young men, converging with age"
   authors: ["Karina Kosiara-Pedersen", "Christina Fiig", "Søren Damsbo-Svendsen"] # order per CV
   status: rr
   topics: [representation]
@@ -209,7 +241,7 @@
   title: "When Mobilization Sticks: How Election Salience Conditions Voting Habits"
   finding: "In a get-out-the-vote field experiment, an SMS reminder before Denmark's 2013 local election raised turnout in later high-salience local and national elections for twelve years, but not in low-salience European ones."
   authors: ["Kasper M. Hansen", "Søren Damsbo-Svendsen"]
-  status: under-review
+  status: submitted
   topics: [voting]
   venue: American Political Science Review
   presented: ["EPSA 2025, Madrid"]

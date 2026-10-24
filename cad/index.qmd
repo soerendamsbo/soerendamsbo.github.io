@@ -22,7 +22,7 @@ css: cad.css
 
 **Climate Adaptation of Democracy (CAD)** studies how adverse climate events affect democracy. The project asks: *How do adverse local climate events affect citizens' attitudes towards democracy and the green transition, and what strategies for communication can help create effects that are environmentally and democratically sustainable?*
 
-CAD is based at {{< fa building-columns >}} the Department of Political Science, University of Copenhagen, and funded by the Independent Research Fund Denmark (DFF). It is led by {{< fa person >}} [Professor Kasper M. Hansen](https://kaspermhansen.eu) with {{< fa person >}} [Postdoc Søren Damsbo-Svendsen](https://soerendamsbo.github.io), both at the University of Copenhagen, and {{< fa person >}} [Senior Researcher Morten A. Dahl Larsen](http://research.dmi.dk/staff/all-staff/mla/) from the Danish Meteorological Institute (DMI).
+CAD is based at the Department of Political Science, University of Copenhagen, and funded by the Independent Research Fund Denmark (DFF). It is led by [Professor Kasper M. Hansen](https://kaspermhansen.eu) with [Postdoc Søren Damsbo-Svendsen](https://soerendamsbo.github.io), both at the University of Copenhagen, and [Senior Researcher Morten A. Dahl Larsen](http://research.dmi.dk/staff/all-staff/mla/) from the Danish Meteorological Institute (DMI).
 
 ::: {.cad-status}
 October\ 2026 · **Survey ready to field** · waiting for the next storm surge
@@ -46,7 +46,7 @@ October\ 2026 · **Survey ready to field** · waiting for the next storm surge
 
 ## Waiting for the storm
 
-Twelve times between 2011 and 2023, the Danish authorities officially declared a storm surge: sea water over the coast, and often into people's homes. When the next one comes, our survey can reach residents of the hit coastline **within about four weeks**, while the experience is still fresh, and ask about their views on climate action and on democracy.
+Twelve times between 2011 and 2023, the Danish authorities officially declared a storm surge: sea water over the coast, and often into people's homes. When the next one comes, our survey can reach residents of the hit coastline within about a month, while the experience is still fresh, and ask about their views on climate action and on democracy.
 
 Most of what we know about disasters and public opinion comes from surveys that happened to be in the field, or from asking people long afterwards. We built the study first, and now we wait for the next surge.
 

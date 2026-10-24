@@ -44,7 +44,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-e48aea03665a06ea90207e66ce42c973.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-ca164da6dd6b0ebb1c11f7a04ae40fad.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/quarto-contrib/fontawesome6-6.7.2/all.min.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/fontawesome6-6.7.2/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -72,9 +72,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-id','listing-type','listing-title','listing-finding','listing-authors','listing-venue','listing-year','listing-volume','listing-issue','listing-pages','listing-status','listing-topics','listing-doi','listing-open_access','listing-attached','listing-abstract','listing-in_phd','listing-phd_article','listing-phd_label',{ data: ['index'] },{ data: ['categories'] }],
+      valueNames: ['listing-id','listing-type','listing-title','listing-finding','listing-figure','listing-figure_label','listing-figure_alt','listing-authors','listing-venue','listing-year','listing-volume','listing-issue','listing-pages','listing-status','listing-topics','listing-doi','listing-open_access','listing-attached','listing-abstract','listing-in_phd','listing-phd_article','listing-phd_label',{ data: ['index'] },{ data: ['categories'] }],
       
-      searchColumns: ["listing-id","listing-type","listing-title","listing-finding","listing-authors","listing-venue","listing-year","listing-volume","listing-issue","listing-pages","listing-status","listing-topics","listing-doi","listing-open_access","listing-attached","listing-abstract","listing-in_phd","listing-phd_article","listing-phd_label"],
+      searchColumns: ["listing-id","listing-type","listing-title","listing-finding","listing-figure","listing-figure_label","listing-figure_alt","listing-authors","listing-venue","listing-year","listing-volume","listing-issue","listing-pages","listing-status","listing-topics","listing-doi","listing-open_access","listing-attached","listing-abstract","listing-in_phd","listing-phd_article","listing-phd_label"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -100,9 +100,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-id','listing-type','listing-title','listing-finding','listing-authors','listing-year','listing-status','listing-topics','listing-book','listing-editors','listing-publisher','listing-url',{ data: ['index'] },{ data: ['categories'] }],
+      valueNames: ['listing-id','listing-type','listing-title','listing-finding','listing-figure','listing-figure_label','listing-figure_alt','listing-authors','listing-year','listing-status','listing-topics','listing-book','listing-editors','listing-publisher','listing-url',{ data: ['index'] },{ data: ['categories'] }],
       
-      searchColumns: ["listing-id","listing-type","listing-title","listing-finding","listing-authors","listing-year","listing-status","listing-topics","listing-book","listing-editors","listing-publisher","listing-url"],
+      searchColumns: ["listing-id","listing-type","listing-title","listing-finding","listing-figure","listing-figure_label","listing-figure_alt","listing-authors","listing-year","listing-status","listing-topics","listing-book","listing-editors","listing-publisher","listing-url"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -128,9 +128,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-id','listing-type','listing-title','listing-finding','listing-authors','listing-status','listing-topics','listing-venue','listing-presented',{ data: ['index'] },{ data: ['categories'] }],
+      valueNames: ['listing-id','listing-type','listing-title','listing-finding','listing-abstract','listing-figure','listing-figure_label','listing-figure_alt','listing-authors','listing-status','listing-topics','listing-venue','listing-presented',{ data: ['index'] },{ data: ['categories'] }],
       
-      searchColumns: ["listing-id","listing-type","listing-title","listing-finding","listing-authors","listing-status","listing-topics","listing-venue","listing-presented"],
+      searchColumns: ["listing-id","listing-type","listing-title","listing-finding","listing-abstract","listing-figure","listing-figure_label","listing-figure_alt","listing-authors","listing-status","listing-topics","listing-venue","listing-presented"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -256,7 +256,8 @@ window.Quarto = {
     </div>
 <div class="quarto-sidebar-footer"><div class="sidebar-footer-item">
 <p>Søren Damsbo-Svendsen</p>
-<p>Postdoc: political behavior, elections and turnout, public opinion, representation, climate politics</p>
+<p>Postdoc</p>
+<p>Political behavior, elections and turnout, public opinion, representation, climate politics</p>
 <p>sdas@ifs.ku.dk</p>
 </div></div></nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
@@ -313,7 +314,10 @@ window.Quarto = {
       <a class="pub-btn" href="https://doi.org/10.1093/poq/nfae067">DOI ↗</a>
       
     </div>
-    <p class="pub-abstract pub-finding" id="find-heat-priming-2025" hidden="">Asking Danes to recall the record-hot summer of 2018 did not raise their support for climate action, and neither did telling them that heat waves are linked to climate change.</p>
+    <div class="pub-abstract pub-finding" id="find-heat-priming-2025" hidden="">
+      <p>Asking Danes to recall the record-hot summer of 2018 did not raise their support for climate action, and neither did telling them that heat waves are linked to climate change.</p>
+      <figure class="pub-fig figure"><img src="media/figures/heat-priming-2025.webp" alt="Coefficient plot: effects of recalling the 2018 heat on four climate outcomes, all close to zero" loading="lazy" class="figure-img"><figcaption>Figure 1 · click to enlarge</figcaption></figure>
+    </div>
     <p class="pub-abstract" id="abs-heat-priming-2025" hidden="">We study whether communication that attributes extreme weather to climate change along with individuals’ personal weather experiences can mobilize increased support for climate change action and policies. Using a preregistered representative survey experiment from Denmark, we randomly assign respondents to two treatments: (a) a hot weather prime that asks them to recall the extreme Danish summer of 2018 and (b) contextualizing information that links extreme weather events to climate change. We find that priming past heat experience does not foster increased climate awareness, opinions, or willingness to act or pay. We also fail to find that climate communication strengthens the effect of heat experience on climate attitudes or matters on its own. We argue, and provide tentative evidence, that this is because people in northern regions often recall heat spells as something pleasant rather than perceiving them as a risk. Similar results were obtained using quasi-experimental data on recent local temperature deviations instead of past heat experiences. Overall, the results suggest that what is objectively and meteorologically extreme may subjectively invoke positive feelings and therefore not increase support for climate action. We discuss the implications for climate communication and opinion formation.</p>
   </div>
 </article>
@@ -334,7 +338,10 @@ window.Quarto = {
       <a class="pub-btn" href="https://doi.org/10.1007/s11109-024-09984-0">DOI ↗</a>
       <span class="pub-oa"><i class="fa-solid fa-lock-open" aria-hidden="true"></i> Open access</span>
     </div>
-    <p class="pub-abstract pub-finding" id="find-flooding-2025" hidden="">After Denmark's 2013 storm surge, flooded districts voted 2–3 percentage points more for pro-climate parties, and in the hardest-hit districts pro-climate local candidates gained votes too.</p>
+    <div class="pub-abstract pub-finding" id="find-flooding-2025" hidden="">
+      <p>After Denmark's 2013 storm surge, flooded districts voted 2–3 percentage points more for pro-climate parties, and in the hardest-hit districts pro-climate local candidates gained votes too.</p>
+      <figure class="pub-fig figure"><img src="media/figures/flooding-2025.webp" alt="Line chart, 1998 to 2019: pro-climate party vote share in flooded and control districts, diverging after the 2013 storm surge" loading="lazy" class="figure-img"><figcaption>Figure 2 · click to enlarge</figcaption></figure>
+    </div>
     <p class="pub-abstract" id="abs-flooding-2025" hidden="">Human-caused global warming exacerbates extreme weather events, but evidence of their impact on political behavior is limited. This article presents a twofold study of the effects of severe storm surge flooding on pro-climate voting in Danish elections. Using difference-in-differences research designs and administrative data, the article shows how the electoral effects of local flooding depends on the intensity of the experience. Voting for pro-climate parties in Danish national elections increased by around 2-3 percentage points in polling districts with flooding. Voting for local election candidates, who communicate a priority for climate issues and can have substantial influence on municipal climate policy, also increased four years after the flood, however only in districts with extreme flooding. Severe flooding increased the relative election chances of marginal pro-climate candidates by around five percentage points. Responsiveness to local flooding depends on the local extremity of the event and, possibly, local citizens’ pre-existing climate awareness. The ostensibly modest effects are illustrative of electoral decision-making, even if the practical political and environmental implications are limited. By raising the salience of climate issues, personal flooding experience shapes voting behavior in a changing climate.</p>
   </div>
 </article>
@@ -355,7 +362,10 @@ window.Quarto = {
       <a class="pub-btn" href="https://doi.org/10.1093/ijpor/edae054">DOI ↗</a>
       
     </div>
-    <p class="pub-abstract pub-finding" id="find-polycrisis-2024" hidden="">Thinking about climate change and the war in Ukraine at the same time made Danes more worried, especially about climate, but less willing to pay for action, especially on Ukraine.</p>
+    <div class="pub-abstract pub-finding" id="find-polycrisis-2024" hidden="">
+      <p>Thinking about climate change and the war in Ukraine at the same time made Danes more worried, especially about climate, but less willing to pay for action, especially on Ukraine.</p>
+      <figure class="pub-fig figure"><img src="media/figures/polycrisis-2024.webp" alt="Bar and coefficient charts: attitudes and priming effects for climate and Ukraine on willingness to pay, crisis perception and willingness to act" loading="lazy" class="figure-img"><figcaption>Figure 2 · click to enlarge</figcaption></figure>
+    </div>
     <p class="pub-abstract" id="abs-polycrisis-2024" hidden="">Decision-makers and commentators are calling Europe’s present political predicament a polycrisis: a period of overlapping, urgent, and mutually reinforcing crises with climate change and Russia’s invasion of Ukraine as key challenges. Our knowledge about how citizens perceive and respond to polycrisis is limited. This paper presents a preregistered survey experiment from Denmark with 4,017 nationally representative respondents. We study crisis perceptions and willingness to act for the climate and Ukraine after concurrently priming both issues. Overall, threat perceptions increase but so does inaction. Climate change drives increases in threat perception and worry, while the war in Ukraine drives a reduction in willingness to act and pay. The results challenge the ‘finite pool of worry’ hypothesis, which presupposes that worry about new, urgent threats will crowd out worry about existing problems, especially in case of climate change. Rather willingness to act under polycrisis is issue-specific and shaped by concrete pocketbook costs, as our experimental evidence illustrates. The results also have important policy implications at a time when decision-makers frequently justify political action through polycrisis discourse.</p>
   </div>
 </article>
@@ -376,7 +386,10 @@ window.Quarto = {
       <a class="pub-btn" href="https://doi.org/10.1016/j.electstud.2022.102573">DOI ↗</a>
       <span class="pub-oa"><i class="fa-solid fa-lock-open" aria-hidden="true"></i> Open access</span>
     </div>
-    <p class="pub-abstract pub-finding" id="find-rain-turnout-2023" hidden="">In Danish local elections, each centimeter of rain on Election Day lowers turnout by about one percentage point on average, and by up to six times as much among young, inexperienced voters.</p>
+    <div class="pub-abstract pub-finding" id="find-rain-turnout-2023" hidden="">
+      <p>In Danish local elections, each centimeter of rain on Election Day lowers turnout by about one percentage point on average, and by up to six times as much among young, inexperienced voters.</p>
+      <figure class="pub-fig figure"><img src="media/figures/rain-turnout-2023.webp" alt="Marginal effect of rainfall on turnout by election cohort, most negative for young voters in their second and third elections" loading="lazy" class="figure-img"><figcaption>Figure 4 (rainfall panel) · click to enlarge</figcaption></figure>
+    </div>
     <p class="pub-abstract" id="abs-rain-turnout-2023" hidden="">Ostensibly random and trivial experiences of everyday life, e.g., local weather, can have significant political consequences. First, we present a comprehensive meta-analysis of 34 studies of electoral turnout and rainfall – the vast majority demonstrating a negative association. Secondly, we present a new analysis of a voter panel with validated turnout for a complete electorate merged with fine-grained meteorological observations to show that Election Day rainfall reduces turnout by 0.95 percentage points per centimeter, while more sunshine increases turnout. Marginal voters (young voters) are up to six times more susceptible to bad weather and respond more positively to pleasant weather. Thus, bad weather exacerbates unequal democratic participation by pushing low-propensity voters to abstain. Efforts to include marginal voters therefore ought to be intensified during poor weather, and elections could even be moved to seasons with more pleasant weather to improve participatory equality.</p>
   </div>
 </article>
@@ -397,7 +410,10 @@ window.Quarto = {
       <a class="pub-btn" href="https://doi.org/10.1093/ijpor/edac009">DOI ↗</a>
       
     </div>
-    <p class="pub-abstract pub-finding" id="find-media-salience-2022" hidden="">In Denmark in 2019, rising climate coverage in the news was followed by more people naming climate the most important problem, and not the other way around.</p>
+    <div class="pub-abstract pub-finding" id="find-media-salience-2022" hidden="">
+      <p>In Denmark in 2019, rising climate coverage in the news was followed by more people naming climate the most important problem, and not the other way around.</p>
+      <figure class="pub-fig figure"><img src="media/figures/media-salience-2022.webp" alt="Time series, January to June 2019: public salience of climate change rising alongside spikes in media coverage" loading="lazy" class="figure-img"><figcaption>Figure 1 · click to enlarge</figcaption></figure>
+    </div>
     <p class="pub-abstract" id="abs-media-salience-2022" hidden="">When a political issue rises to the top of the public agenda, it puts pressure on decisionmakers, shifts power to actors engaging with the issue, and opens a window of opportunity. This article shows that online mass media contributed to the rapid rise of climate change on European public agendas in and around 2019. It also suggests that issue publics, i.e., particularly concerned and interested citizens, were influenced most. Conversely, citizens without strong climate opinions are not subject to influence from intensive media coverage. The results come from vector autoregression (VAR) models that take advantage of unique daily salience time series. The time series are constructed from weekly repeated nationally representative surveys of the public (N=25,445) and online news articles (N=6,905) by a dominant mass media news outlet that boasts a particularly large, trustful, and diverse audience. Traditional mass media can retain a powerful agenda-setting role even in increasingly fragmented media environments. But the target of their influence depends on the issue and the composition of corresponding issue publics, plausibly due in part to individual differences in use and processing of information about the issue.</p>
   </div>
 </article>
@@ -418,7 +434,10 @@ window.Quarto = {
       <a class="pub-btn" href="https://doi.org/10.1080/01402382.2020.1792731">DOI ↗</a>
       
     </div>
-    <p class="pub-abstract pub-finding" id="find-local-warming-2021" hidden="">Across 12 European countries, people interviewed in unusually warm weather held slightly stronger climate opinions: about one point on a 100-point scale for a week 5°C warmer than normal.</p>
+    <div class="pub-abstract pub-finding" id="find-local-warming-2021" hidden="">
+      <p>Across 12 European countries, people interviewed in unusually warm weather held slightly stronger climate opinions: about one point on a 100-point scale for a week 5°C warmer than normal.</p>
+      <figure class="pub-fig figure"><img src="media/figures/local-warming-2021.webp" alt="Predicted climate opinion index rising slightly with warmer-than-normal weeks, across four models" loading="lazy" class="figure-img"><figcaption>Additional analysis · click to enlarge</figcaption></figure>
+    </div>
     <p class="pub-abstract" id="abs-local-warming-2021" hidden="">Previous research has shown that we believe more in the reality of climate change when we experience warmer-than-usual temperatures. This reflects a psychological process in which easily accessible information from personal weather experiences is used as a heuristic to form climate opinions. This paper replicates and extends upon a research design and results of Egan and Mullin to provide the first systematic European study of the Local Warming Effect. Based on data from 12 European countries, the analysis shows that when objective temperatures increase by two standard deviations (5°C) relative to normal temperatures, climate opinions are strengthened by around 0.5–1.0 percentage points – comparable to the effect of a full step to the left on a 0–10 political ideology scale.</p>
   </div>
 </article>
@@ -448,7 +467,10 @@ window.Quarto = {
       <a class="pub-btn" href="https://djoefforlag.dk/products/partiledernes-kamp-om-midten">Book ↗</a>
       
     </div>
-    <p class="pub-abstract pub-finding" id="find-issue-ownership-2024" hidden="">In 2022, Danish voters saw the Social Democrats as the best party on nearly every major issue, and those who did were markedly more likely to vote for them.</p>
+    <div class="pub-abstract pub-finding" id="find-issue-ownership-2024" hidden="">
+      <p>Danish voters see left-wing governments as best on climate, health and the elderly, and right-wing ones on business, defence and tax, but in 2022 these gaps narrowed on most issues.</p>
+      <figure class="pub-fig figure"><img src="media/figures/issue-ownership-2024.webp" alt="Dot plot: issue-ownership margin between right- and left-wing governments on 15 issues, 2019 and 2022, mostly narrowing in 2022" loading="lazy" class="figure-img"><figcaption>Figur 12.3, labels in Danish · click to enlarge</figcaption></figure>
+    </div>
     
   </div>
 </article>
@@ -469,7 +491,10 @@ window.Quarto = {
       <a class="pub-btn" href="https://djoefforlag.dk/products/partiledernes-kamp-om-midten">Book ↗</a>
       
     </div>
-    <p class="pub-abstract pub-finding" id="find-climate-voters-2024" hidden="">Despite war and inflation, three in four Danish voters still called climate change the greatest challenge of our time in 2022, but more of them now put their hopes in new technology.</p>
+    <div class="pub-abstract pub-finding" id="find-climate-voters-2024" hidden="">
+      <p>Despite war and inflation, three in four Danish voters still called climate change the greatest challenge of our time in 2022, and a majority (57%) put their hopes in new technology.</p>
+      <figure class="pub-fig figure"><img src="media/figures/climate-voters-2024.webp" alt="Bar chart: Danish voters' climate attitudes in 2019 and 2022, with 74 percent calling climate change the greatest challenge of our time" loading="lazy" class="figure-img"><figcaption>Figur 13.2, labels in Danish · click to enlarge</figcaption></figure>
+    </div>
     
   </div>
 </article>
@@ -495,12 +520,15 @@ window.Quarto = {
     </p>
     <div class="pub-actions">
       <button type="button" class="pub-btn pub-toggle" aria-expanded="false" aria-controls="find-harassment-awareness">Key finding</button>
-      
+      <button type="button" class="pub-btn pub-toggle" aria-expanded="false" aria-controls="abs-harassment-awareness">Abstract</button>
       
       
     </div>
-    <p class="pub-abstract pub-finding" id="find-harassment-awareness" hidden="">Stories of harassment against politicians did not put the average citizen off running for office, but made citizens already considering it about four percentage points less willing.</p>
-    
+    <div class="pub-abstract pub-finding" id="find-harassment-awareness" hidden="">
+      <p>Stories of harassment against politicians did not put the average citizen off running for office, but made citizens already considering it about four percentage points less willing.</p>
+      
+    </div>
+    <p class="pub-abstract" id="abs-harassment-awareness" hidden="">The risk of harassment comes with the job for political officeholders and candidates, but raising awareness about it can harm the political engagement of citizens and aspiring candidates. Using a preregistered survey experiment in Denmark, replicated in Germany, the UK, and France (n = 8,899), we raise awareness about political harassment by presenting 55 true harassment stories from local politicians. Contrary to existing studies, we find negative conditional effects of around four percentage points on citizens who had expressed consideration of a political career, whereas the average citizen is undeterred from engaging in politics by the threat of harassment. We argue that the distinction between ordinary citizens and aspirants is crucial because personal relevance shapes aspirants' information processing related to costs and benefits of politics. Citizens' attitudinal responses to awareness of harassment are mostly normatively desirable, but the impact on potential candidates has negative implications for recruitment and democratic representation.</p>
   </div>
 </article>
 
@@ -516,12 +544,15 @@ window.Quarto = {
     </p>
     <div class="pub-actions">
       <button type="button" class="pub-btn pub-toggle" aria-expanded="false" aria-controls="find-young-naive">Key finding</button>
-      
+      <button type="button" class="pub-btn pub-toggle" aria-expanded="false" aria-controls="abs-young-naive">Abstract</button>
       
       
     </div>
-    <p class="pub-abstract pub-finding" id="find-young-naive" hidden="">Younger Danish politicians report more harassment than older ones, and the gap between women and men is widest among the youngest, especially for sexual harassment.</p>
-    
+    <div class="pub-abstract pub-finding" id="find-young-naive" hidden="">
+      <p>Younger Danish politicians report more harassment than older ones, and the gap between women and men is widest among the youngest, especially for sexual harassment.</p>
+      
+    </div>
+    <p class="pub-abstract" id="abs-young-naive" hidden="">Harassment, intimidation, and violence in politics fall disproportionately on women, but whether they also fall on the young, and how gender intersects with age, is rarely examined. Treating age as a key dimension of exposure, this article uses a two-by-two typology of physical and psychological, sexual and nonsexual harassment and combines 23 interviews with young representatives and three elite surveys of Danish candidates and officeholders at the national and local levels (n = 5,395). Younger politicians report more harassment than their older colleagues across all four types of harassment. Both young men and young women are dismissed as inexperienced, but for young women the dismissal is often sexualised, involving comments on their bodies, rape threats, and reproductive harassment. The gender gap is widest among the youngest, especially in sexual harassment, and is absent in nonsexual physical harassment. We argue that ageism and sexism are related mechanisms that police who is entitled to political standing. For young women, their age and gender are mutually reinforcing. By discouraging young people, and young women especially, from entering or remaining in politics, harassment narrows political recruitment precisely where it is already narrowest and inhibits representation.</p>
   </div>
 </article>
 
@@ -532,7 +563,7 @@ window.Quarto = {
     <p class="pub-authors">Kasper M. Hansen &amp; <span class="pub-me">Søren Damsbo-Svendsen</span></p>
     <p class="pub-venue">
     
-      <span class="pub-status pub-status-under-review">Under review</span> <em>American Political Science Review</em>
+      <span class="pub-status pub-status-submitted">Submitted</span> <em>American Political Science Review</em>
     
     </p>
     <div class="pub-actions">
@@ -541,7 +572,10 @@ window.Quarto = {
       
       
     </div>
-    <p class="pub-abstract pub-finding" id="find-mobilization-habits" hidden="">In a get-out-the-vote field experiment, an SMS reminder before Denmark's 2013 local election raised turnout in later high-salience local and national elections for twelve years, but not in low-salience European ones.</p>
+    <div class="pub-abstract pub-finding" id="find-mobilization-habits" hidden="">
+      <p>In a get-out-the-vote field experiment, an SMS reminder before Denmark's 2013 local election raised turnout in later high-salience local and national elections for twelve years, but not in low-salience European ones.</p>
+      
+    </div>
     
   </div>
 </article>
@@ -676,6 +710,50 @@ document.addEventListener("click", (e) => {
     s.hidden = !s.querySelector(".pub:not([hidden])");
   });
 });
+
+// Key-finding figures: grow the thumbnail into a near-full-screen view and
+// shrink it back on click or Esc
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+document.addEventListener("click", (e) => {
+  const thumb = e.target.closest(".pub-fig img");
+  if (thumb) zoomFigure(thumb);
+});
+function zoomFigure(thumb) {
+  const ratio = thumb.naturalWidth / thumb.naturalHeight;
+  const w = Math.min(window.innerWidth * 0.94, window.innerHeight * 0.9 * ratio);
+  const h = w / ratio;
+  const left = (window.innerWidth - w) / 2, top = (window.innerHeight - h) / 2;
+  // Transform that places the big image exactly over the thumbnail
+  const overThumb = () => {
+    const r = thumb.getBoundingClientRect();
+    return `translate(${r.left - left}px, ${r.top - top}px) scale(${r.width / w})`;
+  };
+  const back = document.createElement("div");
+  back.className = "fig-zoom-back";
+  const img = document.createElement("img");
+  img.className = "fig-zoom-img";
+  img.src = thumb.currentSrc || thumb.src;
+  img.alt = thumb.alt;
+  Object.assign(img.style, { left: left + "px", top: top + "px", width: w + "px", height: h + "px", transform: overThumb() });
+  document.body.append(back, img);
+  thumb.style.visibility = "hidden";
+  requestAnimationFrame(() => requestAnimationFrame(() => {
+    back.classList.add("open");
+    img.style.transform = "none";
+  }));
+  const done = () => { img.remove(); back.remove(); thumb.style.visibility = ""; };
+  const close = () => {
+    document.removeEventListener("keydown", onKey);
+    back.classList.remove("open");
+    if (reduceMotion) return done();
+    img.style.transform = overThumb();
+    img.addEventListener("transitionend", done, { once: true });
+  };
+  const onKey = (ev) => { if (ev.key === "Escape") close(); };
+  back.addEventListener("click", close);
+  img.addEventListener("click", close);
+  document.addEventListener("keydown", onKey);
+}
 </script>
 
 

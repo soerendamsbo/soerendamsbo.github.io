@@ -348,7 +348,7 @@ $rule-color: rgba($grayn, .12);
   color: $grayn;
 
   &-rr { background: rgba($primary, .15); color: darken($primary, 12%); }
-  &-under-review { background: rgba($link-color, .15); color: darken($link-color, 15%); }
+  &-under-review, &-submitted { background: rgba($link-color, .15); color: darken($link-color, 15%); }
 }
 
 .pub-actions {
@@ -518,7 +518,7 @@ $rule-color: rgba($grayn, .12);
 
 // Sidebar contact block (_quarto.yml sidebar footer): one paragraph per entry,
 // with a little air between entries
-.sidebar-footer-item p { margin: 0 0 .9rem; line-height: 1.5; }
+.sidebar-footer-item p { margin: 0 0 .65rem; line-height: 1.5; }
 
 // Danish abstract toggle at the bottom of phd.qmd
 .phd-abstract-da {
@@ -527,5 +527,49 @@ $rule-color: rgba($grayn, .12);
   &[open] summary { margin-bottom: .75rem; }
 }
 
-// Navbar: the current page's link in pure white (hover keeps the default tint)
+// Navbar: other links dimmed so the current page's link (pure white) stands out;
+// hover keeps the default tint
+.navbar .navbar-nav .nav-link { color: rgba(#fff, .62); }
+.navbar .navbar-nav .nav-link:hover { color: var(--bs-navbar-hover-color); }
 .navbar .navbar-nav .nav-link.active { color: #fff; }
+
+// Key-finding figures (publications.ejs): small thumbnail that zooms to near
+// full screen on click (script in research.qmd)
+.pub-fig {
+  margin: .75rem 0 0;
+  img {
+    display: block;
+    width: 260px;
+    max-width: 100%;
+    height: auto;
+    background: #fff;
+    border: 1px solid rgba($grayn, .15);
+    border-radius: .25rem;
+    cursor: zoom-in;
+    transition: box-shadow .2s;
+  }
+  img:hover { box-shadow: 0 2px 10px rgba($grayn, .25); }
+  figcaption { margin-top: .3rem; font-size: .75rem; font-weight: 400; color: $meta-color; }
+}
+.fig-zoom-back {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  background: rgba(#000, 0);
+  transition: background .3s ease;
+  cursor: zoom-out;
+}
+.fig-zoom-back.open { background: rgba(#000, .72); }
+.fig-zoom-img {
+  position: fixed;
+  z-index: 2001;
+  transform-origin: 0 0;
+  transition: transform .35s cubic-bezier(.2, .8, .2, 1);
+  background: #fff;
+  border-radius: .25rem;
+  box-shadow: 0 10px 40px rgba(#000, .4);
+  cursor: zoom-out;
+}
+@media (prefers-reduced-motion: reduce) {
+  .fig-zoom-back, .fig-zoom-img { transition: none; }
+}

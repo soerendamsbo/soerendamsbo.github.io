@@ -72,5 +72,49 @@ document.addEventListener("click", (e) => {
     s.hidden = !s.querySelector(".pub:not([hidden])");
   });
 });
+
+// Key-finding figures: grow the thumbnail into a near-full-screen view and
+// shrink it back on click or Esc
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+document.addEventListener("click", (e) => {
+  const thumb = e.target.closest(".pub-fig img");
+  if (thumb) zoomFigure(thumb);
+});
+function zoomFigure(thumb) {
+  const ratio = thumb.naturalWidth / thumb.naturalHeight;
+  const w = Math.min(window.innerWidth * 0.94, window.innerHeight * 0.9 * ratio);
+  const h = w / ratio;
+  const left = (window.innerWidth - w) / 2, top = (window.innerHeight - h) / 2;
+  // Transform that places the big image exactly over the thumbnail
+  const overThumb = () => {
+    const r = thumb.getBoundingClientRect();
+    return `translate(${r.left - left}px, ${r.top - top}px) scale(${r.width / w})`;
+  };
+  const back = document.createElement("div");
+  back.className = "fig-zoom-back";
+  const img = document.createElement("img");
+  img.className = "fig-zoom-img";
+  img.src = thumb.currentSrc || thumb.src;
+  img.alt = thumb.alt;
+  Object.assign(img.style, { left: left + "px", top: top + "px", width: w + "px", height: h + "px", transform: overThumb() });
+  document.body.append(back, img);
+  thumb.style.visibility = "hidden";
+  requestAnimationFrame(() => requestAnimationFrame(() => {
+    back.classList.add("open");
+    img.style.transform = "none";
+  }));
+  const done = () => { img.remove(); back.remove(); thumb.style.visibility = ""; };
+  const close = () => {
+    document.removeEventListener("keydown", onKey);
+    back.classList.remove("open");
+    if (reduceMotion) return done();
+    img.style.transform = overThumb();
+    img.addEventListener("transitionend", done, { once: true });
+  };
+  const onKey = (ev) => { if (ev.key === "Escape") close(); };
+  back.addEventListener("click", close);
+  img.addEventListener("click", close);
+  document.addEventListener("keydown", onKey);
+}
 </script>
 ```
