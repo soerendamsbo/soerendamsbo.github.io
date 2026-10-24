@@ -1,5 +1,5 @@
 ---
-title: "Accurate Scientific Impact and Citations Tracker"
+title: "High-Accuracy Scientific Impact and Citations Tracker"
 format: html
 execute: 
     echo: false
