@@ -2,6 +2,13 @@
 title: CV
 ---
 
-<br><br><br>
-
-My CV can be downloaded from [here](https://web.tresorit.com/l/tNiVm#qEOwS8wyKpmL8eEh8mme5g) using the password '*cvita*'.
+```{=html}
+<dl class="phd-facts">
+  <dt>Position</dt><dd>Postdoctoral researcher, Department of Political Science, University of Copenhagen</dd>
+  <dt>PhD</dt><dd><a href="phd.html">Political science, University of Copenhagen, 2024</a></dd>
+</dl>
+<div class="pub-actions">
+  <a class="pub-btn" href="https://web.tresorit.com/l/tNiVm#qEOwS8wyKpmL8eEh8mme5g">Download CV &#8599;</a>
+  <span class="phd-pw">password: <code>cvita</code></span>
+</div>
+```

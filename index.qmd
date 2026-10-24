@@ -1,32 +1,31 @@
 ---
-image: media/soren1.png
+image: media/soren1_600.webp
 sidebar: false
 about:
   template: jolla
   links:
-    - icon: envelope
-      text: Email
+    - text: <i class="fa-solid fa-envelope"></i> Email
       href: mailto:sdas@ifs.ku.dk
-    - text: <img src="https://www.freelogovectors.net/wp-content/uploads/2021/08/google-scholar-logo-freelogovectors.net_.png" height="15"> Google Scholar
+    - text: <i class="fa-brands fa-google-scholar" style="color:#4285F4"></i> Google Scholar
       href: https://scholar.google.com/citations?user=TeuKGQ0AAAAJ&hl=en&oi=sra
     - text: <img src="media/ku_segl.png" height="15">  UCPH profile
       href: https://researchprofiles.ku.dk/en/persons/41d49521-ceef-4843-867c-43e6816bbf20
-    - text: <img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Bluesky_Logo.svg" height="15"> Bluesky
+    - text: <i class="fa-brands fa-bluesky" style="color:#1185FE"></i> Bluesky
       href: https://bsky.app/profile/soerendamsbo.bsky.social
     # - icon: github
     #   text: Github
     #   href: https://github.com/soerendamsbo
-    - text: <img src="https://orcid.org/favicon.ico" height="15"> ORCID
+    - text: <i class="fa-brands fa-orcid" style="color:#A6CE39"></i> ORCID
       href: https://orcid.org/0000-0002-9227-090X
-    - text: <img src="https://logosmarken.com/wp-content/uploads/2020/04/Linkedin-Emblem.png" height="15"> LinkedIn
+    - text: <i class="fa-brands fa-linkedin" style="color:#0A66C2"></i> LinkedIn
       href: https://www.linkedin.com/in/s%C3%B8ren-damsbo-svendsen-a63051170/
 ---
 
 Hi there! I am a postdoctoral researcher at the [Department of Political Science, University of Copenhagen](https://politicalscience.ku.dk/), who is interested in political behavior, voters and elections, public opinion, and representation, especially from a climate perspective. 
 
-I am working on a new research project, **Climate Adaptation of Democracy (CAD)**, led by Professor Kasper M. Hansen and funded by the Independent Research Fund Denmark. The project investigates how climate change threatens core democratic institutions, and what we can do about that. Read more about the project on the [CAD](https://soerendamsbo.github.io/cad) site.
+I am working on a new research project, **Climate Adaptation of Democracy (CAD)**, led by Professor Kasper M. Hansen and funded by the Independent Research Fund Denmark. The project investigates how climate change threatens core democratic institutions, and what we can do about that. Read more on the [CAD project page](cad/index.qmd).
 
-I defended my PhD dissertation, *Political Weather: How experiencing climate change shapes our political lives*, in January 2024. Find the thesis [here](https://soerendamsbo.github.io/phd-thesis.html). I've since worked as a postdoc on the Danish Turnout Project with Kasper M. Hansen and on Democratic Implications of Political Harassment and Sexism (DIPAS) with Karina Kosiara-Pedersen. My research has been published in journals such as *Political Behavior*, *Electoral Studies*, *Public Opinion Quarterly*, and *West European Politics*. Read more about my research [here](https://soerendamsbo.github.io/research.html).
+I defended my PhD dissertation, *Political Weather: How experiencing climate change shapes our political lives*, in January 2024. Find the thesis [here](phd.qmd). I've since worked as a postdoc on the Danish Turnout Project with Kasper M. Hansen and on Democratic Implications of Political Harassment and Sexism (DIPAS) with Karina Kosiara-Pedersen. My research has been published in journals such as *Political Behavior*, *Electoral Studies*, *Public Opinion Quarterly*, and *West European Politics*. Read more about my research [here](research.qmd).
 
 {{< fa person >}} Søren Damsbo-Svendsen  
 {{< fa map-marker >}} Copenhagen, Denmark  

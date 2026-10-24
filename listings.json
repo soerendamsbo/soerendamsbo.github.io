@@ -4,5 +4,17 @@
     "items": [
       "/posts/Test/index.html"
     ]
+  },
+  {
+    "listing": "/research.html",
+    "items": []
+  },
+  {
+    "listing": "/media.html",
+    "items": []
+  },
+  {
+    "listing": "/phd.html",
+    "items": []
   }
 ]

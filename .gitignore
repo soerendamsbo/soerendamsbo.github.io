@@ -1,5 +1,12 @@
 .Rproj.user
 
 /.quarto/
+meta/
 
 **/*.quarto_ipynb
+
+# Private: Claude Code config/history
+.claude/
+
+# Local previews for review (not published)
+_preview/

@@ -1,0 +1,41 @@
+<%
+// Renders entries from site-data/publications.yml. Used by research.qmd.
+// Styles: .pub-* rules in theme.scss. Abstract toggle + topic filter: script in research.qmd.
+const me = "Søren Damsbo-Svendsen";
+const joinNames = (xs) => xs.length <= 1 ? (xs[0] || "") : xs.slice(0, -1).join(", ") + " & " + xs[xs.length - 1];
+const linkOf = (item) => item.doi ? "https://doi.org/" + item.doi : item.url;
+const statusLabel = { rr: "R&R", "under-review": "Under review", "in-progress": "Work in progress" };
+const authorsHtml = (xs) => joinNames(xs.map((a) => a === me ? "<span class=\"pub-me\">" + a + "</span>" : a));
+%>
+```{=html}
+<div class="list pub-list">
+<% items.forEach((item) => {
+  const authors = item.authors || [];
+  const href = linkOf(item);
+  const linkLabel = item.type === "chapter" ? "Book" : item.doi ? "DOI" : "Link";
+%>
+<article class="pub" id="pub-<%= item.id %>" data-topics="<%= (item.topics || []).join(" ") %>" <%= metadataAttrs(item) %>>
+  <div class="pub-year"><%= item.year || "" %></div>
+  <div class="pub-body">
+    <h4 class="pub-title"><% if (href) { %><a href="<%= href %>"><%= item.title %></a><% } else { %><%= item.title %><% } %></h4>
+    <p class="pub-authors"><% if (authors.length > 1) { %><%= authorsHtml(authors) %><% } else { %>Single-authored<% } %></p>
+    <p class="pub-venue">
+    <% if (item.type === "article") { %>
+      <em><%= item.venue %></em>
+    <% } else if (item.type === "chapter") { %>
+      In <%= joinNames(item.editors || []) %> (eds.), <em><%= item.book %></em>. <%= item.publisher || "" %>
+    <% } else { %>
+      <span class="pub-status pub-status-<%= item.status %>"><%= statusLabel[item.status] || item.status %></span><% if (item.venue && item.status !== "in-progress") { %> <em><%= item.venue %></em><% } %>
+    <% } %>
+    </p>
+    <div class="pub-actions">
+      <% if (item.abstract) { %><button type="button" class="pub-btn pub-toggle" aria-expanded="false" aria-controls="abs-<%= item.id %>">Abstract</button><% } %>
+      <% if (href) { %><a class="pub-btn" href="<%= href %>"><%= linkLabel %> &#8599;</a><% } %>
+      <% if (item.open_access) { %><span class="pub-oa"><i class="fa-solid fa-lock-open" aria-hidden="true"></i> Open access</span><% } %>
+    </div>
+    <% if (item.abstract) { %><p class="pub-abstract" id="abs-<%= item.id %>" hidden><%= item.abstract %></p><% } %>
+  </div>
+</article>
+<% }) %>
+</div>
+```

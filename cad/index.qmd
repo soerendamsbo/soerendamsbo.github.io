@@ -1,0 +1,84 @@
+---
+pagetitle: "CAD Project"
+description: "Climate impacts on environmental and democratic attitudes"
+sidebar: false
+css: cad.css
+---
+
+<!-- Ported from the standalone CAD site (github.com/soerendamsbo/cad). Styles in cad.css. -->
+
+```{=html}
+<div class="cad-hero column-screen">
+  <div class="cad-hero-inner">
+    <div>
+      <p class="cad-kicker">Research project &middot; 2026&ndash;2028</p>
+      <h1>Climate Adaptation of Democracy</h1>
+      <p class="cad-sub">Climate impacts on environmental and democratic attitudes</p>
+    </div>
+    <img class="cad-logo" src="media/cad-logo.svg" alt="CAD logo">
+  </div>
+</div>
+```
+
+**Climate Adaptation of Democracy (CAD)** studies how adverse climate events affect democracy. The project asks: *How do adverse local climate events affect citizens' attitudes towards democracy and the green transition, and what strategies for communication can help create effects that are environmentally and democratically sustainable?*
+
+CAD is based at {{< fa building-columns >}} the Department of Political Science, University of Copenhagen, and funded by the Independent Research Fund Denmark (DFF). It is led by {{< fa person >}} [Professor Kasper M. Hansen](https://kaspermhansen.eu) with {{< fa person >}} [Postdoc Søren Damsbo-Svendsen](https://soerendamsbo.github.io), both at the University of Copenhagen, and {{< fa person >}} [Senior Researcher Morten A. Dahl Larsen](http://research.dmi.dk/staff/all-staff/mla/) from the Danish Meteorological Institute (DMI).
+
+::: {.cad-status}
+October\ 2026 · **Survey ready to field** · waiting for the next storm surge
+:::
+
+```{=html}
+<figure class="frame-map">
+  <div class="fm-stat">
+    <span class="fm-n">2,576</span>
+    one-kilometre squares with homes inside Denmark's storm-surge risk area
+  </div>
+  <img src="media/map-frame.png" width="1520" height="1438" loading="lazy"
+       alt="Map of Denmark on a dark background. Strings of small glowing squares in nine colours trace much of the coast: the Wadden Sea, the Limfjord, the east Jutland fjords, the southern islands and Øresund. Each is a one-kilometre square with homes inside the storm-surge risk area.">
+  <figcaption>
+    <div class="fm-kicker">The coast we watch</div>
+    <p>Each lit square is one of them. Together they trace the Wadden Sea, the fjords, the southern islands and Øresund. The colours mark nine stretches of coast.</p>
+    <p class="fm-source">Data: DMI storm-surge risk maps · Danish address and building registers · DAGI. Bornholm moved closer.</p>
+  </figcaption>
+</figure>
+```
+
+## Waiting for the storm
+
+Twelve times between 2011 and 2023, the Danish authorities officially declared a storm surge: sea water over the coast, and often into people's homes. When the next one comes, our survey can reach residents of the hit coastline **within about four weeks**, while the experience is still fresh, and ask about their views on climate action and on democracy.
+
+Most of what we know about disasters and public opinion comes from surveys that happened to be in the field, or from asking people long afterwards. We built the study first, and now we wait for the next surge.
+
+## What it took to get ready
+
+Getting a survey into the field within weeks of a disaster took a lot of groundwork:
+
+::: {.cad-steps}
+- We reconstructed every official storm-surge declaration from 2011 to 2023, so we know where and how the declarations come.
+- We mapped every one-kilometre square of Danish coast with homes inside the storm-surge risk area. Together, these squares hold more than 500,000 homes.
+- Within days of a surge, we model the flooding with DMI to find which homes the water reached.
+- With Denmark's national registers and the survey agency Epinion, we can turn a list of coastal addresses into survey invitations in people's Digital Post within weeks.
+:::
+
+## What's next
+
+::: {.cad-next}
+::: {.cad-next-item}
+**More storms.** We can reuse the design. Each surge we survey adds a new case, and with enough cases we can study how communities respond to repeated flooding.
+:::
+::: {.cad-next-item}
+**Experiments.** Survey experiments on how to talk about climate risk and adaptation in ways that sustain both climate action and trust in democracy.
+:::
+::: {.cad-next-item}
+**A national picture.** A nationwide survey on the same questions: what Danes expect of their democracy when climate events hit close to home.
+:::
+:::
+
+::: {.cad-partners}
+![](media/ku-logo.png){fig-alt="University of Copenhagen"}
+
+![](media/dff-logo.png){fig-alt="Independent Research Fund Denmark"}
+
+![](media/dmi-logo.png){fig-alt="Danish Meteorological Institute"}
+:::

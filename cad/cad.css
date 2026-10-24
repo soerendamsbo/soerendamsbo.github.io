@@ -1,0 +1,213 @@
+/* CAD project page. Ported from the standalone CAD site (custom.css, 2026-10-23).
+   The map card is the page's only dark element; --cad-sea must match
+   the sea colour baked into media/map-frame.png. */
+
+:root {
+  --cad-teal: #2e86ab;
+  --cad-ink: #1b2a4a; /* logo navy */
+  --cad-link: #2563a8;
+  --cad-sea: #0b1423;
+  --cad-muted: #5c6b7a;
+  --cad-on-dark: #d4dfeb;
+  --cad-on-dark-muted: #91a0b1;
+}
+
+/* --- Links: blue on this page only (site default is green) ---------------- */
+#quarto-document-content a {
+  color: var(--cad-link);
+}
+#quarto-document-content a:hover {
+  color: var(--cad-ink);
+}
+
+/* --- Hero banner ---------------------------------------------------------- */
+.cad-hero {
+  background: #ebf1fa; /* pale blue */
+  border-bottom: 1px solid rgba(27, 42, 74, 0.1);
+  padding: 2.5rem 0 2.25rem;
+  margin-bottom: 2rem;
+}
+.cad-hero-inner {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.cad-kicker {
+  margin: 0;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--cad-muted);
+}
+.cad-hero h1 {
+  margin: 0.3rem 0 0.4rem;
+  color: var(--cad-ink);
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-weight: 700;
+  line-height: 1.15;
+  border: none;
+}
+.cad-sub {
+  margin: 0;
+  font-size: 1.15rem;
+  color: var(--cad-muted);
+}
+.cad-logo {
+  flex: 0 0 auto;
+  width: 190px;
+  height: auto;
+}
+
+/* --- Status line ---------------------------------------------------------- */
+.cad-status {
+  margin: 2rem 0 0.5rem;
+  color: var(--cad-muted);
+  font-size: 0.9rem;
+}
+.cad-status > p {
+  margin: 0;
+}
+.cad-status + .frame-map {
+  margin-top: 0;
+}
+
+/* --- "What it took" list ---------------------------------------------------- */
+.cad-steps ul {
+  max-width: 40rem;
+  padding: 0;
+  list-style: none;
+}
+.cad-steps li {
+  position: relative;
+  margin-bottom: 0.6rem;
+  padding-left: 1.5rem;
+}
+.cad-steps li::before {
+  content: "";
+  position: absolute;
+  left: 0.15rem;
+  top: 0.5em;
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 1px;
+  background: var(--cad-teal);
+  box-shadow: 0 0 0 3px rgba(46, 134, 171, 0.18);
+}
+
+/* --- Map card ------------------------------------------------------------- */
+.frame-map {
+  position: relative;
+  margin: 2rem 0;
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--cad-sea);
+}
+.frame-map img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.fm-stat {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  width: 36%;
+  text-align: right;
+  color: var(--cad-on-dark);
+  font-size: 0.85rem;
+  line-height: 1.35;
+}
+.fm-n {
+  display: block;
+  color: #fff;
+  font-size: clamp(1.8rem, 5vw, 2.5rem);
+  font-weight: 700;
+  line-height: 1.1;
+}
+.frame-map figcaption {
+  padding: 0.25rem 1.25rem 1.25rem;
+  color: var(--cad-on-dark);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  text-align: left;
+}
+.frame-map figcaption p {
+  margin: 0;
+}
+.fm-kicker {
+  margin-bottom: 0.25rem;
+  font-weight: 700;
+}
+.frame-map .fm-source {
+  margin-top: 0.6rem;
+  color: var(--cad-on-dark-muted);
+  font-size: 0.8rem;
+}
+
+/* --- What's next ---------------------------------------------------------- */
+/* The cards carry their own top rules, so drop the heading underline here */
+#whats-next > h2 {
+  border-bottom: none;
+}
+.cad-next {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin: 1rem 0 0.5rem;
+}
+.cad-next-item {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  padding-top: 0.75rem;
+  border-top: 2px solid var(--cad-teal);
+}
+.cad-next-item > p {
+  margin: 0;
+}
+
+/* --- Partner logos -------------------------------------------------------- */
+.cad-partners {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 4rem;
+}
+.cad-partners img {
+  width: 100px;
+  height: auto;
+}
+
+/* --- Phones --------------------------------------------------------------- */
+@media (max-width: 600px) {
+  .cad-hero-inner {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: 1.25rem;
+  }
+  .cad-logo {
+    width: 140px;
+  }
+  .frame-map {
+    border-radius: 10px;
+  }
+  .fm-stat {
+    position: static;
+    width: auto;
+    padding: 1rem 1rem 0;
+    text-align: left;
+  }
+  .frame-map figcaption {
+    padding: 0.25rem 1rem 1rem;
+  }
+  .cad-next {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}

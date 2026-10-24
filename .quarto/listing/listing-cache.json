@@ -2,6 +2,15 @@
   "listingMap": {
     "blog.qmd": [
       "posts"
+    ],
+    "research.qmd": [
+      "site-data/publications.yml"
+    ],
+    "media.qmd": [
+      "site-data/outreach.yml"
+    ],
+    "phd.qmd": [
+      "site-data/publications.yml"
     ]
   }
 }

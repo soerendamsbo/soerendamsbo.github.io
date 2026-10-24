@@ -1,0 +1,14 @@
+<%
+// Renders the four thesis articles from site-data/publications.yml (in_phd: true). Used by phd.qmd.
+%>
+```{=html}
+<div class="list phd-articles">
+<% for (const item of items) { %>
+<a class="phd-article" href="research.html#pub-<%= item.id %>" <%= metadataAttrs(item) %>>
+  <span class="phd-kicker">Article <%= item.phd_article %> &middot; <%= item.phd_label %></span>
+  <span class="phd-art-title"><%= item.title %></span>
+  <span class="phd-art-venue"><em><%= item.venue %></em> (<%= item.year %>)</span>
+</a>
+<% } %>
+</div>
+```

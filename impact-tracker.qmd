@@ -21,7 +21,9 @@ get_impact_stats <- function(gs_id, author_name_pattern) {
   pubs <- get_publications(gs_id) |>
     mutate(
       pub_no = row_number(),
-      n_authors = str_count(author, ",") + 1,
+      # Scholar truncates long author lists ("A, B, ..."): a "..." adds one author on top of
+      # the comma count, so a truncated list counts at least one hidden author, at worst two
+      n_authors = str_count(author, ",") + 1 + str_detect(author, fixed("...")) + str_detect(author, fixed("…")),
       .before = 1
     ) |>
     separate_longer_delim(cols = author, delim = ",") |>
@@ -53,7 +55,7 @@ get_impact_stats <- function(gs_id, author_name_pattern) {
 }
 
 sds_stats <- get_impact_stats("TeuKGQ0AAAAJ", "Damsbo")
-fkk_stats <- get_impact_stats("2jFLHrgAAAAJ", "Larsen|Kjøller")
+fkk_stats <- get_impact_stats("2jFLHrgAAAAJ", "Kjøller|FK Larsen")
 chd_stats <- get_impact_stats("cgRByH8AAAAJ", "Dausgaard")
 
 ```
@@ -81,13 +83,19 @@ ready_stats <- bind_rows(
 
 write_csv(ready_stats, here::here("Data", paste0("impact-tracker_", lubridate::today(), ".csv")))
 
+# Only the invented indices compete for the footnote; the classic metrics never win
+invented_stats <- c("effective_cites", "first_author", "single_author")
+
 stats_ratio <- ready_stats |> 
+  filter(stat %in% invented_stats) |> 
   rowwise() |> 
-   transmute(stat_lab, ratio = `Søren Damsbo-Svendsen` / max(c(`Frederik K. Kjøller`, `Christoffer H. Dausgaard`))) |> 
+   mutate(rival_best = max(c(`Frederik K. Kjøller`, `Christoffer H. Dausgaard`))) |> 
+   # A zero denominator would hand out an automatic Inf win; such indices sit out
+   transmute(stat_lab, ratio = if (rival_best > 0) `Søren Damsbo-Svendsen` / rival_best else NA_real_) |> 
    ungroup()
 
   stats_ratio_max <- stats_ratio |> 
-    filter(ratio == max(ratio))
+    slice_max(ratio, n = 1, with_ties = FALSE, na_rm = TRUE)
 
 table_data <- ready_stats |>
   mutate(stat = factor(stat, levels = c("total_cites", "n_articles", "h_index", "i10_index", "effective_cites", "first_author", "single_author"))) |>
@@ -119,7 +127,7 @@ table_data |>
 
 ```
 
-<sup>*</sup>Note: This metric provides the most accurate comparative assessment of a researcher's impact, integrity, and character, and it is vastly superior to most established metrics.
+<sup>*</sup>Note: This metric currently provides the most accurate comparative assessment of a researcher's impact, integrity, and character, and it is vastly superior to most established metrics.
 
 ## Methodology
 
