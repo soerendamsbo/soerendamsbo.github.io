@@ -18,10 +18,10 @@ website:
       - research.qmd
       - text: "CAD Project"
         file: cad/index.qmd
-      - cv.qmd
       - text: "PhD"
         file: phd.qmd
       - media.qmd
+      - cv.qmd
       # - blog.qmd
       #- icon: twitter
       #  href: https://twitter.com/soerendamsbo
@@ -43,6 +43,7 @@ website:
 format:
   html:
     theme: ./theme.scss
+    link-external-newwindow: true   # links to other sites open in a new tab
 
  
 

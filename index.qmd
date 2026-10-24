@@ -30,3 +30,13 @@ I defended my PhD dissertation, *Political Weather: How Experiencing Climate Cha
 {{< fa person >}} Søren Damsbo-Svendsen  
 {{< fa map-marker >}} Copenhagen, Denmark  
 {{< fa envelope >}} sdas@ifs.ku.dk
+
+```{=html}
+<script>
+// Quarto's link-external-newwindow skips the about-page link buttons; open those in a new tab too
+document.querySelectorAll("a.about-link[href^='http']").forEach((a) => {
+  a.target = "_blank";
+  a.rel = "noopener";
+});
+</script>
+```
