@@ -8,7 +8,7 @@ title: CV
   <dt>PhD</dt><dd><a href="phd.html">Political science, University of Copenhagen, 2024</a></dd>
 </dl>
 <div class="pub-actions">
-  <a class="pub-btn" href="https://web.tresorit.com/l/tNiVm#qEOwS8wyKpmL8eEh8mme5g">Download CV &#8599;</a>
+  <a class="pub-btn" href="https://web.tresorit.com/l/jTyKl#cDuntdRMxsAsJMBNW_oMWw">Download CV &#8599;</a>
   <span class="phd-pw">password: <code>cvita</code></span>
 </div>
 ```
