@@ -21,7 +21,6 @@ Interviews, op-eds, podcasts and talks on climate opinion, elections and turnout
   <button type="button" class="chip" data-filter="op-ed">Op-eds</button>
   <button type="button" class="chip" data-filter="podcast radio">Podcasts &amp; radio</button>
   <button type="button" class="chip" data-filter="talk">Talks</button>
-  <button type="button" class="chip" data-filter="reference">Cited</button>
 </div>
 ```
 
