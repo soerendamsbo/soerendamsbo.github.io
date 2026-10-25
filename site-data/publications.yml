@@ -23,7 +23,8 @@
 #               published work and status accepted
 #   figure_label, figure_alt   caption label and screen-reader description
 #   abstract    plain text (working papers: R&R and later only)
-#   topics      climate | voting | representation (filters on the research page)
+#   topics      one of climate | turnout | harassment | voters (filter chips on the
+#               research page; one topic per paper so the filters don't overlap)
 #   presented   optional list of conferences (not shown on the website; the CV
 #               keeps its own conference list)
 #   (which publications get an asterisk on the CV is set in the CV repo's cv-selection.yml)
@@ -47,7 +48,7 @@
   issue: 1
   pages: 201-216
   status: published
-  topics: [climate, voting]
+  topics: [climate]
   doi: 10.1093/poq/nfae067
   open_access: false
   abstract: >-
@@ -67,7 +68,7 @@
   issue: 3
   pages: 1169-1190
   status: published
-  topics: [climate, voting]
+  topics: [climate]
   in_phd: true
   phd_article: 3
   phd_label: Flooding
@@ -90,7 +91,7 @@
   issue: 4
   pages: edae054
   status: published
-  topics: [climate, voting]
+  topics: [climate]
   doi: 10.1093/ijpor/edae054
   open_access: false
   abstract: >-
@@ -109,7 +110,7 @@
   volume: 81
   pages: "102573"
   status: published
-  topics: [climate, voting]
+  topics: [turnout]
   in_phd: true
   phd_article: 4
   phd_label: Turnout
@@ -132,7 +133,7 @@
   issue: 2
   pages: edac009
   status: published
-  topics: [climate, voting]
+  topics: [climate]
   in_phd: true
   phd_article: 1
   phd_label: Media
@@ -155,7 +156,7 @@
   issue: 7
   pages: 1604-1618
   status: published
-  topics: [climate, voting]
+  topics: [climate]
   in_phd: true
   phd_article: 2
   phd_label: Temperature
@@ -176,7 +177,7 @@
   authors: ["Søren Damsbo-Svendsen", "Henrik B. Seeberg"]
   year: 2024
   status: published
-  topics: [voting]
+  topics: [voters]
   book: "Partiledernes kamp om midten: Folketingsvalget 2022"
   editors: ["Kasper M. Hansen", "Rune Stubager"]
   publisher: Djøf Forlag
@@ -192,7 +193,7 @@
   authors: ["Søren Damsbo-Svendsen", "Johannes Andersen"]
   year: 2024
   status: published
-  topics: [climate, voting]
+  topics: [climate]
   book: "Partiledernes kamp om midten: Folketingsvalget 2022"
   editors: ["Kasper M. Hansen", "Rune Stubager"]
   publisher: Djøf Forlag
@@ -223,7 +224,7 @@
   figure_alt: "Conditional treatment effects on willingness to run for office, turning negative among likely candidates"
   authors: ["Søren Damsbo-Svendsen", "Karina Kosiara-Pedersen"]
   status: rr
-  topics: [representation]
+  topics: [harassment]
   venue: British Journal of Political Science
   presented: ["EPSA 2025, Madrid", "ECPR General Conference 2025, Thessaloniki"]
 
@@ -237,7 +238,7 @@
   figure_alt: "Predicted share reporting harassment by age, higher for young women than young men, converging with age"
   authors: ["Karina Kosiara-Pedersen", "Christina Fiig", "Søren Damsbo-Svendsen"] # order per CV
   status: rr
-  topics: [representation]
+  topics: [harassment]
   venue: European Journal of Political Research
 
 - id: mobilization-habits
@@ -249,7 +250,7 @@
   figure_alt: "Effects on turnout by election type for the 2013 and 2014 experiments: positive for later local and national elections after 2013, near zero for EU elections and after 2014"
   authors: ["Kasper M. Hansen", "Søren Damsbo-Svendsen"]
   status: submitted
-  topics: [voting]
+  topics: [turnout]
   venue: American Political Science Review
   presented: ["EPSA 2025, Madrid"]
 
@@ -258,14 +259,14 @@
   title: "Act, Target, or Observer? What Shapes Perceptions of Political Harassment"
   authors: ["Søren Damsbo-Svendsen", "Karina Kosiara-Pedersen"]
   status: in-progress
-  topics: [representation, voting]
+  topics: [harassment]
 
 - id: habit-rdd
   type: working-paper
   title: "Does an Earlier Start Last? Voting Eligibility and Turnout Across 17 Years of Danish Elections"
   authors: ["Kasper M. Hansen", "Esther Bastholm", "Søren Damsbo-Svendsen"]
   status: in-progress
-  topics: [voting]
+  topics: [turnout]
 
 - id: green-wave
   type: working-paper
@@ -279,11 +280,11 @@
   title: "Retrospective Voting After a Sudden Rise in Human Death Rates"
   authors: ["Christoffer Dausgaard", "Søren Damsbo-Svendsen"]
   status: in-progress
-  topics: [voting]
+  topics: [voters]
 
 - id: persuasion-in-practice
   type: working-paper
   title: "Persuasion in Practice: How Party Cues and Persuasive Messaging Interact in Voters’ Opinion Formation"
   authors: ["Søren Damsbo-Svendsen", "Christoffer Dausgaard"]
   status: in-progress
-  topics: [voting]
+  topics: [voters]

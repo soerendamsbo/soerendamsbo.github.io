@@ -28,9 +28,10 @@ Citation counts are on {{< fa brands google-scholar >}} [Google Scholar](https:/
 ```{=html}
 <div class="filter-chips" role="group" aria-label="Filter by theme">
   <button type="button" class="chip active" data-filter="all">All</button>
-  <button type="button" class="chip" data-filter="climate">Climate</button>
-  <button type="button" class="chip" data-filter="voting">Voting &amp; Attitudes</button>
-  <button type="button" class="chip" data-filter="representation">Representation &amp; Harassment</button>
+  <button type="button" class="chip" data-filter="climate">Climate &amp; weather</button>
+  <button type="button" class="chip" data-filter="turnout">Turnout</button>
+  <button type="button" class="chip" data-filter="harassment">Political harassment</button>
+  <button type="button" class="chip" data-filter="voters">Voting &amp; parties</button>
 </div>
 ```
 
