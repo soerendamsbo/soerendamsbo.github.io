@@ -12,7 +12,7 @@ listing:
 
 <!-- Entries live in site-data/outreach.yml; layout in _templates/outreach.ejs -->
 
-Interviews, op-eds, podcasts and talks on climate opinion, elections and turnout, mostly in Danish.
+Interviews, op-eds, podcasts and talks on climate opinion and elections, mostly in Danish.
 
 ```{=html}
 <div class="filter-chips" role="group" aria-label="Filter by type">
