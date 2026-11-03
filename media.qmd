@@ -14,36 +14,5 @@ listing:
 
 Interviews, op-eds, podcasts and talks on climate opinion and elections, mostly in Danish.
 
-```{=html}
-<div class="filter-chips" role="group" aria-label="Filter by type">
-  <button type="button" class="chip active" data-filter="all">All</button>
-  <button type="button" class="chip" data-filter="interview">Interviews</button>
-  <button type="button" class="chip" data-filter="op-ed">Op-eds</button>
-  <button type="button" class="chip" data-filter="podcast radio">Podcasts &amp; radio</button>
-  <button type="button" class="chip" data-filter="talk">Talks</button>
-</div>
-```
-
 ::: {#outreach}
 :::
-
-```{=html}
-<script>
-document.querySelector(".filter-chips").addEventListener("click", (e) => {
-  const chip = e.target.closest(".chip");
-  if (!chip) return;
-  const f = chip.dataset.filter.split(" ");
-  document.querySelectorAll(".filter-chips .chip").forEach((c) => c.classList.toggle("active", c === chip));
-  document.querySelectorAll(".out-item").forEach((it) => {
-    it.hidden = !f.includes("all") && !f.includes(it.dataset.type);
-  });
-  // Hide year headings with no visible entries
-  document.querySelectorAll(".out-year").forEach((h) => {
-    h.hidden = !document.querySelector(`.out-item[data-year="${h.dataset.year}"]:not([hidden])`);
-  });
-  // The citations block belongs to "All" only
-  const cited = document.getElementById("cited-in-the-media");
-  if (cited) cited.hidden = !f.includes("all");
-});
-</script>
-```

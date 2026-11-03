@@ -44,7 +44,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-92b19461e058ca9a13e61b51eb0133a2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-8410865a22108b3d094481e932fe3b93.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/quarto-contrib/fontawesome6-6.7.2/all.min.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/fontawesome6-6.7.2/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -316,13 +316,6 @@ window.Quarto = {
 
 <!-- Entries live in site-data/publications.yml; layout in _templates/publications.ejs -->
 <p>Citation counts are on <i class="fa-brands fa-google-scholar" aria-label="google-scholar"></i> <a href="https://scholar.google.com/citations?user=TeuKGQ0AAAAJ&amp;hl=en">Google Scholar</a>.</p>
-<div class="filter-chips" role="group" aria-label="Filter by theme">
-  <button type="button" class="chip active" data-filter="all">All</button>
-  <button type="button" class="chip" data-filter="climate">Climate &amp; weather</button>
-  <button type="button" class="chip" data-filter="turnout">Turnout</button>
-  <button type="button" class="chip" data-filter="harassment">Political harassment</button>
-  <button type="button" class="chip" data-filter="voters">Voting &amp; parties</button>
-</div>
 <section id="journal-articles" class="level2 pub-section">
 <h2 class="pub-section anchored" data-anchor-id="journal-articles">Journal articles</h2>
 <div id="listing-articles" class="quarto-listing quarto-listing-container-custom">
@@ -748,19 +741,7 @@ document.addEventListener("click", (e) => {
     const open = toggle.getAttribute("aria-expanded") === "true";
     toggle.setAttribute("aria-expanded", String(!open));
     abs.hidden = open;
-    return;
   }
-  const chip = e.target.closest(".filter-chips .chip");
-  if (!chip) return;
-  const f = chip.dataset.filter;
-  document.querySelectorAll(".filter-chips .chip").forEach((c) => c.classList.toggle("active", c === chip));
-  document.querySelectorAll(".pub").forEach((p) => {
-    p.hidden = f !== "all" && !p.dataset.topics.split(" ").includes(f);
-  });
-  // Hide a section heading when none of its entries match
-  document.querySelectorAll("section.pub-section").forEach((s) => {
-    s.hidden = !s.querySelector(".pub:not([hidden])");
-  });
 });
 
 // "In the media": one outreach.yml entry whose `related` names the paper, then

@@ -23,8 +23,8 @@
 #               published work and status accepted
 #   figure_label, figure_alt   caption label and screen-reader description
 #   abstract    plain text (working papers: R&R and later only)
-#   topics      one of climate | turnout | harassment | voters (filter chips on the
-#               research page; one topic per paper so the filters don't overlap)
+#   topics      one of climate | turnout | harassment | voters (one per paper; not
+#               shown on the website at the moment)
 #   presented   optional list of conferences (not shown on the website; the CV
 #               keeps its own conference list)
 #   (which publications get an asterisk on the CV is set in the CV repo's cv-selection.yml)

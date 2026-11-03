@@ -1,6 +1,6 @@
 <%
 // Renders entries from site-data/publications.yml. Used by research.qmd.
-// Styles: .pub-* rules in theme.scss. Abstract toggle + topic filter: script in research.qmd.
+// Styles: .pub-* rules in theme.scss. Abstract/finding toggles: script in research.qmd.
 const me = "Søren Damsbo-Svendsen";
 const joinNames = (xs) => xs.length <= 1 ? (xs[0] || "") : xs.slice(0, -1).join(", ") + " & " + xs[xs.length - 1];
 const linkOf = (item) => item.doi ? "https://doi.org/" + item.doi : item.url;

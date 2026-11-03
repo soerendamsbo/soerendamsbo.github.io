@@ -29,16 +29,6 @@ listing:
 
 Citation counts are on {{< fa brands google-scholar >}} [Google Scholar](https://scholar.google.com/citations?user=TeuKGQ0AAAAJ&hl=en).
 
-```{=html}
-<div class="filter-chips" role="group" aria-label="Filter by theme">
-  <button type="button" class="chip active" data-filter="all">All</button>
-  <button type="button" class="chip" data-filter="climate">Climate &amp; weather</button>
-  <button type="button" class="chip" data-filter="turnout">Turnout</button>
-  <button type="button" class="chip" data-filter="harassment">Political harassment</button>
-  <button type="button" class="chip" data-filter="voters">Voting &amp; parties</button>
-</div>
-```
-
 ## Journal articles {.pub-section}
 
 ::: {#articles}
@@ -66,19 +56,7 @@ document.addEventListener("click", (e) => {
     const open = toggle.getAttribute("aria-expanded") === "true";
     toggle.setAttribute("aria-expanded", String(!open));
     abs.hidden = open;
-    return;
   }
-  const chip = e.target.closest(".filter-chips .chip");
-  if (!chip) return;
-  const f = chip.dataset.filter;
-  document.querySelectorAll(".filter-chips .chip").forEach((c) => c.classList.toggle("active", c === chip));
-  document.querySelectorAll(".pub").forEach((p) => {
-    p.hidden = f !== "all" && !p.dataset.topics.split(" ").includes(f);
-  });
-  // Hide a section heading when none of its entries match
-  document.querySelectorAll("section.pub-section").forEach((s) => {
-    s.hidden = !s.querySelector(".pub:not([hidden])");
-  });
 });
 
 // "In the media": one outreach.yml entry whose `related` names the paper, then

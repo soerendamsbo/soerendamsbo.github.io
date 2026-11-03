@@ -280,27 +280,6 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@4
 $meta-color: $gray-700;
 $rule-color: rgba($grayn, .12);
 
-.filter-chips {
-  display: flex;
-  flex-wrap: wrap;
-  gap: .4rem;
-  margin: .5rem 0 1.5rem;
-
-  .chip {
-    border: 1px solid rgba($grayn, .25);
-    background: transparent;
-    color: $grayn;
-    border-radius: 999px;
-    padding: .2rem .8rem;
-    font-size: .9rem;
-    cursor: pointer;
-    transition: background-color .15s, color .15s;
-
-    &:hover { border-color: $grayn; }
-    &.active { background: $grayn; border-color: $grayn; color: $white; }
-  }
-}
-
 // Research
 .pub {
   display: grid;
