@@ -27,9 +27,9 @@ listing:
 
 <!-- Entries live in site-data/publications.yml; layout in _templates/publications.ejs -->
 
-Citation counts are on {{< fa brands google-scholar >}} [Google Scholar](https://scholar.google.com/citations?user=TeuKGQ0AAAAJ&hl=en).
+Journal articles, working papers and book chapters on voters, elections and public opinion, much of it about climate change.
 
-## Journal articles {.pub-section}
+## Journal articles [{{< fa brands google-scholar >}} Citations&nbsp;↗](https://scholar.google.com/citations?user=TeuKGQ0AAAAJ&hl=en){.pub-cites} {#journal-articles .pub-section}
 
 ::: {#articles}
 :::

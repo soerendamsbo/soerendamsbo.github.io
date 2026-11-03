@@ -45,6 +45,9 @@ body,
   white-space: pre;
   overflow-x: auto;
 }
+.bs-tree .bs-line {
+  display: block;
+}
 .bs-note {
   margin: 1rem 0 0;
   color: var(--bs-muted);
@@ -79,5 +82,11 @@ body,
   }
   .bs-ls li {
     grid-template-columns: 1fr;
+  }
+  /* tree: each description on its own line under its name */
+  .bs-tree .bs-desc {
+    display: block;
+    padding-left: 4ch;
+    color: var(--bs-muted);
   }
 }

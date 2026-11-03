@@ -212,10 +212,28 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@4
   @import url($web-font-path);
 }
 
-// Page titles: a little more air before the content
+// Page titles: a little more air before the content (Quarto zeroes it on
+// narrow screens when the page has a sidebar, hence the second selector)
 
-#title-block-header {
-  margin-bottom: 1.5rem;
+#title-block-header,
+body.nav-sidebar #title-block-header {
+  margin-block-end: 1.25rem;
+}
+
+// Phones and tablets: the sidebar (photo, contact) is for wide screens only, so
+// drop the bar that opens it. The navbar name (211px at 1.25rem) shrinks just
+// enough to fit in full beside the menu button instead of being cut off.
+@media (max-width: 991.98px) {
+  .quarto-secondary-nav {
+    display: none;
+  }
+  // ...which also held the space above the page title; give it back (to match desktop)
+  #quarto-content > main.content {
+    padding-top: 14px;
+  }
+  .navbar-title {
+    font-size: clamp(14px, calc((100vw - 192px) / 10.6), 1.25rem);
+  }
 }
 
 // Buttons
@@ -392,6 +410,17 @@ $rule-color: rgba($grayn, .12);
 
 @media (max-width: 575.98px) {
   .pub { grid-template-columns: 1fr; gap: .2rem; }
+}
+
+// Research: Google Scholar link on the "Journal articles" heading line
+.pub-cites {
+  float: right;
+  margin-top: .55rem;
+  font-size: .8rem;
+  font-weight: 400;
+  color: $meta-color;
+  text-decoration: none;
+  &:hover { color: $link-color; }
 }
 
 // Outreach
