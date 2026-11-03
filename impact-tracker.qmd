@@ -1,11 +1,19 @@
 ---
+search: false   # hidden page: keep it out of search.json
 title: "High-Accuracy Scientific Impact and Citations Tracker"
 format: html
 execute: 
     echo: false
     cache: false
     warning: false
+include-in-header:
+  - text: |
+      <meta name="robots" content="noindex, nofollow">
 ---
+
+::: {.callout-note appearance="simple"}
+This is a joke. Although the citation statistics should be correct, please don't take the rankings seriously.
+:::
 
 This application tracks the scientific impact of leading scholars in political science. Data is retrieved from Google Scholar and updated `r lubridate::today()`.
 
@@ -59,8 +67,6 @@ fkk_stats <- get_impact_stats("2jFLHrgAAAAJ", "Kjøller|FK Larsen")
 chd_stats <- get_impact_stats("cgRByH8AAAAJ", "Dausgaard")
 
 ```
-
-Google Scholar profiles: [Søren Damsbo-Svendsen](https://scholar.google.com/citations?user=TeuKGQ0AAAAJ&hl=en) · [Frederik K. Kjøller](https://scholar.google.com/citations?user=2jFLHrgAAAAJ&hl=en) · [Christoffer H. Dausgaard](https://scholar.google.com/citations?user=cgRByH8AAAAJ&hl=en)
 
 ```{r}
 #| label: showimpact
@@ -140,3 +146,5 @@ $$\text{PI} = \frac{1}{N}\sum_{i=1}^{N} \mathbf{1}[a_i = 1] \times 100$$
 ## References
 
 Damsbo-Svendsen, S. (`r lubridate::year(lubridate::today())`). High-Accuracy Scientific Impact and Citations Tracker. Personal website of Søren Damsbo-Svendsen. https://soerendamsbo.github.io/impact-tracker.html
+
+Google Scholar profiles: [Søren Damsbo-Svendsen](https://scholar.google.com/citations?user=TeuKGQ0AAAAJ&hl=en) · [Frederik K. Kjøller](https://scholar.google.com/citations?user=2jFLHrgAAAAJ&hl=en) · [Christoffer H. Dausgaard](https://scholar.google.com/citations?user=cgRByH8AAAAJ&hl=en)

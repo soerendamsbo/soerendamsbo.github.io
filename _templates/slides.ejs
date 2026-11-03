@@ -1,0 +1,11 @@
+<%
+// Renders backstage/slides/slides.yml (generated). Used by backstage/slides/index.qmd.
+// Styles: .bs-* rules in backstage/backstage.css.
+%>
+```{=html}
+<ul class="bs-ls">
+<% for (const d of items) { %>
+<li><span class="bs-date"><%= d.date || "" %><%= d.date_source === "last commit" ? "*" : " " %></span><span class="bs-entry"><a href="<%= d.url %>"><%= d.title %></a> <span class="bs-file"><%= d.file %></span></span></li>
+<% } %>
+</ul>
+```

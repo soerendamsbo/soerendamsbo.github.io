@@ -1,0 +1,16 @@
+---
+search: false   # hidden page: keep it out of search.json
+pagetitle: "Page not found"
+sidebar: false
+include-in-header:
+  - text: |
+      <meta name="robots" content="noindex">
+---
+
+<!-- GitHub Pages serves this for any missing path; Quarto makes its links root-absolute -->
+
+## Page not found
+
+The page you were looking for isn't here. Try the [front page](index.qmd).
+
+[{{< fa umbrella >}}](/backstage/){rel="nofollow" aria-label="Backstage" style="text-decoration: none; color: #8a8a8a"}

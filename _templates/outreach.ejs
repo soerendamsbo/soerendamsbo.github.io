@@ -9,12 +9,9 @@ const yearOf = (item) => String(item.date).slice(-4);
 // Citations (type: reference) get their own compact block at the end
 const cites = items.filter((i) => i.type === "reference");
 const own = items.filter((i) => i.type !== "reference");
-const outlets = new Set(own.map((i) => i.outlet).filter(Boolean));
-const nTalks = own.filter((i) => i.type === "talk").length;
 let lastYear = null;
 %>
 ```{=html}
-<p class="out-stats"><strong><%= own.length - nTalks %></strong> media appearances &middot; <strong><%= outlets.size %></strong> outlets &middot; <strong><%= nTalks %></strong> talks</p>
 <div class="list out-list">
 <% for (const item of own) {
   const year = yearOf(item);

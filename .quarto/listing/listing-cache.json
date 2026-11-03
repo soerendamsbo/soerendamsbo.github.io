@@ -12,6 +12,9 @@
     ],
     "phd.qmd": [
       "site-data/publications.yml"
+    ],
+    "backstage/slides/index.qmd": [
+      "slides.yml"
     ]
   }
 }

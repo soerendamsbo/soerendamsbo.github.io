@@ -1,0 +1,83 @@
+/* Backstage pages: a plain README look, monospace on off-white paper. */
+
+:root {
+  --bs-paper: #fbfaf4;
+  --bs-ink: #222;
+  --bs-muted: #777;
+  --bs-link: #1a4fb4;
+  --bs-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+}
+
+body,
+.nav-footer {
+  background: var(--bs-paper);
+}
+#title-block-header:empty {
+  display: none;
+}
+
+.bs-page,
+.bs-ls {
+  max-width: 46rem;
+  font-family: var(--bs-mono);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--bs-ink);
+}
+.bs-page a,
+.bs-ls a {
+  color: var(--bs-link);
+}
+.bs-prompt {
+  margin: 1.75rem 0 0.4rem;
+  font-weight: 700;
+}
+.bs-page > .bs-prompt:first-child {
+  margin-top: 0.5rem;
+}
+.bs-tree {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  font-family: inherit;
+  font-size: inherit;
+  white-space: pre;
+  overflow-x: auto;
+}
+.bs-note {
+  margin: 1rem 0 0;
+  color: var(--bs-muted);
+  font-size: 0.8rem;
+}
+
+/* --- Slides listing ------------------------------------------------------- */
+.bs-ls {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.bs-ls li {
+  display: grid;
+  grid-template-columns: 13ch 1fr;
+  margin-bottom: 0.55rem;
+}
+.bs-date {
+  color: var(--bs-muted);
+  white-space: pre;
+}
+.bs-file {
+  display: block;
+  color: var(--bs-muted);
+  font-size: 0.8rem;
+}
+
+@media (max-width: 600px) {
+  .bs-page,
+  .bs-ls {
+    font-size: 0.82rem;
+  }
+  .bs-ls li {
+    grid-template-columns: 1fr;
+  }
+}
