@@ -21,7 +21,7 @@ about:
       href: https://www.linkedin.com/in/s%C3%B8ren-damsbo-svendsen-a63051170/
 ---
 
-Hi there! I am a postdoctoral researcher at the Department of Political Science, University of Copenhagen. I am working on political behavior, voters and elections, public opinion, and representation, especially from a climate perspective. 
+Hi there! I am a postdoctoral researcher at the Department of Political Science, University of Copenhagen. I am working on political behavior, voters and elections, public opinion, and representation, with a particular focus on climate change. 
 
 I am working on a new research project, **Climate Adaptation of Democracy (CAD)**, led by Professor Kasper M. Hansen and funded by the Independent Research Fund Denmark. The project investigates how climate change threatens core democratic institutions, and what we can do about that. Read more on the [CAD project page](cad/index.qmd).
 
