@@ -7,11 +7,14 @@ const linkOf = (item) => item.doi ? "https://doi.org/" + item.doi : item.url;
 const statusLabel = { rr: "R&R", "under-review": "Under review", submitted: "Submitted", "in-progress": "Work in progress" };
 // Working-paper figures stay hidden until (conditional) acceptance
 const showFigure = (item) => item.figure && (item.type !== "working-paper" || item.status === "accepted");
+// Display order: furthest along first (published, accepted, ... in-progress); file order within a status
+const statusRank = ["published", "accepted", "rr", "under-review", "submitted", "in-progress"];
+const rank = (item) => { const r = statusRank.indexOf(item.status); return r < 0 ? statusRank.length : r; };
 const authorsHtml = (xs) => joinNames(xs.map((a) => a === me ? "<span class=\"pub-me\">" + a + "</span>" : a));
 %>
 ```{=html}
 <div class="list pub-list">
-<% items.forEach((item) => {
+<% [...items].sort((a, b) => rank(a) - rank(b)).forEach((item) => {
   const authors = item.authors || [];
   const href = linkOf(item);
   const linkLabel = item.type === "chapter" ? "Book" : item.doi ? "DOI" : "Link";

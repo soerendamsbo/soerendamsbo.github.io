@@ -28,7 +28,6 @@ In the research project **Climate Adaptation of Democracy (CAD)**, my colleagues
 I defended my PhD dissertation, *Political Weather: How Experiencing Climate Change Shapes Our Political Lives*, in January 2024. Find the thesis [here](phd.qmd). I've since worked as a postdoc on the Danish Turnout Project with Kasper M. Hansen and on Democratic Implications of Political Harassment and Sexism (DIPAS) with Karina Kosiara-Pedersen. My research has been published in journals such as *Political Behavior*, *Electoral Studies*, *Public Opinion Quarterly*, and *West European Politics*. Read more about my research [here](research.qmd).
 
 {{< fa person >}} Søren Damsbo-Svendsen  
-{{< fa building-columns >}} Department of Political Science, University of Copenhagen  
 {{< fa map-marker >}} Copenhagen, Denmark  
 {{< fa envelope >}} sdas@ifs.ku.dk
 

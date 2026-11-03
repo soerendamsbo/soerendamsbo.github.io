@@ -1,7 +1,8 @@
 # Publications: single source of truth for research.qmd, phd.qmd and the CV.
 # This file is public (served at soerendamsbo.github.io/site-data/publications.yml);
-# the CV repo reads it at build time. Display order within each type = order in
-# this file (newest first).
+# the CV repo reads it at build time. Display order within each type: by status,
+# furthest along first (published, accepted, rr, under-review, submitted,
+# in-progress), then order in this file (newest first).
 #
 # Fields
 #   id          unique, stable slug. Never rename: outreach.yml `related` and the
