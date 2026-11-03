@@ -167,6 +167,14 @@
 
 # ---- Book chapters -----------------------------------------------------------
 
+- id: pig-election-2026
+  type: chapter
+  title: "Svinevalget og den grønne omstillings geografi"
+  authors: ["Søren Damsbo-Svendsen", "Kasper M. Hansen"]
+  status: in-progress
+  book: "Valgundersøgelsen 2026"   # placeholder; the volume's title is not public yet
+  editors: ["Kasper M. Hansen", "Rune Stubager"]
+
 - id: issue-ownership-2024
   type: chapter
   title: "Næsten fuld plade på politiske emner: Socialdemokratiet får medvind fra emneejerskab over klima og sundhed"

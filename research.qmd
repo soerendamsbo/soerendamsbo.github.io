@@ -34,14 +34,14 @@ Citation counts are on {{< fa brands google-scholar >}} [Google Scholar](https:/
 ::: {#articles}
 :::
 
-## Book chapters {.pub-section}
-
-::: {#chapters}
-:::
-
 ## Working papers {.pub-section}
 
 ::: {#wp-list}
+:::
+
+## Book chapters {.pub-section}
+
+::: {#chapters}
 :::
 
 ::: {#pub-media}

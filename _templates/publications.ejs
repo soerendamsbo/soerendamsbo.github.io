@@ -25,7 +25,7 @@ const authorsHtml = (xs) => joinNames(xs.map((a) => a === me ? "<span class=\"pu
     <% if (item.type === "article") { %>
       <em><%= item.venue %></em>
     <% } else if (item.type === "chapter") { %>
-      In <%= joinNames(item.editors || []) %> (eds.), <em><%= item.book %></em>. <%= item.publisher || "" %>
+      <% if (item.status !== "published") { %><span class="pub-status pub-status-<%= item.status %>"><%= statusLabel[item.status] || item.status %></span> <% } %>In <%= joinNames(item.editors || []) %> (eds.), <em><%= item.book %></em>. <%= item.publisher || "" %>
     <% } else { %>
       <span class="pub-status pub-status-<%= item.status %>"><%= statusLabel[item.status] || item.status %></span><% if (item.venue && item.status !== "in-progress") { %> <em><%= item.venue %></em><% } %>
     <% } %>
