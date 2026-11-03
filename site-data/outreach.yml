@@ -219,6 +219,18 @@
   paywalled: false
   language: da
 
+- id: 2022-10-23-raeson
+  date: 2022-10-23
+  type: op-ed
+  label: Magazine article   # print article in RÆSON's autumn 2022 issue; the link is the web announcement
+  title: "Hvad vil danskerne ofre for klimaet og for Ukraine?"
+  outlet: RÆSON
+  coauthors: ["Jakob Dreyer"]
+  url: https://www.raeson.dk/2022/dreyer-og-damsbo-svendsen-i-raesons-nye-trykte-nummer-hvad-vil-danskerne-ofre-for-klimaet-og-for-ukraine/
+  paywalled: true
+  language: da
+  related: [polycrisis-2024]
+
 - id: 2022-10-13-weekendavisen
   date: 2022-10-13
   type: interview
@@ -237,6 +249,7 @@
   url: https://borsen.dk/nyheder/opinion/danskerne-har-ikke-glemt-alt-om-klimaet-paa-fire-aar
   paywalled: false
   language: da
+  related: [polycrisis-2024]
 
 - id: 2021-10-30-berlingske
   date: 2021-10-30
