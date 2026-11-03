@@ -319,7 +319,6 @@
   date: 2024-11-01
   month_only: true
   type: talk
-  label: Research presentation
   title: "Climate attitudes and public reactions to extreme events"
   venue: Delegation from the Norwegian Environment Agency
   slides: https://soerendamsbo.github.io/misc-slides/polycrisis.html
@@ -338,7 +337,6 @@
   date: 2023-01-01
   month_only: true
   type: talk
-  label: Research presentation
   title: "Weather and politics"
   venue: Danish Meteorological Institute
   slides: https://soerendamsbo.github.io/misc-slides/dmi2023.html
