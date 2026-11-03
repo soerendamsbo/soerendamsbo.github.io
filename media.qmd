@@ -8,6 +8,7 @@ listing:
     audience: academic
   sort: "date desc"
   date-format: "D MMM YYYY"
+  page-size: 1000   # one long page, no pagination
 ---
 
 <!-- Entries live in site-data/outreach.yml; layout in _templates/outreach.ejs -->
