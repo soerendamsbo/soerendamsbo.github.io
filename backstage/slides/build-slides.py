@@ -2,8 +2,9 @@
 
 Run from the site root when decks are added:  python3 -I backstage/slides/build-slides.py
 Standard library only. Reads the gh-pages branch of soerendamsbo/misc-slides on
-GitHub: the file list, each deck's <title>, and its date (from the deck itself,
-else the file's last commit). The output is generated; don't edit it by hand.
+GitHub: the file list, each deck's <title>, and its date: the date printed on the
+title slide, else the date in the file's metadata, else the file's last commit.
+The output is generated; don't edit it by hand.
 """
 
 import html
@@ -20,8 +21,13 @@ PAGES = "https://soerendamsbo.github.io/misc-slides/"
 SKIP = {"template.html", "rladies-theme.html"}  # empty template and theme demo, not talks
 OUT = Path(__file__).with_name("slides.yml")
 
-DANISH_MONTHS = {m: i for i, m in enumerate(
-    "januar februar marts april maj juni juli august september oktober november december".split(), 1)}
+MONTHS = {m: i for names in (
+    "januar februar marts april maj juni juli august september oktober november december",
+    "january february march april may june july august september october november december")
+    for i, m in enumerate(names.split(), 1)}
+MONTH = "(" + "|".join(sorted(MONTHS, key=len, reverse=True)) + ")"
+# Where the title slide starts: Quarto/reveal.js, then xaringan's markdown source
+TITLE_SLIDE = re.compile(rb'id="title-slide"|class: [^\n]*title-slide')
 
 
 def get(url, headers=None):
@@ -30,15 +36,48 @@ def get(url, headers=None):
         return r.read()
 
 
-def deck_date(head):
-    """Date written into the deck by Quarto/R Markdown, or None."""
-    m = re.search(r'<meta name="(?:dcterms\.date|date)" content="(\d{4}-\d{2}-\d{2})', head)
-    if m:
-        return m.group(1)
-    m = re.search(r'class="date"[^>]*>\s*(\d{1,2})\.?\s+([a-zæøå]+)\s+(\d{4})', head, re.I)
-    if m and m.group(2).lower() in DANISH_MONTHS:
-        return date(int(m.group(3)), DANISH_MONTHS[m.group(2).lower()], int(m.group(1))).isoformat()
-    return None
+def read_until_title_slide(name):
+    """The deck from its start through the title slide (self-contained decks inline
+    megabytes of scripts first, so read in chunks and stop once the slide is in)."""
+    req = urllib.request.Request(f"https://raw.githubusercontent.com/{REPO}/{BRANCH}/{name}",
+                                 headers={"User-Agent": "build-slides"})
+    buf = b""
+    with urllib.request.urlopen(req, timeout=120) as r:
+        while True:
+            chunk = r.read(1 << 20)
+            buf += chunk
+            m = TITLE_SLIDE.search(buf)
+            if not chunk or (m and len(buf) > m.start() + 20000):
+                return buf.decode("utf-8", errors="replace")
+
+
+def title_slide_date(text):
+    """Date printed on the title slide: YYYY-MM-DD, or YYYY-MM when it gives only a month."""
+    m = TITLE_SLIDE.search(text.encode("utf-8", errors="replace"))
+    if not m:
+        return None
+    start = len(text.encode("utf-8", errors="replace")[:m.start()].decode("utf-8", errors="replace"))
+    slide = re.split(r"</section>|\n---\s*\n", text[start:start + 20000])[0]
+    slide = html.unescape(re.sub(r"<[^>]+>", " ", slide)).lower()
+    full = [
+        (r"\b(\d{4})-(\d{1,2})-(\d{1,2})\b", lambda g: (g[0], g[1], g[2])),
+        (r"\b(\d{1,2})-(\d{1,2})-(\d{4})\b", lambda g: (g[2], g[1], g[0])),
+        (r"\b(\d{1,2})\.?\s+" + MONTH + r",?\s+(\d{4})\b", lambda g: (g[2], MONTHS[g[1]], g[0])),
+        (MONTH + r"\s+(\d{1,2}),?\s+(\d{4})\b", lambda g: (g[2], MONTHS[g[0]], g[1])),
+    ]
+    for pattern, ymd in full:
+        m = re.search(pattern, slide)
+        if m:
+            y, mo, d = (int(x) for x in ymd(m.groups()))
+            return date(y, mo, d).isoformat()
+    m = re.search(MONTH + r",?\s+(\d{4})\b", slide)
+    return f"{int(m.group(2)):04d}-{MONTHS[m.group(1)]:02d}" if m else None
+
+
+def metadata_date(text):
+    """Date in the deck's <meta> tags (Quarto: dcterms.date; R Markdown: date), or None."""
+    m = re.search(r'<meta name="(?:dcterms\.date|date)" content="(\d{4}-\d{2}-\d{2})', text)
+    return m.group(1) if m else None
 
 
 def last_commit_date(name):
@@ -54,24 +93,25 @@ def main():
                    and f["name"] != "index.html" and f["name"] not in SKIP)
     decks = []
     for name in names:
-        # The <title> and date sit in the <head>; the first 128 KB is enough
-        raw = get(f"https://raw.githubusercontent.com/{REPO}/{BRANCH}/{name}", {"Range": "bytes=0-131071"})
-        head = raw.decode("utf-8", errors="replace")
-        m = re.search(r"<title>(.*?)</title>", head, re.S)
+        text = read_until_title_slide(name)
+        m = re.search(r"<title>(.*?)</title>", text, re.S)
         title = html.unescape(m.group(1)).strip() if m else ""
-        when, source = deck_date(head), "deck"
+        when, source = title_slide_date(text), "title slide"
+        if not when:
+            when, source = metadata_date(text), "metadata"
         if not when:
             when, source = last_commit_date(name), "last commit"
-        decks.append({"file": name, "title": title or name, "date": when, "date_source": source,
+        decks.append({"file": name, "title": title or name, "when": when, "date_source": source,
                       "url": PAGES + name})
         print(f"{when}  {source:11}  {name}", file=sys.stderr)
-    decks.sort(key=lambda d: (d["date"] or "", d["file"]), reverse=True)
+    decks.sort(key=lambda d: (d["when"] or "", d["file"]), reverse=True)
 
     lines = ["# Generated by backstage/slides/build-slides.py from github.com/" + REPO + " (" + BRANCH + ").",
-             "# Don't edit by hand: re-run the script. date_source: deck | last commit", ""]
+             "# Don't edit by hand: re-run the script. date_source: title slide | metadata | last commit",
+             "# when: YYYY-MM-DD, or YYYY-MM when the title slide gives only a month", ""]
     for d in decks:
         lines.append(f"- file: {json.dumps(d['file'])}")
-        for key in ("title", "date", "date_source", "url"):
+        for key in ("title", "when", "date_source", "url"):
             lines.append(f"  {key}: {json.dumps(d[key], ensure_ascii=False)}")
     OUT.write_text("\n".join(lines) + "\n", encoding="utf-8")
     print(f"Wrote {len(decks)} decks to {OUT}", file=sys.stderr)
