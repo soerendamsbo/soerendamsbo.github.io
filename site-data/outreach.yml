@@ -9,15 +9,19 @@
 #              the CV's selection file refers to it
 #   date       YYYY-MM-DD
 #   type       interview | op-ed | podcast | radio | reference | talk
+#              (reference = coverage that cites the research without interviewing me;
+#              listed under "Cited in the media" on the Outreach page)
 #   label      optional display override for the type (e.g. "Live radio interview")
-#   title      headline / episode title as published
+#   title      headline / episode title as published, in English or Danish (other
+#              languages: translate to English and note the original in a comment)
 #   outlet     publication or broadcaster
 #   programme  optional show/podcast name within the outlet
 #   coauthors  optional, for op-eds
 #   url        optional
 #   paywalled  true if behind a paywall
 #   language   da | en
-#   related    optional list of publication ids from publications.yml
+#   related    optional list of publication ids from publications.yml (shown as
+#              "In the media" under those papers on the Research page)
 #   talks:
 #   venue      event / host (instead of outlet)
 #   slides     optional link to slides
@@ -25,6 +29,16 @@
 #              the Outreach page; all talks live here, conference papers live in the CV)
 #   no_slides  true when the talk format had no slides
 #   month_only true when only the month is known (date then uses day 01)
+
+- id: 2026-10-30-spectrum-news
+  date: 2026-10-30
+  type: reference
+  title: "Could weather have an impact on the 2026 elections?"
+  outlet: Spectrum News
+  url: https://spectrumlocalnews.com/mo/st-louis/weather/2026/10/30/how-weather-could-impact-election-day
+  paywalled: false
+  language: en
+  related: [rain-turnout-2023]
 
 - id: 2026-09-22-altinget
   date: 2026-09-22
@@ -121,6 +135,18 @@
   language: da
   related: [rain-turnout-2023]
 
+- id: 2023-01-27-ct24
+  date: 2023-01-27
+  type: interview
+  label: Live TV interview
+  title: "The influence of weather on voter turnout"   # segment title, translated from Czech ("Vliv počasí na volební účast")
+  outlet: Česká televize
+  programme: Studio ČT24
+  url: https://www.ceskatelevize.cz/porady/10101491767-studio-ct24/223411058030127/
+  paywalled: false
+  language: en
+  related: [rain-turnout-2023]
+
 - id: 2022-11-09-tv2
   date: 2022-11-09
   type: interview
@@ -184,6 +210,7 @@
   url: https://videnskab.dk/kultur-samfund/ekstremt-vejr-faar-os-til-at-aendre-holdning-til-klimaforandringerne
   paywalled: false
   language: da
+  related: [local-warming-2021]
 
 - id: 2020-11-17-information
   date: 2020-11-17
@@ -203,6 +230,7 @@
   url: https://www.altinget.dk/energi/artikel/forsker-naar-vejret-er-varmt-er-vi-alle-klimatosser
   paywalled: false
   language: da
+  related: [local-warming-2021]
 
 # ---- Talks (non-conference; conference papers stay in the CV) ----------------
 

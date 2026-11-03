@@ -1,0 +1,10 @@
+<%
+// Hands outreach.yml entries that name a paper in `related` to the script in
+// research.qmd, which lists them as "In the media" under that paper.
+const mentions = items.filter((i) => i.related && i.related.length && i.type !== "talk");
+%>
+```{=html}
+<ul id="pub-media-data" hidden>
+<% for (const m of mentions) { %><li data-type="<%= m.type %>" data-related="<%= m.related.join(" ") %>" data-url="<%= m.url || "" %>" title="<%= m.title %>"><%= m.outlet %></li>
+<% } %></ul>
+```

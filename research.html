@@ -44,7 +44,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-b787efabc50ed2b263793a8b77f7365b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-307a32561ccfe20cbfd7e4a093c0a3f6.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/quarto-contrib/fontawesome6-6.7.2/all.min.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/fontawesome6-6.7.2/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -135,6 +135,35 @@ ul.task-list li input[type="checkbox"] {
 
     window['quarto-listings'] = window['quarto-listings'] || {};
     window['quarto-listings']['listing-wp-list'] = new List('listing-wp-list', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-pub-media .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-id','listing-date','listing-type','listing-title','listing-outlet','listing-url','listing-paywalled','listing-language','listing-related','listing-programme','listing-label','listing-coauthors','listing-month_only','listing-venue','listing-no_slides','listing-audience','listing-slides',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] }],
+      page: 25,
+    pagination: { item: "<li class='page-item'><a class='page page-link' href='#'></a></li>" },
+      searchColumns: ["listing-id","listing-date","listing-type","listing-title","listing-outlet","listing-url","listing-paywalled","listing-language","listing-related","listing-programme","listing-label","listing-coauthors","listing-month_only","listing-venue","listing-no_slides","listing-audience","listing-slides"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-pub-media'] = new List('listing-pub-media', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -689,6 +718,22 @@ window.Quarto = {
 </div>
 <div class="listing-no-matching d-none">No matching items</div>
 </div>
+<div id="listing-pub-media" class="quarto-listing quarto-listing-container-custom">
+<ul id="pub-media-data" hidden="">
+<li data-type="reference" data-related="rain-turnout-2023" data-url="https://spectrumlocalnews.com/mo/st-louis/weather/2026/10/30/how-weather-could-impact-election-day" title="Could weather have an impact on the 2026 elections?">Spectrum News</li>
+<li data-type="interview" data-related="flooding-2025" data-url="https://videnskab.dk/kultur-samfund/klimachok-saadan-flyttede-stormen-bodil-danske-vaelgere/" title="Klimachok: Sådan flyttede stormen Bodil danske vælgere">Videnskab.dk</li>
+<li data-type="reference" data-related="rain-turnout-2023" data-url="https://www.nytimes.com/2024/10/26/weather/election-day-weather.html" title="In a Tight Election, Can the Weather Cast a Deciding Vote?">New York Times</li>
+<li data-type="interview" data-related="rain-turnout-2023" data-url="https://jyllands-posten.dk/indland/ECE15105747/et-graat-spoergsmaal-spoeger-ofte-ved-valg-og-nu-har-forskere-et-svar/" title="Et gråt spørgsmål spøger ofte ved valg, og nu har forskere et svar">Jyllands-Posten</li>
+<li data-type="interview" data-related="rain-turnout-2023" data-url="https://videnskab.dk/kultur-samfund/regn-faar-unge-til-at-blive-vaek-fra-stemmeboksen" title="Regn får unge til at blive væk fra stemmeboksen">Videnskab.dk</li>
+<li data-type="interview" data-related="rain-turnout-2023" data-url="https://www.ceskatelevize.cz/porady/10101491767-studio-ct24/223411058030127/" title="The influence of weather on voter turnout">Česká televize</li>
+<li data-type="interview" data-related="local-warming-2021" data-url="https://videnskab.dk/kultur-samfund/ekstremt-vejr-faar-os-til-at-aendre-holdning-til-klimaforandringerne" title="Ekstremt vejr får os til at ændre holdning til klimaforandringerne">Videnskab.dk</li>
+<li data-type="op-ed" data-related="local-warming-2021" data-url="https://www.altinget.dk/energi/artikel/forsker-naar-vejret-er-varmt-er-vi-alle-klimatosser" title="Forsker: Når vejret er varmt, er vi alle klimatosser">Altinget</li>
+</ul>
+<div class="listing-no-matching d-none">No matching items</div>
+<nav id="pub-media-pagination" class="listing-pagination" aria-label="Page Navigation">
+  <ul class="pagination"></ul>
+</nav>
+</div>
 <script>
 document.addEventListener("click", (e) => {
   const toggle = e.target.closest(".pub-toggle");
@@ -710,6 +755,42 @@ document.addEventListener("click", (e) => {
   document.querySelectorAll("section.pub-section").forEach((s) => {
     s.hidden = !s.querySelector(".pub:not([hidden])");
   });
+});
+
+// "In the media": outreach.yml entries whose `related` names the paper,
+// grouped by type ("interviewed by …, cited by …"), newest first within each
+// group (data from the pub-media listing)
+const mentions = [...document.querySelectorAll("#pub-media-data li")].map((li) => ({
+  type: li.dataset.type, related: li.dataset.related.split(" "), outlet: li.textContent, title: li.title, url: li.dataset.url,
+}));
+const mediaGroups = [
+  { types: ["interview"], verb: "interviewed by" },
+  { types: ["op-ed"], verb: "op-ed in", plural: "op-eds in" },
+  { types: ["podcast", "radio"], verb: "on" },
+  { types: ["reference"], verb: "cited by" },
+];
+document.querySelectorAll(".pub").forEach((p) => {
+  const id = p.id.replace(/^pub-/, "");
+  const ms = mentions.filter((m) => m.related.includes(id));
+  if (!ms.length) return;
+  const line = document.createElement("p");
+  line.className = "pub-media";
+  line.append("In the media:");
+  let first = true;
+  for (const g of mediaGroups) {
+    const gs = ms.filter((m) => g.types.includes(m.type));
+    if (!gs.length) continue;
+    line.append((first ? " " : " · ") + (gs.length > 1 && g.plural ? g.plural : g.verb) + " ");
+    first = false;
+    gs.forEach((m, i) => {
+      if (i) line.append(", ");
+      const el = document.createElement(m.url ? "a" : "span");
+      el.textContent = m.outlet;
+      if (m.url) { el.href = m.url; el.title = m.title; el.target = "_blank"; el.rel = "noopener"; }
+      line.append(el);
+    });
+  }
+  p.querySelector(".pub-venue").after(line);
 });
 
 // Key-finding figures: grow the thumbnail into a near-full-screen view and

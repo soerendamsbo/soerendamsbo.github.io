@@ -157,6 +157,95 @@
   font-size: 0.8rem;
 }
 
+/* --- Map zoom ------------------------------------------------------------ */
+.fm-zoomable {
+  cursor: zoom-in;
+}
+.fm-zoom-btn {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  z-index: 1;
+  padding: 0.3rem 0.7rem;
+  border: 1px solid rgba(212, 223, 235, 0.35);
+  border-radius: 999px;
+  background: rgba(11, 20, 35, 0.75);
+  color: var(--cad-on-dark);
+  font-size: 0.85rem;
+}
+.fm-zoom-btn:hover {
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.6);
+}
+.map-viewer {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: var(--cad-sea);
+}
+.map-viewer[hidden] {
+  display: none;
+}
+.mv-stage {
+  /* the image's aspect ratio (6000 x 5675), fitted to the screen */
+  width: min(96vw, calc(90dvh * 6000 / 5675));
+  aspect-ratio: 6000 / 5675;
+}
+.mv-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  cursor: grab;
+}
+.mv-img:active {
+  cursor: grabbing;
+}
+.mv-controls {
+  position: absolute;
+  top: calc(0.75rem + env(safe-area-inset-top, 0px));
+  right: 0.75rem;
+  display: flex;
+  gap: 0.4rem;
+}
+.mv-controls button {
+  width: 2.4rem;
+  height: 2.4rem;
+  border: 1px solid rgba(212, 223, 235, 0.35);
+  border-radius: 50%;
+  background: rgba(11, 20, 35, 0.8);
+  color: var(--cad-on-dark);
+}
+.mv-controls button:hover {
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.6);
+}
+.mv-hint {
+  position: absolute;
+  bottom: calc(0.5rem + env(safe-area-inset-bottom, 0px));
+  left: 0;
+  right: 0;
+  margin: 0;
+  text-align: center;
+  color: var(--cad-on-dark-muted);
+  font-size: 0.8rem;
+  pointer-events: none;
+}
+.mv-hint-touch {
+  display: none;
+}
+@media (hover: none) {
+  .mv-hint-mouse {
+    display: none;
+  }
+  .mv-hint-touch {
+    display: inline;
+  }
+}
+
 /* --- What's next ---------------------------------------------------------- */
 /* The cards carry their own top rules, so drop the heading underline here */
 #whats-next > h2 {
@@ -204,6 +293,10 @@
   }
   .frame-map {
     border-radius: 10px;
+  }
+  .fm-zoom-btn {
+    position: static;
+    margin: 0.75rem 1rem 0;
   }
   .fm-stat {
     position: static;

@@ -6,14 +6,17 @@ const labels = { interview: "Interview", "op-ed": "Op-ed", podcast: "Podcast", r
 const icons = { podcast: "podcast", radio: "radio", "op-ed": "pen-nib", reference: "quote-right", talk: "person-chalkboard" }; // default: newspaper
 const joinNames = (xs) => xs.length <= 1 ? (xs[0] || "") : xs.slice(0, -1).join(", ") + " & " + xs[xs.length - 1];
 const yearOf = (item) => String(item.date).slice(-4);
-const outlets = new Set(items.map((i) => i.outlet).filter(Boolean));
-const nTalks = items.filter((i) => i.type === "talk").length;
+// Citations (type: reference) get their own compact block at the end
+const cites = items.filter((i) => i.type === "reference");
+const own = items.filter((i) => i.type !== "reference");
+const outlets = new Set(own.map((i) => i.outlet).filter(Boolean));
+const nTalks = own.filter((i) => i.type === "talk").length;
 let lastYear = null;
 %>
 ```{=html}
-<p class="out-stats"><strong><%= items.length - nTalks %></strong> media appearances &middot; <strong><%= outlets.size %></strong> outlets &middot; <strong><%= nTalks %></strong> talks</p>
+<p class="out-stats"><strong><%= own.length - nTalks %></strong> media appearances &middot; <strong><%= outlets.size %></strong> outlets &middot; <strong><%= nTalks %></strong> talks</p>
 <div class="list out-list">
-<% for (const item of items) {
+<% for (const item of own) {
   const year = yearOf(item);
   let form = item.label || labels[item.type] || item.type;
   if (item.coauthors && item.coauthors.length) form += " with " + joinNames(item.coauthors);
@@ -24,10 +27,21 @@ let lastYear = null;
 <div class="out-item" data-type="<%= item.type %>" data-year="<%= year %>" <%= metadataAttrs(item) %>>
   <span class="out-icon out-icon-<%= item.type %>"><i class="fa-solid fa-<%= icons[item.type] || "newspaper" %>" aria-hidden="true"></i></span>
   <div class="out-body">
-    <p class="out-title"><% if (item.url) { %><a href="<%= item.url %>"><%= item.title %></a><% } else { %><%= item.title %><% } %><% if (item.language === "en") { %> <span class="out-lang">EN</span><% } %></p>
-    <p class="out-meta"><span class="out-form"><%= form %></span> &middot; <%= source %> &middot; <%= dayMonth %><% if (item.paywalled) { %> &middot; <span class="out-paywall"><i class="fa-solid fa-lock" aria-hidden="true"></i> paywall</span><% } %><% if (item.slides) { %> &middot; <a class="out-related" href="<%= item.slides %>">slides &#8599;</a><% } %><% if (item.no_slides) { %> &middot; <span class="out-noslides">no slides</span><% } %><% for (const r of (item.related || [])) { %> &middot; <a class="out-related" href="research.html#pub-<%= r %>">the research &rarr;</a><% } %></p>
+    <p class="out-title"><% if (item.url) { %><a href="<%= item.url %>"><%= item.title %></a><% } else { %><%= item.title %><% } %></p>
+    <p class="out-meta"><span class="out-form"><%= form %></span> &middot; <%= source %> &middot; <%= dayMonth %><% if (item.paywalled) { %> &middot; <span class="out-paywall"><i class="fa-solid fa-lock" aria-hidden="true"></i> paywall</span><% } %><% if (item.slides) { %> &middot; <a class="out-related" href="<%= item.slides %>">slides &#8599;</a><% } %><% if (item.no_slides) { %> &middot; <span class="out-noslides">no slides</span><% } %></p>
   </div>
 </div>
 <% } %>
 </div>
+<% if (cites.length) { %>
+<section class="out-cited" id="cited-in-the-media">
+<h2 class="out-cited-heading">Cited in the media</h2>
+<p class="out-cited-intro">Reporting that draws on the research.</p>
+<ul class="out-cited-list">
+<% for (const item of cites) { %>
+  <li <%= metadataAttrs(item) %>><span class="out-cite-outlet"><%= item.outlet %></span> &middot; <% if (item.url) { %><a href="<%= item.url %>"><%= item.title %></a><% } else { %><%= item.title %><% } %> &middot; <%= item.date %><% if (item.paywalled) { %> &middot; <span class="out-paywall"><i class="fa-solid fa-lock" aria-hidden="true"></i> paywall</span><% } %><% for (const r of (item.related || [])) { %> &middot; <a class="out-related" href="research.html#pub-<%= r %>">the research &rarr;</a><% } %></li>
+<% } %>
+</ul>
+</section>
+<% } %>
 ```

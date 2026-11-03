@@ -19,6 +19,10 @@ listing:
       type: working-paper
     template: _templates/publications.ejs
     sort: false
+  - id: pub-media
+    contents: site-data/outreach.yml
+    template: _templates/pub-media.ejs
+    sort: "date desc"
 ---
 
 <!-- Entries live in site-data/publications.yml; layout in _templates/publications.ejs -->
@@ -50,6 +54,9 @@ Citation counts are on {{< fa brands google-scholar >}} [Google Scholar](https:/
 ::: {#wp-list}
 :::
 
+::: {#pub-media}
+:::
+
 ```{=html}
 <script>
 document.addEventListener("click", (e) => {
@@ -72,6 +79,42 @@ document.addEventListener("click", (e) => {
   document.querySelectorAll("section.pub-section").forEach((s) => {
     s.hidden = !s.querySelector(".pub:not([hidden])");
   });
+});
+
+// "In the media": outreach.yml entries whose `related` names the paper,
+// grouped by type ("interviewed by …, cited by …"), newest first within each
+// group (data from the pub-media listing)
+const mentions = [...document.querySelectorAll("#pub-media-data li")].map((li) => ({
+  type: li.dataset.type, related: li.dataset.related.split(" "), outlet: li.textContent, title: li.title, url: li.dataset.url,
+}));
+const mediaGroups = [
+  { types: ["interview"], verb: "interviewed by" },
+  { types: ["op-ed"], verb: "op-ed in", plural: "op-eds in" },
+  { types: ["podcast", "radio"], verb: "on" },
+  { types: ["reference"], verb: "cited by" },
+];
+document.querySelectorAll(".pub").forEach((p) => {
+  const id = p.id.replace(/^pub-/, "");
+  const ms = mentions.filter((m) => m.related.includes(id));
+  if (!ms.length) return;
+  const line = document.createElement("p");
+  line.className = "pub-media";
+  line.append("In the media:");
+  let first = true;
+  for (const g of mediaGroups) {
+    const gs = ms.filter((m) => g.types.includes(m.type));
+    if (!gs.length) continue;
+    line.append((first ? " " : " · ") + (gs.length > 1 && g.plural ? g.plural : g.verb) + " ");
+    first = false;
+    gs.forEach((m, i) => {
+      if (i) line.append(", ");
+      const el = document.createElement(m.url ? "a" : "span");
+      el.textContent = m.outlet;
+      if (m.url) { el.href = m.url; el.title = m.title; el.target = "_blank"; el.rel = "noopener"; }
+      line.append(el);
+    });
+  }
+  p.querySelector(".pub-venue").after(line);
 });
 
 // Key-finding figures: grow the thumbnail into a near-full-screen view and

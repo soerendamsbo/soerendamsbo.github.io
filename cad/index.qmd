@@ -34,14 +34,71 @@ October\ 2026 · **Survey ready to field** · waiting for the next storm surge
     <span class="fm-n">2,576</span>
     one-kilometre squares with homes inside Denmark's storm-surge risk area
   </div>
-  <img src="media/map-frame.png" width="1520" height="1438" loading="lazy"
+  <button type="button" class="fm-zoom-btn" aria-label="Zoom into the map"><i class="bi bi-zoom-in" aria-hidden="true"></i> Zoom</button>
+  <img class="fm-zoomable" src="media/map-frame.png" width="1520" height="1438" loading="lazy"
        alt="Map of Denmark on a dark background. Strings of small glowing squares in nine colours trace much of the coast: the Wadden Sea, the Limfjord, the east Jutland fjords, the southern islands and Øresund. Each is a one-kilometre square with homes inside the storm-surge risk area.">
   <figcaption>
-    <div class="fm-kicker">The coast we watch</div>
-    <p>Each lit square is one of them. Together they trace the Wadden Sea, the fjords, the southern islands and Øresund. The colours mark nine stretches of coast.</p>
+    <div class="fm-kicker">The coast we are watching</div>
+    <p>Each lit square is one square kilometre of coast with homes inside the storm-surge risk area. Together they trace the Wadden Sea, the fjords, the southern islands and Øresund. The colours mark nine groups of squares.</p>
     <p class="fm-source">Data: DMI storm-surge risk maps · Danish address and building registers · DAGI. Bornholm moved closer.</p>
   </figcaption>
 </figure>
+```
+
+```{=html}
+<div class="map-viewer" role="dialog" aria-modal="true" aria-label="Zoomable map of the storm-surge coast" hidden>
+  <div class="mv-stage"><img class="mv-img" alt="Zoomable map of Denmark's storm-surge coast, one-kilometre squares in nine colours" width="6000" height="5675"></div>
+  <div class="mv-controls">
+    <button type="button" data-mv="in" aria-label="Zoom in"><i class="bi bi-plus-lg" aria-hidden="true"></i></button>
+    <button type="button" data-mv="out" aria-label="Zoom out"><i class="bi bi-dash-lg" aria-hidden="true"></i></button>
+    <button type="button" data-mv="reset" aria-label="Reset zoom"><i class="bi bi-arrows-angle-contract" aria-hidden="true"></i></button>
+    <button type="button" data-mv="close" aria-label="Close"><i class="bi bi-x-lg" aria-hidden="true"></i></button>
+  </div>
+  <p class="mv-hint"><span class="mv-hint-mouse">Scroll to zoom &middot; drag to move &middot; Esc to close</span><span class="mv-hint-touch">Pinch to zoom &middot; drag to move</span></p>
+</div>
+<script src="panzoom.min.js"></script>
+<script>
+// Map viewer: the full-resolution map (media/map-frame-zoom.webp, 6000 px) loads on
+// first open; the inline image stands in until it arrives. Panzoom 4.6.2, vendored.
+(() => {
+  const viewer = document.querySelector(".map-viewer");
+  const stage = viewer.querySelector(".mv-stage");
+  const img = viewer.querySelector(".mv-img");
+  let pz = null, opener = null;
+
+  const open = (e) => {
+    opener = e.currentTarget;
+    if (!img.src) {
+      img.src = "media/map-frame.png";
+      const hi = new Image();
+      hi.onload = () => { img.src = hi.src; };
+      hi.src = "media/map-frame-zoom.webp";
+    }
+    viewer.hidden = false;
+    document.body.style.overflow = "hidden";
+    if (!pz) {
+      pz = Panzoom(img, { maxScale: 12, contain: "outside", overflow: "visible", step: 0.5 });
+      stage.addEventListener("wheel", pz.zoomWithWheel);
+      img.addEventListener("dblclick", (ev) => pz.zoomToPoint(Math.min(pz.getScale() * 2, 12), ev));
+    }
+    viewer.querySelector('[data-mv="close"]').focus();
+  };
+  const close = () => {
+    viewer.hidden = true;
+    document.body.style.overflow = "";
+    pz.reset({ animate: false });
+    if (opener) opener.focus();
+  };
+
+  document.querySelectorAll(".fm-zoom-btn, .fm-zoomable").forEach((el) => el.addEventListener("click", open));
+  viewer.querySelector(".mv-controls").addEventListener("click", (e) => {
+    const b = e.target.closest("button");
+    if (!b) return;
+    ({ in: () => pz.zoomIn(), out: () => pz.zoomOut(), reset: () => pz.reset(), close })[b.dataset.mv]();
+  });
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !viewer.hidden) close(); });
+})();
+</script>
 ```
 
 ## Waiting for the storm

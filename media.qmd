@@ -41,6 +41,9 @@ document.querySelector(".filter-chips").addEventListener("click", (e) => {
   document.querySelectorAll(".out-year").forEach((h) => {
     h.hidden = !document.querySelector(`.out-item[data-year="${h.dataset.year}"]:not([hidden])`);
   });
+  // The citations block belongs to "All" only
+  const cited = document.getElementById("cited-in-the-media");
+  if (cited) cited.hidden = !f.includes("all");
 });
 </script>
 ```

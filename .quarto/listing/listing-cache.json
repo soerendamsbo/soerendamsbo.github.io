@@ -4,7 +4,8 @@
       "posts"
     ],
     "research.qmd": [
-      "site-data/publications.yml"
+      "site-data/publications.yml",
+      "site-data/outreach.yml"
     ],
     "media.qmd": [
       "site-data/outreach.yml"

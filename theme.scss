@@ -387,6 +387,12 @@ $rule-color: rgba($grayn, .12);
 }
 .pub-finding { font-size: 1rem; font-weight: 500; }
 
+.pub-media {
+  margin: .15rem 0 0;
+  font-size: .85rem;
+  color: $meta-color;
+}
+
 @media (max-width: 575.98px) {
   .pub { grid-template-columns: 1fr; gap: .2rem; }
 }
@@ -429,7 +435,7 @@ $rule-color: rgba($grayn, .12);
 
 .out-title {
   margin: 0;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 1.35;
 
   a { color: inherit; text-decoration: none; }
@@ -444,15 +450,28 @@ $rule-color: rgba($grayn, .12);
 
 .out-form { font-weight: 600; }
 
-.out-lang {
-  font-size: .7rem;
-  font-weight: 700;
-  border: 1px solid currentColor;
-  border-radius: .2rem;
-  padding: 0 .3rem;
-  color: $meta-color;
-  vertical-align: middle;
+.out-cited {
+  margin-top: 2.5rem;
 }
+.out-cited-heading {
+  font-size: 1.25rem;
+}
+.out-cited-intro {
+  color: $meta-color;
+  font-size: .9rem;
+  margin-bottom: .5rem;
+}
+.out-cited-list {
+  padding-left: 0;
+  list-style: none;
+  font-size: .9rem;
+  color: $meta-color;
+
+  li { padding: .3rem 0; }
+  a:not(.out-related) { color: $grayn; text-decoration: none; }
+  a:not(.out-related):hover { color: $link-color; }
+}
+.out-cite-outlet { font-weight: 600; color: $grayn; }
 
 // PhD page
 .phd-hero {
