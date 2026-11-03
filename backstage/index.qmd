@@ -20,7 +20,7 @@ please don't cite.</p>
 <p class="bs-prompt">$ tree backstage/</p>
 <pre class="bs-tree">backstage/
 ├── <a href="slides/">slides/</a>          talk, conference and other slide decks
-└── <a href="../impact-tracker.html">impact-tracker</a>   a joke, with real numbers</pre>
+└── <a href="../impact.html">impact-tracker</a>   a joke, with real numbers</pre>
 
 <p class="bs-prompt">$ <a href="../">cd ~</a></p>
 </div>

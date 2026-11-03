@@ -2,6 +2,7 @@
 search: false   # hidden page: keep it out of search.json
 title: "High-Accuracy Scientific Impact and Citations Tracker"
 format: html
+aliases: [impact-tracker.html]   # old address redirects here
 execute: 
     echo: false
     cache: false
@@ -145,6 +146,6 @@ $$\text{PI} = \frac{1}{N}\sum_{i=1}^{N} \mathbf{1}[a_i = 1] \times 100$$
 
 ## References
 
-Damsbo-Svendsen, S. (`r lubridate::year(lubridate::today())`). High-Accuracy Scientific Impact and Citations Tracker. Personal website of Søren Damsbo-Svendsen. https://soerendamsbo.github.io/impact-tracker.html
+Damsbo-Svendsen, S. (`r lubridate::year(lubridate::today())`). High-Accuracy Scientific Impact and Citations Tracker. Personal website of Søren Damsbo-Svendsen. https://soerendamsbo.github.io/impact.html
 
 Google Scholar profiles: [Søren Damsbo-Svendsen](https://scholar.google.com/citations?user=TeuKGQ0AAAAJ&hl=en) · [Frederik K. Kjøller](https://scholar.google.com/citations?user=2jFLHrgAAAAJ&hl=en) · [Christoffer H. Dausgaard](https://scholar.google.com/citations?user=cgRByH8AAAAJ&hl=en)

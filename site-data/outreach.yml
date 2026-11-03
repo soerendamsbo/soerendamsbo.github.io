@@ -1,5 +1,5 @@
 # Outreach: media appearances, op-eds, podcasts and talks. Single source of truth for
-# media.qmd (the Outreach page) and the CV. This file is public (served at
+# outreach.qmd (the Outreach page) and the CV. This file is public (served at
 # soerendamsbo.github.io/site-data/outreach.yml); the CV repo reads it at build time
 # and chooses which media items to show in its own cv-selection.yml (by id).
 # Sorted by date on the page, so new entries can go anywhere (top is easiest).

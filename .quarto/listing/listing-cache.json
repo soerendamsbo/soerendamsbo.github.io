@@ -15,6 +15,9 @@
     ],
     "backstage/slides/index.qmd": [
       "slides.yml"
+    ],
+    "outreach.qmd": [
+      "site-data/outreach.yml"
     ]
   }
 }

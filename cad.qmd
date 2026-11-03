@@ -2,10 +2,11 @@
 pagetitle: "CAD Project"
 description: "Climate impacts on environmental and democratic attitudes"
 sidebar: false
-css: cad.css
+css: cad/cad.css
+aliases: [cad/index.html]   # old address (also /cad/) redirects here
 ---
 
-<!-- Ported from the standalone CAD site (github.com/soerendamsbo/cad). Styles in cad.css. -->
+<!-- Ported from the standalone CAD site (github.com/soerendamsbo/cad). Styles in cad/cad.css; assets in cad/. -->
 
 ```{=html}
 <div class="cad-hero column-screen">
@@ -15,7 +16,7 @@ css: cad.css
       <h1>Climate Adaptation of Democracy</h1>
       <p class="cad-sub">Climate impacts on environmental and democratic attitudes</p>
     </div>
-    <img class="cad-logo" src="media/cad-logo.svg" alt="CAD logo">
+    <img class="cad-logo" src="cad/media/cad-logo.svg" alt="CAD logo">
   </div>
 </div>
 ```
@@ -35,7 +36,7 @@ October\ 2026 · **Survey ready to field** · waiting for the next storm surge
     one-kilometre squares with homes inside Denmark's storm-surge risk area
   </div>
   <button type="button" class="fm-zoom-btn" aria-label="Zoom into the map"><i class="bi bi-zoom-in" aria-hidden="true"></i> Zoom</button>
-  <img class="fm-zoomable" src="media/map-frame.png" width="1520" height="1438" loading="lazy"
+  <img class="fm-zoomable" src="cad/media/map-frame.png" width="1520" height="1438" loading="lazy"
        alt="Map of Denmark on a dark background. Strings of small glowing squares in nine colours trace much of the coast: the Wadden Sea, the Limfjord, the east Jutland fjords, the southern islands and Øresund. Each is a one-kilometre square with homes inside the storm-surge risk area.">
   <figcaption>
     <div class="fm-kicker">The coast we are watching</div>
@@ -56,9 +57,9 @@ October\ 2026 · **Survey ready to field** · waiting for the next storm surge
   </div>
   <p class="mv-hint"><span class="mv-hint-mouse">Scroll to zoom &middot; drag to move &middot; Esc to close</span><span class="mv-hint-touch">Pinch to zoom &middot; drag to move</span></p>
 </div>
-<script src="panzoom.min.js"></script>
+<script src="cad/panzoom.min.js"></script>
 <script>
-// Map viewer: the full-resolution map (media/map-frame-zoom.webp, 6000 px) loads on
+// Map viewer: the full-resolution map (cad/media/map-frame-zoom.webp, 6000 px) loads on
 // first open; the inline image stands in until it arrives. Panzoom 4.6.2, vendored.
 (() => {
   const viewer = document.querySelector(".map-viewer");
@@ -69,10 +70,10 @@ October\ 2026 · **Survey ready to field** · waiting for the next storm surge
   const open = (e) => {
     opener = e.currentTarget;
     if (!img.src) {
-      img.src = "media/map-frame.png";
+      img.src = "cad/media/map-frame.png";
       const hi = new Image();
       hi.onload = () => { img.src = hi.src; };
-      hi.src = "media/map-frame-zoom.webp";
+      hi.src = "cad/media/map-frame-zoom.webp";
     }
     viewer.hidden = false;
     document.body.style.overflow = "hidden";
@@ -133,9 +134,9 @@ Getting a survey into the field within weeks of a disaster took a lot of groundw
 :::
 
 ::: {.cad-partners}
-![](media/ku-logo.png){fig-alt="University of Copenhagen"}
+![](cad/media/ku-logo.png){fig-alt="University of Copenhagen"}
 
-![](media/dff-logo.png){fig-alt="Independent Research Fund Denmark"}
+![](cad/media/dff-logo.png){fig-alt="Independent Research Fund Denmark"}
 
-![](media/dmi-logo.png){fig-alt="Danish Meteorological Institute"}
+![](cad/media/dmi-logo.png){fig-alt="Danish Meteorological Institute"}
 :::
