@@ -44,7 +44,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-307a32561ccfe20cbfd7e4a093c0a3f6.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-92b19461e058ca9a13e61b51eb0133a2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/quarto-contrib/fontawesome6-6.7.2/all.min.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/fontawesome6-6.7.2/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -156,10 +156,10 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-id','listing-date','listing-type','listing-title','listing-outlet','listing-url','listing-paywalled','listing-language','listing-related','listing-programme','listing-label','listing-coauthors','listing-month_only','listing-venue','listing-no_slides','listing-audience','listing-slides',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] }],
+      valueNames: ['listing-id','listing-date','listing-type','listing-title','listing-outlet','listing-url','listing-paywalled','listing-language','listing-related','listing-programme','listing-highlight','listing-label','listing-coauthors','listing-month_only','listing-venue','listing-no_slides','listing-audience','listing-slides',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] }],
       page: 25,
     pagination: { item: "<li class='page-item'><a class='page page-link' href='#'></a></li>" },
-      searchColumns: ["listing-id","listing-date","listing-type","listing-title","listing-outlet","listing-url","listing-paywalled","listing-language","listing-related","listing-programme","listing-label","listing-coauthors","listing-month_only","listing-venue","listing-no_slides","listing-audience","listing-slides"],
+      searchColumns: ["listing-id","listing-date","listing-type","listing-title","listing-outlet","listing-url","listing-paywalled","listing-language","listing-related","listing-programme","listing-highlight","listing-label","listing-coauthors","listing-month_only","listing-venue","listing-no_slides","listing-audience","listing-slides"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -721,8 +721,14 @@ window.Quarto = {
 <div id="listing-pub-media" class="quarto-listing quarto-listing-container-custom">
 <ul id="pub-media-data" hidden="">
 <li data-type="reference" data-related="rain-turnout-2023" data-url="https://spectrumlocalnews.com/mo/st-louis/weather/2026/10/30/how-weather-could-impact-election-day" title="Could weather have an impact on the 2026 elections?">Spectrum News</li>
+<li data-type="reference" data-related="rain-turnout-2023" data-url="https://www.mprnews.org/story/2026/10/30/minnesota-weather-its-like-rain-on-election-day" title="Minnesota weather: It's like rain on Election Day">MPR News</li>
+<li data-type="reference" data-related="rain-turnout-2023" data-url="https://www.jpost.com/israel-election-2026/article-912746" title="Israel braces for rainy Election Day, but can bad weather affect voter turnout?">The Jerusalem Post</li>
+<li data-type="reference" data-related="rain-turnout-2023" data-url="https://videnskab.dk/kultur-samfund/regn-pa-valgdagen-vil-fa-tusinder-af-vaelgere-til-at-blive-hjemme/" title="Regn på valgdagen vil få tusinder af vælgere til at blive hjemme">Videnskab.dk</li>
 <li data-type="interview" data-related="flooding-2025" data-url="https://videnskab.dk/kultur-samfund/klimachok-saadan-flyttede-stormen-bodil-danske-vaelgere/" title="Klimachok: Sådan flyttede stormen Bodil danske vælgere">Videnskab.dk</li>
-<li data-type="reference" data-related="rain-turnout-2023" data-url="https://www.nytimes.com/2024/10/26/weather/election-day-weather.html" title="In a Tight Election, Can the Weather Cast a Deciding Vote?">New York Times</li>
+<li data-type="reference" data-related="rain-turnout-2023" data-url="https://www.newsweek.com/stormy-weather-across-us-could-impact-voter-turnout-1980222" title="Severe Storms Across US Could Impact Voter Turnout in Key States">Newsweek</li>
+<li data-type="reference" data-highlight="" data-related="rain-turnout-2023" data-url="https://www.nytimes.com/2024/10/26/weather/election-day-weather.html" title="In a Tight Election, Can the Weather Cast a Deciding Vote?">New York Times</li>
+<li data-type="reference" data-related="rain-turnout-2023" data-url="https://nsnews.com/highlights/rainfall-warning-stop-bc-election-vancouver-2024-9673678" title="Will heavy rainfall keep people from voting in Vancouver?">North Shore News</li>
+<li data-type="reference" data-related="rain-turnout-2023" data-url="https://journalistsresource.org/home/bad-weather-voter-turnout-election-day-research/" title="Bad weather dampens Election Day turnout. Studies suggest mail ballots and other alternative voting methods can help.">The Journalist's Resource</li>
 <li data-type="interview" data-related="rain-turnout-2023" data-url="https://jyllands-posten.dk/indland/ECE15105747/et-graat-spoergsmaal-spoeger-ofte-ved-valg-og-nu-har-forskere-et-svar/" title="Et gråt spørgsmål spøger ofte ved valg, og nu har forskere et svar">Jyllands-Posten</li>
 <li data-type="interview" data-related="rain-turnout-2023" data-url="https://videnskab.dk/kultur-samfund/regn-faar-unge-til-at-blive-vaek-fra-stemmeboksen" title="Regn får unge til at blive væk fra stemmeboksen">Videnskab.dk</li>
 <li data-type="interview" data-related="rain-turnout-2023" data-url="https://www.ceskatelevize.cz/porady/10101491767-studio-ct24/223411058030127/" title="The influence of weather on voter turnout">Česká televize</li>
@@ -757,38 +763,48 @@ document.addEventListener("click", (e) => {
   });
 });
 
-// "In the media": outreach.yml entries whose `related` names the paper,
-// grouped by type ("interviewed by …, cited by …"), newest first within each
-// group (data from the pub-media listing)
+// "In the media": one outreach.yml entry whose `related` names the paper, then
+// a "+N" button that reveals the rest in place. Shown first: the entry marked
+// `highlight` (most prominent outlet), else the one with the most of my own
+// involvement (op-ed > interview > podcast/radio > citation), newest first
+// within that (data from the pub-media listing, already newest first)
 const mentions = [...document.querySelectorAll("#pub-media-data li")].map((li) => ({
-  type: li.dataset.type, related: li.dataset.related.split(" "), outlet: li.textContent, title: li.title, url: li.dataset.url,
+  type: li.dataset.type, related: li.dataset.related.split(" "), highlight: "highlight" in li.dataset,
+  outlet: li.textContent, title: li.title, url: li.dataset.url,
 }));
-const mediaGroups = [
-  { types: ["interview"], verb: "interviewed by" },
-  { types: ["op-ed"], verb: "op-ed in", plural: "op-eds in" },
-  { types: ["podcast", "radio"], verb: "on" },
-  { types: ["reference"], verb: "cited by" },
-];
 document.querySelectorAll(".pub").forEach((p) => {
   const id = p.id.replace(/^pub-/, "");
   const ms = mentions.filter((m) => m.related.includes(id));
   if (!ms.length) return;
+  const involvement = { "op-ed": 0, interview: 1, podcast: 2, radio: 2, reference: 3 };
+  const rank = (m) => (m.highlight ? -1 : involvement[m.type] ?? 4);
+  const top = ms.reduce((a, b) => (rank(b) < rank(a) ? b : a));
+  const rest = ms.filter((m) => m !== top);
+  const link = (m) => {
+    const el = document.createElement(m.url ? "a" : "span");
+    el.textContent = m.outlet;
+    if (m.url) { el.href = m.url; el.title = m.title; el.target = "_blank"; el.rel = "noopener"; }
+    return el;
+  };
   const line = document.createElement("p");
   line.className = "pub-media";
-  line.append("In the media:");
-  let first = true;
-  for (const g of mediaGroups) {
-    const gs = ms.filter((m) => g.types.includes(m.type));
-    if (!gs.length) continue;
-    line.append((first ? " " : " · ") + (gs.length > 1 && g.plural ? g.plural : g.verb) + " ");
-    first = false;
-    gs.forEach((m, i) => {
-      if (i) line.append(", ");
-      const el = document.createElement(m.url ? "a" : "span");
-      el.textContent = m.outlet;
-      if (m.url) { el.href = m.url; el.title = m.title; el.target = "_blank"; el.rel = "noopener"; }
-      line.append(el);
+  line.append("In the media: ", link(top));
+  if (rest.length) {
+    const more = document.createElement("span");
+    more.className = "pub-media-rest";
+    more.hidden = true;
+    rest.forEach((m) => more.append(", ", link(m)));
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "pub-media-more";
+    btn.setAttribute("aria-label", `Show ${rest.length} more`);
+    btn.textContent = `+${rest.length}`;
+    // One way: the button gives way to the full list
+    btn.addEventListener("click", () => {
+      more.hidden = false;
+      btn.remove();
     });
+    line.append(more, " ", btn);
   }
   p.querySelector(".pub-venue").after(line);
 });

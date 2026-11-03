@@ -392,6 +392,18 @@ $rule-color: rgba($grayn, .12);
   font-size: .85rem;
   color: $meta-color;
 }
+.pub-media-more {
+  padding: 0 .4rem;
+  border: 1px solid $rule-color;
+  border-radius: 999px;
+  background: none;
+  color: $link-color;
+  font-size: .75rem;
+  line-height: 1.5;
+  vertical-align: 1px;
+
+  &:hover { border-color: $link-color; }
+}
 
 @media (max-width: 575.98px) {
   .pub { grid-template-columns: 1fr; gap: .2rem; }

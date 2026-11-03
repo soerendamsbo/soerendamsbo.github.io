@@ -44,7 +44,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-307a32561ccfe20cbfd7e4a093c0a3f6.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-92b19461e058ca9a13e61b51eb0133a2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/quarto-contrib/fontawesome6-6.7.2/all.min.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/fontawesome6-6.7.2/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -72,9 +72,10 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-id','listing-date','listing-type','listing-title','listing-outlet','listing-url','listing-paywalled','listing-language','listing-related','listing-programme','listing-label','listing-coauthors','listing-month_only','listing-venue','listing-no_slides','listing-audience','listing-slides',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] }],
-      
-      searchColumns: ["listing-id","listing-date","listing-type","listing-title","listing-outlet","listing-url","listing-paywalled","listing-language","listing-related","listing-programme","listing-label","listing-coauthors","listing-month_only","listing-venue","listing-no_slides","listing-audience","listing-slides"],
+      valueNames: ['listing-id','listing-date','listing-type','listing-title','listing-outlet','listing-url','listing-paywalled','listing-language','listing-related','listing-programme','listing-highlight','listing-label','listing-coauthors','listing-month_only','listing-venue','listing-no_slides','listing-audience','listing-slides',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] }],
+      page: 25,
+    pagination: { item: "<li class='page-item'><a class='page page-link' href='#'></a></li>" },
+      searchColumns: ["listing-id","listing-date","listing-type","listing-title","listing-outlet","listing-url","listing-paywalled","listing-language","listing-related","listing-programme","listing-highlight","listing-label","listing-coauthors","listing-month_only","listing-venue","listing-no_slides","listing-audience","listing-slides"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -437,17 +438,32 @@ window.Quarto = {
 
 <section class="out-cited" id="cited-in-the-media">
 <h2 class="out-cited-heading anchored">Cited in the media</h2>
-<p class="out-cited-intro">Reporting that draws on the research.</p>
+<p class="out-cited-intro">Reporting that draws on my research.</p>
 <ul class="out-cited-list">
 
-  <li data-index="23" data-listing-date-sort="1793318400000"><span class="out-cite-outlet">Spectrum News</span> · <a href="https://spectrumlocalnews.com/mo/st-louis/weather/2026/10/30/how-weather-could-impact-election-day">Could weather have an impact on the 2026 elections?</a> · 30 Oct 2026 · <a class="out-related" href="research.html#pub-rain-turnout-2023">the research →</a></li>
+  <li data-index="23" data-listing-date-sort="1793318400000"><span class="out-cite-outlet">Spectrum News</span> · <a href="https://spectrumlocalnews.com/mo/st-louis/weather/2026/10/30/how-weather-could-impact-election-day">Could weather have an impact on the 2026 elections?</a> · 30 Oct 2026</li>
 
-  <li data-index="24" data-listing-date-sort="1729900800000"><span class="out-cite-outlet">New York Times</span> · <a href="https://www.nytimes.com/2024/10/26/weather/election-day-weather.html">In a Tight Election, Can the Weather Cast a Deciding Vote?</a> · 26 Oct 2024 · <a class="out-related" href="research.html#pub-rain-turnout-2023">the research →</a></li>
+  <li data-index="24" data-listing-date-sort="1793318400000"><span class="out-cite-outlet">MPR News</span> · <a href="https://www.mprnews.org/story/2026/10/30/minnesota-weather-its-like-rain-on-election-day">Minnesota weather: It's like rain on Election Day</a> · 30 Oct 2026</li>
+
+  <li data-index="25" data-listing-date-sort="1792886400000"><span class="out-cite-outlet">The Jerusalem Post</span> · <a href="https://www.jpost.com/israel-election-2026/article-912746">Israel braces for rainy Election Day, but can bad weather affect voter turnout?</a> · 25 Oct 2026</li>
+
+  <li data-index="26" data-listing-date-sort="1774224000000"><span class="out-cite-outlet">Videnskab.dk</span> · <a href="https://videnskab.dk/kultur-samfund/regn-pa-valgdagen-vil-fa-tusinder-af-vaelgere-til-at-blive-hjemme/">Regn på valgdagen vil få tusinder af vælgere til at blive hjemme</a> · 23 Mar 2026</li>
+
+  <li data-index="27" data-listing-date-sort="1730764800000"><span class="out-cite-outlet">Newsweek</span> · <a href="https://www.newsweek.com/stormy-weather-across-us-could-impact-voter-turnout-1980222">Severe Storms Across US Could Impact Voter Turnout in Key States</a> · 5 Nov 2024</li>
+
+  <li data-index="28" data-listing-date-sort="1729900800000"><span class="out-cite-outlet">New York Times</span> · <a href="https://www.nytimes.com/2024/10/26/weather/election-day-weather.html">In a Tight Election, Can the Weather Cast a Deciding Vote?</a> · 26 Oct 2024</li>
+
+  <li data-index="29" data-listing-date-sort="1729296000000"><span class="out-cite-outlet">North Shore News</span> · <a href="https://nsnews.com/highlights/rainfall-warning-stop-bc-election-vancouver-2024-9673678">Will heavy rainfall keep people from voting in Vancouver?</a> · 19 Oct 2024</li>
+
+  <li data-index="30" data-listing-date-sort="1725494400000"><span class="out-cite-outlet">The Journalist's Resource</span> · <a href="https://journalistsresource.org/home/bad-weather-voter-turnout-election-day-research/">Bad weather dampens Election Day turnout. Studies suggest mail ballots and other alternative voting methods can help.</a> · 5 Sep 2024</li>
 
 </ul>
 </section>
 
 <div class="listing-no-matching d-none">No matching items</div>
+<nav id="outreach-pagination" class="listing-pagination" aria-label="Page Navigation">
+  <ul class="pagination"></ul>
+</nav>
 </div>
 <script>
 document.querySelector(".filter-chips").addEventListener("click", (e) => {

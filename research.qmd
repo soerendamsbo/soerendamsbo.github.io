@@ -81,38 +81,48 @@ document.addEventListener("click", (e) => {
   });
 });
 
-// "In the media": outreach.yml entries whose `related` names the paper,
-// grouped by type ("interviewed by …, cited by …"), newest first within each
-// group (data from the pub-media listing)
+// "In the media": one outreach.yml entry whose `related` names the paper, then
+// a "+N" button that reveals the rest in place. Shown first: the entry marked
+// `highlight` (most prominent outlet), else the one with the most of my own
+// involvement (op-ed > interview > podcast/radio > citation), newest first
+// within that (data from the pub-media listing, already newest first)
 const mentions = [...document.querySelectorAll("#pub-media-data li")].map((li) => ({
-  type: li.dataset.type, related: li.dataset.related.split(" "), outlet: li.textContent, title: li.title, url: li.dataset.url,
+  type: li.dataset.type, related: li.dataset.related.split(" "), highlight: "highlight" in li.dataset,
+  outlet: li.textContent, title: li.title, url: li.dataset.url,
 }));
-const mediaGroups = [
-  { types: ["interview"], verb: "interviewed by" },
-  { types: ["op-ed"], verb: "op-ed in", plural: "op-eds in" },
-  { types: ["podcast", "radio"], verb: "on" },
-  { types: ["reference"], verb: "cited by" },
-];
 document.querySelectorAll(".pub").forEach((p) => {
   const id = p.id.replace(/^pub-/, "");
   const ms = mentions.filter((m) => m.related.includes(id));
   if (!ms.length) return;
+  const involvement = { "op-ed": 0, interview: 1, podcast: 2, radio: 2, reference: 3 };
+  const rank = (m) => (m.highlight ? -1 : involvement[m.type] ?? 4);
+  const top = ms.reduce((a, b) => (rank(b) < rank(a) ? b : a));
+  const rest = ms.filter((m) => m !== top);
+  const link = (m) => {
+    const el = document.createElement(m.url ? "a" : "span");
+    el.textContent = m.outlet;
+    if (m.url) { el.href = m.url; el.title = m.title; el.target = "_blank"; el.rel = "noopener"; }
+    return el;
+  };
   const line = document.createElement("p");
   line.className = "pub-media";
-  line.append("In the media:");
-  let first = true;
-  for (const g of mediaGroups) {
-    const gs = ms.filter((m) => g.types.includes(m.type));
-    if (!gs.length) continue;
-    line.append((first ? " " : " · ") + (gs.length > 1 && g.plural ? g.plural : g.verb) + " ");
-    first = false;
-    gs.forEach((m, i) => {
-      if (i) line.append(", ");
-      const el = document.createElement(m.url ? "a" : "span");
-      el.textContent = m.outlet;
-      if (m.url) { el.href = m.url; el.title = m.title; el.target = "_blank"; el.rel = "noopener"; }
-      line.append(el);
+  line.append("In the media: ", link(top));
+  if (rest.length) {
+    const more = document.createElement("span");
+    more.className = "pub-media-rest";
+    more.hidden = true;
+    rest.forEach((m) => more.append(", ", link(m)));
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "pub-media-more";
+    btn.setAttribute("aria-label", `Show ${rest.length} more`);
+    btn.textContent = `+${rest.length}`;
+    // One way: the button gives way to the full list
+    btn.addEventListener("click", () => {
+      more.hidden = false;
+      btn.remove();
     });
+    line.append(more, " ", btn);
   }
   p.querySelector(".pub-venue").after(line);
 });

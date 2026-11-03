@@ -36,10 +36,10 @@ let lastYear = null;
 <% if (cites.length) { %>
 <section class="out-cited" id="cited-in-the-media">
 <h2 class="out-cited-heading">Cited in the media</h2>
-<p class="out-cited-intro">Reporting that draws on the research.</p>
+<p class="out-cited-intro">Reporting that draws on my research.</p>
 <ul class="out-cited-list">
 <% for (const item of cites) { %>
-  <li <%= metadataAttrs(item) %>><span class="out-cite-outlet"><%= item.outlet %></span> &middot; <% if (item.url) { %><a href="<%= item.url %>"><%= item.title %></a><% } else { %><%= item.title %><% } %> &middot; <%= item.date %><% if (item.paywalled) { %> &middot; <span class="out-paywall"><i class="fa-solid fa-lock" aria-hidden="true"></i> paywall</span><% } %><% for (const r of (item.related || [])) { %> &middot; <a class="out-related" href="research.html#pub-<%= r %>">the research &rarr;</a><% } %></li>
+  <li <%= metadataAttrs(item) %>><span class="out-cite-outlet"><%= item.outlet %></span> &middot; <% if (item.url) { %><a href="<%= item.url %>"><%= item.title %></a><% } else { %><%= item.title %><% } %> &middot; <%= item.date %><% if (item.paywalled) { %> &middot; <span class="out-paywall"><i class="fa-solid fa-lock" aria-hidden="true"></i> paywall</span><% } %></li>
 <% } %>
 </ul>
 </section>

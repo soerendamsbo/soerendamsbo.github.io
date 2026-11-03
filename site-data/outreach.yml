@@ -22,6 +22,8 @@
 #   language   da | en
 #   related    optional list of publication ids from publications.yml (shown as
 #              "In the media" under those papers on the Research page)
+#   highlight  true = the item a paper's "In the media" line shows first (otherwise
+#              the newest); the rest are summed up as "and N others"
 #   talks:
 #   venue      event / host (instead of outlet)
 #   slides     optional link to slides
@@ -36,6 +38,26 @@
   title: "Could weather have an impact on the 2026 elections?"
   outlet: Spectrum News
   url: https://spectrumlocalnews.com/mo/st-louis/weather/2026/10/30/how-weather-could-impact-election-day
+  paywalled: false
+  language: en
+  related: [rain-turnout-2023]
+
+- id: 2026-10-30-mpr-news
+  date: 2026-10-30
+  type: reference
+  title: "Minnesota weather: It's like rain on Election Day"
+  outlet: MPR News
+  url: https://www.mprnews.org/story/2026/10/30/minnesota-weather-its-like-rain-on-election-day
+  paywalled: false
+  language: en
+  related: [rain-turnout-2023]
+
+- id: 2026-10-25-jerusalem-post
+  date: 2026-10-25
+  type: reference
+  title: "Israel braces for rainy Election Day, but can bad weather affect voter turnout?"
+  outlet: The Jerusalem Post
+  url: https://www.jpost.com/israel-election-2026/article-912746
   paywalled: false
   language: en
   related: [rain-turnout-2023]
@@ -58,6 +80,16 @@
   url: https://www.altinget.dk/artikel/valget-cementerer-en-ny-klimapolitisk-virkelighed
   paywalled: false
   language: da
+
+- id: 2026-03-23-videnskab
+  date: 2026-03-23
+  type: reference
+  title: "Regn på valgdagen vil få tusinder af vælgere til at blive hjemme"
+  outlet: Videnskab.dk
+  url: https://videnskab.dk/kultur-samfund/regn-pa-valgdagen-vil-fa-tusinder-af-vaelgere-til-at-blive-hjemme/
+  paywalled: false
+  language: da
+  related: [rain-turnout-2023]
 
 - id: 2025-04-24-information
   date: 2025-04-24
@@ -87,12 +119,43 @@
   language: da
   related: [flooding-2025]
 
+- id: 2024-11-05-newsweek
+  date: 2024-11-05
+  type: reference
+  title: "Severe Storms Across US Could Impact Voter Turnout in Key States"
+  outlet: Newsweek
+  url: https://www.newsweek.com/stormy-weather-across-us-could-impact-voter-turnout-1980222
+  paywalled: false
+  language: en
+  related: [rain-turnout-2023]
+
 - id: 2024-10-26-new-york
   date: 2024-10-26
   type: reference
   title: "In a Tight Election, Can the Weather Cast a Deciding Vote?"
   outlet: New York Times
   url: https://www.nytimes.com/2024/10/26/weather/election-day-weather.html
+  paywalled: false
+  language: en
+  related: [rain-turnout-2023]
+  highlight: true
+
+- id: 2024-10-19-north-shore-news
+  date: 2024-10-19
+  type: reference
+  title: "Will heavy rainfall keep people from voting in Vancouver?"
+  outlet: North Shore News
+  url: https://nsnews.com/highlights/rainfall-warning-stop-bc-election-vancouver-2024-9673678
+  paywalled: false
+  language: en
+  related: [rain-turnout-2023]
+
+- id: 2024-09-05-journalists-resource
+  date: 2024-09-05
+  type: reference
+  title: "Bad weather dampens Election Day turnout. Studies suggest mail ballots and other alternative voting methods can help."
+  outlet: The Journalist's Resource
+  url: https://journalistsresource.org/home/bad-weather-voter-turnout-election-day-research/
   paywalled: false
   language: en
   related: [rain-turnout-2023]

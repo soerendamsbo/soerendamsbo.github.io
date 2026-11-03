@@ -5,6 +5,6 @@ const mentions = items.filter((i) => i.related && i.related.length && i.type !==
 %>
 ```{=html}
 <ul id="pub-media-data" hidden>
-<% for (const m of mentions) { %><li data-type="<%= m.type %>" data-related="<%= m.related.join(" ") %>" data-url="<%= m.url || "" %>" title="<%= m.title %>"><%= m.outlet %></li>
+<% for (const m of mentions) { %><li data-type="<%= m.type %>"<% if (m.highlight) { %> data-highlight<% } %> data-related="<%= m.related.join(" ") %>" data-url="<%= m.url || "" %>" title="<%= m.title %>"><%= m.outlet %></li>
 <% } %></ul>
 ```

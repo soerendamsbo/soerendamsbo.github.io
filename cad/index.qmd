@@ -22,7 +22,7 @@ css: cad.css
 
 **Climate Adaptation of Democracy (CAD)** studies how adverse climate events affect democracy. The project asks: *How do adverse local climate events affect citizens' attitudes towards democracy and the green transition, and what strategies for communication can help create effects that are environmentally and democratically sustainable?*
 
-CAD is based at the Department of Political Science, University of Copenhagen, and funded by the Independent Research Fund Denmark (DFF). It is led by [Professor Kasper M. Hansen](https://kaspermhansen.eu) with [Postdoc Søren Damsbo-Svendsen](https://soerendamsbo.github.io), both at the University of Copenhagen, and [Senior Researcher Morten A. Dahl Larsen](http://research.dmi.dk/staff/all-staff/mla/) from the Danish Meteorological Institute (DMI).
+CAD is based at the Department of Political Science, University of Copenhagen, and funded by the Independent Research Fund Denmark (DFF). It is led by Kasper M. Hansen (professor) with Søren Damsbo-Svendsen (postdoc), both at the University of Copenhagen, and Morten A. Dahl Larsen (senior researcher) from the Danish Meteorological Institute (DMI).
 
 ::: {.cad-status}
 October\ 2026 · **Survey ready to field** · waiting for the next storm surge
@@ -39,7 +39,7 @@ October\ 2026 · **Survey ready to field** · waiting for the next storm surge
        alt="Map of Denmark on a dark background. Strings of small glowing squares in nine colours trace much of the coast: the Wadden Sea, the Limfjord, the east Jutland fjords, the southern islands and Øresund. Each is a one-kilometre square with homes inside the storm-surge risk area.">
   <figcaption>
     <div class="fm-kicker">The coast we are watching</div>
-    <p>Each lit square is one square kilometre of coast with homes inside the storm-surge risk area. Together they trace the Wadden Sea, the fjords, the southern islands and Øresund. The colours mark nine groups of squares.</p>
+    <p>Each lit square is one square kilometre of coast with homes inside the storm-surge risk area. Together they trace the Wadden Sea, the fjords, the southern islands and Øresund.</p>
     <p class="fm-source">Data: DMI storm-surge risk maps · Danish address and building registers · DAGI. Bornholm moved closer.</p>
   </figcaption>
 </figure>
