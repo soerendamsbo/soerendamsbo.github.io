@@ -22,8 +22,9 @@
 #   language   da | en
 #   related    optional list of publication ids from publications.yml (shown as
 #              "In the media" under those papers on the Research page)
-#   highlight  true = the item a paper's "In the media" line shows first (otherwise
-#              the newest); the rest are summed up as "and N others"
+#   highlight  true = the item a paper's "In the media" line shows first; otherwise
+#              the one where I was most involved (op-ed, then interview, podcast/radio,
+#              citation), newest first; the rest sit behind a "+N" button
 #   talks:
 #   venue      event / host (instead of outlet)
 #   slides     optional link to slides
@@ -250,6 +251,7 @@
   paywalled: false
   language: da
   related: [polycrisis-2024]
+  highlight: true   # shown before RÆSON: more prominent, and not paywalled
 
 - id: 2021-10-30-berlingske
   date: 2021-10-30
