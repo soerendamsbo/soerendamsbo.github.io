@@ -17,6 +17,7 @@ body,
 }
 
 .bs-page,
+.bs-group,
 .bs-ls {
   max-width: 46rem;
   font-family: var(--bs-mono);
@@ -55,6 +56,10 @@ body,
 }
 
 /* --- Slides listing ------------------------------------------------------- */
+.bs-group {
+  margin: 1.75rem 0 0.6rem;
+  font-weight: 700;
+}
 .bs-ls {
   margin: 0;
   padding: 0;
@@ -77,6 +82,7 @@ body,
 
 @media (max-width: 600px) {
   .bs-page,
+  .bs-group,
   .bs-ls {
     font-size: 0.82rem;
   }

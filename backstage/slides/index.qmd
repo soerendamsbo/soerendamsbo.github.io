@@ -20,7 +20,8 @@ listing:
 <div class="bs-page">
 <p class="bs-prompt">$ ls -t backstage/slides/</p>
 <p>Every HTML slide deck in my <a href="https://github.com/soerendamsbo/misc-slides">misc-slides</a>
-repository, newest first, drafts and old versions included. Please don't cite.</p>
+repository: talks newest first, then teaching by course, lecture 1 first. Drafts and
+old versions included. Please don't cite.</p>
 </div>
 ```
 

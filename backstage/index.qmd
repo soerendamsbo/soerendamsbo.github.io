@@ -18,7 +18,7 @@ I keep for myself and the people I share them with. You're welcome to look aroun
 please don't cite.</p>
 
 <p class="bs-prompt">$ tree backstage/</p>
-<pre class="bs-tree"><span class="bs-line">backstage/</span><span class="bs-line">├── <a href="slides/">slides/</a>          <span class="bs-desc">talk, conference and other slide decks</span></span><span class="bs-line">└── <a href="../impact.html">impact-tracker</a>   <span class="bs-desc">a joke, with real numbers</span></span></pre>
+<pre class="bs-tree"><span class="bs-line">backstage/</span><span class="bs-line">├── <a href="slides/">slides/</a>          <span class="bs-desc">talk, teaching and other slide decks</span></span><span class="bs-line">└── <a href="../impact.html">impact-tracker</a>   <span class="bs-desc">a joke, with real numbers</span></span></pre>
 
 <p class="bs-prompt">$ <a href="../">cd ~</a></p>
 </div>

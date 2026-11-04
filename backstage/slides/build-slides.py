@@ -8,6 +8,9 @@ title slide, else the date in the file's metadata, else the file's last commit.
 It also checks that the local files each deck refers to (images, styles, scripts)
 exist in the repo, and ends with a report of what is missing. Decks unchanged since
 the last run (same git blob sha) are taken from slides.yml without re-reading.
+Decks: the .html files at the repo root (talks) and in teaching-decks/<folder>/, one
+folder per course and semester; deeper folders (Quarto's *_files/ etc.) are ignored.
+Talks are listed newest first; each course oldest first, then courses newest first.
 The output is generated; don't edit it by hand.
 """
 
@@ -16,6 +19,7 @@ import json
 import posixpath
 import re
 import sys
+import urllib.error
 import urllib.parse
 import urllib.request
 from datetime import date
@@ -25,6 +29,15 @@ REPO = "soerendamsbo/misc-slides"
 BRANCH = "gh-pages"
 PAGES = "https://soerendamsbo.github.io/misc-slides/"
 SKIP = {"template.html", "rladies-theme.html"}  # empty template and theme demo, not talks
+TEACHING = "teaching-decks/"
+# Headings for the teaching folders; a folder not listed here shows its folder name.
+# Course name as it was taught (Danish), semester in English.
+GROUPS = {
+    "dak2-f2022": "Dansk og Komparativ Politik 2 · spring 2022",
+    "dak2-f2023": "Dansk og Komparativ Politik 2 · spring 2023",
+    "methods1-f2025": "Metode 1 · spring 2025",
+    "methods1-f2026": "Metode 1 · spring 2026",
+}
 OUT = Path(__file__).with_name("slides.yml")
 
 MONTHS = {m: i for names in (
@@ -77,7 +90,12 @@ def metadata_date(text):
 
 def last_commit_date(name):
     url = f"https://api.github.com/repos/{REPO}/commits?sha={BRANCH}&path={urllib.parse.quote(name)}&per_page=1"
-    commits = json.loads(get(url))
+    try:
+        commits = json.loads(get(url))
+    except urllib.error.HTTPError as e:
+        if e.code in (403, 429):
+            sys.exit("GitHub's API limit reached (60 calls an hour without login): run again in an hour.")
+        raise
     return commits[0]["commit"]["committer"]["date"][:10] if commits else None
 
 
@@ -108,6 +126,42 @@ def check_refs(name, refs, repo_files):
     return missing, absolute
 
 
+def is_deck(path):
+    """Root-level .html files, and .html files directly in a teaching-decks/<folder>/."""
+    parts = path.split("/")
+    if not path.endswith(".html") or parts[-1] in SKIP:
+        return False
+    if len(parts) == 1:
+        return path != "index.html"
+    return len(parts) == 3 and path.startswith(TEACHING)
+
+
+def group_of(path):
+    """'Talks' for root-level decks, else the teaching folder's heading."""
+    if "/" not in path:
+        return "Talks"
+    folder = path.split("/")[1]
+    return GROUPS.get(folder, folder)
+
+
+def natural(s):
+    """Sort key that puts lecture-2 before lecture-10."""
+    return [int(t) if t.isdigit() else t for t in re.split(r"(\d+)", s)]
+
+
+def ordered(decks):
+    """Talks newest first; then each course oldest first, courses newest first."""
+    by_group = {}
+    for d in decks:
+        by_group.setdefault(d["group"], []).append(d)
+    talks = sorted(by_group.pop("Talks", []),
+                   key=lambda d: (d["when"] or "", natural(d["file"])), reverse=True)
+    courses = [sorted(g, key=lambda d: (d["when"] or "", natural(d["file"])))
+               for g in by_group.values()]
+    courses.sort(key=lambda g: max(d["when"] or "" for d in g), reverse=True)
+    return talks + [d for g in courses for d in g]
+
+
 def read_previous():
     """Entries from the last run's slides.yml, by file name."""
     prev, cur = {}, None
@@ -133,7 +187,7 @@ def read_deck(name, sha):
     if not when:
         when, source = last_commit_date(name), "last commit"
     return {"file": name, "title": title or name, "when": when, "date_source": source,
-            "url": PAGES + name, "sha": sha, "refs": local_refs(text)}
+            "url": PAGES + urllib.parse.quote(name), "sha": sha, "refs": local_refs(text)}
 
 
 def main():
@@ -141,29 +195,29 @@ def main():
     if tree.get("truncated"):
         sys.exit("GitHub truncated the file list, so the file check would be unreliable.")
     repo_files = {f["path"] for f in tree["tree"] if f["type"] == "blob"}
-    shas = {f["path"]: f["sha"] for f in tree["tree"]
-            if f["type"] == "blob" and "/" not in f["path"] and f["path"].endswith(".html")
-            and f["path"] != "index.html" and f["path"] not in SKIP}
+    shas = {f["path"]: f["sha"] for f in tree["tree"] if f["type"] == "blob" and is_deck(f["path"])}
     prev = {} if "--full" in sys.argv[1:] else read_previous()
     decks = []
     for name in sorted(shas):
         old = prev.get(name)
         reused = bool(old) and old.get("sha") == shas[name] and "refs" in old
         d = dict(old) if reused else read_deck(name, shas[name])
-        # Checked every run, against today's repo: copied-in files clear a warning
+        # Set every run: copied-in files clear a warning, and GROUPS edits apply
+        d["group"] = group_of(name)
         d["missing"], d["absolute"] = check_refs(name, d["refs"], repo_files)
         decks.append(d)
         print(f"{d['when']}  {d['date_source']:11}  {'(unchanged) ' if reused else ''}{name}", file=sys.stderr)
-    decks.sort(key=lambda d: (d["when"] or "", d["file"]), reverse=True)
+    decks = ordered(decks)
 
     lines = ["# Generated by backstage/slides/build-slides.py from github.com/" + REPO + " (" + BRANCH + ").",
-             "# Don't edit by hand: re-run the script. date_source: title slide | metadata | last commit",
+             "# Don't edit by hand: re-run the script. Order: talks, then courses (see the script).",
+             "# group: Talks, or the teaching folder's heading. date_source: title slide | metadata | last commit",
              "# when: YYYY-MM-DD, or YYYY-MM when the title slide gives only a month",
              "# sha: git blob of the deck (unchanged decks are not re-read); refs: local files it",
              "# refers to; missing: refs not in the repo; absolute: refs starting with /", ""]
     for d in decks:
         lines.append(f"- file: {json.dumps(d['file'])}")
-        for key in ("title", "when", "date_source", "url", "sha", "refs", "missing", "absolute"):
+        for key in ("group", "title", "when", "date_source", "url", "sha", "refs", "missing", "absolute"):
             lines.append(f"  {key}: {json.dumps(d[key], ensure_ascii=False)}")
     OUT.write_text("\n".join(lines) + "\n", encoding="utf-8")
     print(f"Wrote {len(decks)} decks to {OUT}\n", file=sys.stderr)

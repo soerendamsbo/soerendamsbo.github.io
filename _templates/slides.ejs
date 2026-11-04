@@ -1,11 +1,19 @@
 <%
-// Renders backstage/slides/slides.yml (generated). Used by backstage/slides/index.qmd.
-// Styles: .bs-* rules in backstage/backstage.css.
+// Renders backstage/slides/slides.yml (generated, already in display order: talks,
+// then courses). Used by backstage/slides/index.qmd. Styles: .bs-* in backstage/backstage.css.
+const groups = [];
+for (const d of items) {
+  if (!groups.length || groups[groups.length - 1].name !== d.group) groups.push({ name: d.group, decks: [] });
+  groups[groups.length - 1].decks.push(d);
+}
 %>
 ```{=html}
+<% for (const g of groups) { %>
+<p class="bs-group"># <%= g.name %></p>
 <ul class="bs-ls">
-<% for (const d of items) { %>
-<li><span class="bs-date"><%= d.when || "" %><%= d.date_source === "last commit" ? "*" : " " %></span><span class="bs-entry"><a href="<%= d.url %>"><%= d.title %></a> <span class="bs-file"><%= d.file %></span></span></li>
+<% for (const d of g.decks) { %>
+<li><span class="bs-date"><%= d.when || "" %><%= d.date_source === "last commit" ? "*" : " " %></span><span class="bs-entry"><a href="<%= d.url %>"><%= d.title %></a> <span class="bs-file"><%= d.file.replace(/^teaching-decks\//, "") %></span></span></li>
 <% } %>
 </ul>
+<% } %>
 ```
