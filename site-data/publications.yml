@@ -1,8 +1,8 @@
 # Publications: single source of truth for research.qmd, phd.qmd and the CV.
 # This file is public (served at soerendamsbo.github.io/site-data/publications.yml);
 # the CV repo reads it at build time. Display order within each type: by status
-# (accepted, published, conditionally-accepted, rr, under-review, in-progress),
-# then order in this file (newest first).
+# (accepted, published, conditionally-accepted, rr, under-review, submitted,
+# in-progress), then order in this file (newest first).
 #
 # Fields
 #   id          unique, stable slug. Never rename: outreach.yml `related` and the
@@ -14,11 +14,14 @@
 #   venue       journal (articles) or target journal (working papers)
 #   year        publication year
 #   volume, issue, pages   citation details (pages = page range or article number)
-#   status      published | accepted | conditionally-accepted | rr | under-review | in-progress
-#               Working papers: in-progress -> under-review -> rr -> conditionally-accepted;
-#               on acceptance set type: article and status: accepted ("Forthcoming").
-#               The website shows the journal from rr on, and no key finding for
-#               in-progress. CV includes everything except in-progress (website only)
+#   status      published | accepted | conditionally-accepted | rr | under-review |
+#               submitted | in-progress
+#               Working papers: in-progress -> submitted -> under-review -> rr ->
+#               conditionally-accepted; on acceptance set type: article and status:
+#               accepted ("Forthcoming"). submitted = has been submitted at some
+#               point (far along), whether or not it is at a journal right now; the
+#               website shows no label for it (it only sorts). The website shows the
+#               journal from rr on, and no key finding for in-progress. CV includes everything except in-progress (website only)
 #   doi         DOI without https://doi.org/ prefix
 #   url         only when there is no DOI (or a better landing page)
 #   open_access true when the published version is freely available
@@ -261,15 +264,16 @@
   figure_label: "Figure 1"
   figure_alt: "Effects on turnout by election type for the 2013 and 2014 experiments: positive for later local and national elections after 2013, near zero for EU elections and after 2014"
   authors: ["Kasper M. Hansen", "Søren Damsbo-Svendsen"]
-  status: in-progress
+  status: submitted
   topics: [turnout]
   presented: ["EPSA 2025, Madrid"]
 
 - id: harassment-perceptions
   type: working-paper
   title: "Act, Target, or Observer? What Shapes Perceptions of Political Harassment"
+  finding: "How severe citizens judge harassment against politicians depends mostly on what is done and who is judging, not on who is targeted. Threats, verbal assault, and incursions into private life are condemned across the board, while the gap between older women and young men is more than six times larger than any difference by who is targeted."
   authors: ["Søren Damsbo-Svendsen", "Karina Kosiara-Pedersen"]
-  status: in-progress
+  status: submitted
   topics: [harassment]
 
 - id: habit-rdd
