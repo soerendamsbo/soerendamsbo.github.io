@@ -1,8 +1,8 @@
 # Publications: single source of truth for research.qmd, phd.qmd and the CV.
 # This file is public (served at soerendamsbo.github.io/site-data/publications.yml);
-# the CV repo reads it at build time. Display order within each type: by status,
-# furthest along first (published, accepted, rr, under-review, submitted,
-# in-progress), then order in this file (newest first).
+# the CV repo reads it at build time. Display order within each type: by status
+# (accepted, published, conditionally-accepted, rr, under-review, in-progress),
+# then order in this file (newest first).
 #
 # Fields
 #   id          unique, stable slug. Never rename: outreach.yml `related` and the
@@ -14,8 +14,11 @@
 #   venue       journal (articles) or target journal (working papers)
 #   year        publication year
 #   volume, issue, pages   citation details (pages = page range or article number)
-#   status      published | accepted | rr | under-review | submitted | in-progress
-#               CV includes everything except in-progress (website only)
+#   status      published | accepted | conditionally-accepted | rr | under-review | in-progress
+#               Working papers: in-progress -> under-review -> rr -> conditionally-accepted;
+#               on acceptance set type: article and status: accepted ("Forthcoming").
+#               The website shows the journal from rr on, and no key finding for
+#               in-progress. CV includes everything except in-progress (website only)
 #   doi         DOI without https://doi.org/ prefix
 #   url         only when there is no DOI (or a better landing page)
 #   open_access true when the published version is freely available
@@ -266,9 +269,8 @@
   type: working-paper
   title: "Act, Target, or Observer? What Shapes Perceptions of Political Harassment"
   authors: ["Søren Damsbo-Svendsen", "Karina Kosiara-Pedersen"]
-  status: submitted
+  status: in-progress
   topics: [harassment]
-  venue: Journal of Politics
 
 - id: habit-rdd
   type: working-paper
