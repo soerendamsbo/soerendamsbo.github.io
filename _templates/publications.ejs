@@ -6,8 +6,9 @@ const joinNames = (xs) => xs.length <= 1 ? (xs[0] || "") : xs.slice(0, -1).join(
 const linkOf = (item) => item.doi ? "https://doi.org/" + item.doi : item.url;
 const statusLabel = { accepted: "Forthcoming", "conditionally-accepted": "Conditionally accepted", rr: "R&R", "under-review": "Under review", "in-progress": "Work in progress" };
 // Working papers: journal shown from R&R on; figures from conditional acceptance on;
-// no key finding while in progress. "submitted" has no label: it only sorts the paper
-// (and puts it on the CV)
+// no key finding while in progress. Labels from under review on: "submitted" and "in-progress"
+// only sort the paper ("submitted" also puts it on the CV). Chapters keep "Work in progress"
+const labelOf = (item) => item.type === "working-paper" && item.status === "in-progress" ? undefined : statusLabel[item.status];
 const showVenue = (item) => item.venue && ["rr", "conditionally-accepted"].includes(item.status);
 const showFigure = (item) => item.figure && (item.type !== "working-paper" || item.status === "conditionally-accepted");
 const showFinding = (item) => item.finding && item.status !== "in-progress";
@@ -28,13 +29,13 @@ const authorsHtml = (xs) => joinNames(xs.map((a) => a === me ? "<span class=\"pu
   <div class="pub-body">
     <h4 class="pub-title"><% if (href) { %><a href="<%= href %>"><%= item.title %></a><% } else { %><%= item.title %><% } %></h4>
     <p class="pub-authors"><% if (authors.length > 1) { %><%= authorsHtml(authors) %><% } else { %>Single-authored<% } %></p>
-    <% if (item.type !== "working-paper" || statusLabel[item.status] || showVenue(item)) { %><p class="pub-venue">
+    <% if (item.type !== "working-paper" || labelOf(item) || showVenue(item)) { %><p class="pub-venue">
     <% if (item.type === "article") { %>
       <% if (item.status === "accepted") { %><span class="pub-status pub-status-accepted"><%= statusLabel.accepted %></span> <% } %><em><%= item.venue %></em>
     <% } else if (item.type === "chapter") { %>
       <% if (statusLabel[item.status]) { %><span class="pub-status pub-status-<%= item.status %>"><%= statusLabel[item.status] %></span> <% } %>In <%= joinNames(item.editors || []) %> (eds.), <em><%= item.book %></em>. <%= item.publisher || "" %>
     <% } else { %>
-      <% if (statusLabel[item.status]) { %><span class="pub-status pub-status-<%= item.status %>"><%= statusLabel[item.status] %></span><% } %><% if (showVenue(item)) { %> <em><%= item.venue %></em><% } %>
+      <% if (labelOf(item)) { %><span class="pub-status pub-status-<%= item.status %>"><%= labelOf(item) %></span><% } %><% if (showVenue(item)) { %> <em><%= item.venue %></em><% } %>
     <% } %>
     </p><% } %>
     <div class="pub-actions">

@@ -19,8 +19,9 @@
 #               Working papers: in-progress -> submitted -> under-review -> rr ->
 #               conditionally-accepted; on acceptance set type: article and status:
 #               accepted ("Forthcoming"). submitted = has been submitted at some
-#               point (far along), whether or not it is at a journal right now; the
-#               website shows no label for it (it only sorts). The website shows the
+#               point (far along), whether or not it is at a journal right now. The
+#               website labels working papers from under-review on (submitted and
+#               in-progress only sort; chapters keep "Work in progress"), shows the
 #               journal from rr on, and no key finding for in-progress. CV includes everything except in-progress (website only)
 #   doi         DOI without https://doi.org/ prefix
 #   url         only when there is no DOI (or a better landing page)
