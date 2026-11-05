@@ -258,17 +258,17 @@
   figure_label: "Figure 1"
   figure_alt: "Effects on turnout by election type for the 2013 and 2014 experiments: positive for later local and national elections after 2013, near zero for EU elections and after 2014"
   authors: ["Kasper M. Hansen", "Søren Damsbo-Svendsen"]
-  status: submitted
+  status: in-progress
   topics: [turnout]
-  venue: American Political Science Review
   presented: ["EPSA 2025, Madrid"]
 
 - id: harassment-perceptions
   type: working-paper
   title: "Act, Target, or Observer? What Shapes Perceptions of Political Harassment"
   authors: ["Søren Damsbo-Svendsen", "Karina Kosiara-Pedersen"]
-  status: in-progress
+  status: submitted
   topics: [harassment]
+  venue: Journal of Politics
 
 - id: habit-rdd
   type: working-paper
