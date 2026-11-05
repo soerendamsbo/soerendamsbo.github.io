@@ -22,12 +22,48 @@ This application tracks the scientific impact of leading scholars in political s
 #| label: calcimpact
 #| include: false
 
-pacman::p_load(tidyverse, scholar, kableExtra)
+library(dplyr)
+library(tidyr)
+library(stringr)
+library(readr)
+library(knitr)
+
+# Google Scholar is read directly rather than through the scholar package, which pulls
+# in ggplot2, igraph and more for plotting this page never does. Scholar refuses
+# requests that announce R, hence the browser User-Agent
+options(HTTPUserAgent = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36")
+
+read_scholar <- function(gs_id, cstart = 0) {
+  con <- url(sprintf("https://scholar.google.com/citations?hl=en&user=%s&cstart=%d&pagesize=100", gs_id, cstart), encoding = "UTF-8")
+  on.exit(close(con))
+  page <- paste(readLines(con, warn = FALSE), collapse = "\n")
+  if (!str_detect(page, "gsc_rsb_std")) stop("Google Scholar sent no profile for ", gs_id, " (blocked?)")
+  page
+}
+
+# The profile's citations, h-index and i10-index, "All" column (the first of each pair)
+get_profile <- function(page) {
+  stats <- as.numeric(str_match_all(page, '<td class="gsc_rsb_std">(\\d*)</td>')[[1]][, 2])
+  list(total_cites = stats[1], h_index = stats[3], i10_index = stats[5])
+}
+
+# One row per publication: Scholar's (abbreviated) author list and citation count
+get_publications <- function(gs_id, cstart = 0) {
+  rows <- str_split(read_scholar(gs_id, cstart), '<tr class="gsc_a_tr">')[[1]][-1]
+  pubs <- tibble(
+    author = str_match(rows, '<div class="gs_gray">(.*?)</div>')[, 2] |> str_replace_all(fixed("&amp;"), "&"),
+    cites = replace_na(as.numeric(str_match(rows, 'class="gsc_a_ac[^"]*"[^>]*>(\\d*)</a>')[, 2]), 0)
+  )
+  # Scholar shows at most 100 a page
+  if (nrow(pubs) == 100) pubs <- bind_rows(pubs, get_publications(gs_id, cstart + 100))
+  pubs
+}
 
 get_impact_stats <- function(gs_id, author_name_pattern) {
-  profile <- get_profile(gs_id)
+  profile <- get_profile(read_scholar(gs_id))
+  all_pubs <- get_publications(gs_id)
 
-  pubs <- get_publications(gs_id) |>
+  pubs <- all_pubs |>
     mutate(
       pub_no = row_number(),
       # Scholar truncates long author lists ("A, B, ..."): a "..." adds one author on top of
@@ -42,7 +78,7 @@ get_impact_stats <- function(gs_id, author_name_pattern) {
     filter(str_detect(author, author_name_pattern))
 
   lst(
-    n_articles = get_num_articles(gs_id),
+    n_articles = nrow(all_pubs),
     total_cites = profile$total_cites,
     h_index = profile$h_index,
     i10_index = profile$i10_index,
@@ -113,16 +149,16 @@ table_data <- ready_stats |>
 
 bold_row <- which(table_data$stat_lab == stats_ratio_max$stat_lab)
 
+# Rounded before the bold row's cells become text
 table_data |>
-  rename('Impact Metric' = stat_lab) |>
+  mutate(across(where(is.numeric), round)) |>
+  mutate(across(everything(), \(x) if_else(row_number() == bold_row, paste0("<strong>", x, "</strong>"), as.character(x)))) |>
   kable(
     format = "html",
-    digits = 0,
+    align = "lrrr",
     col.names = c('Impact Metric', 'Søren Damsbo-Svendsen', 'Frederik K. Kjøller', 'Christoffer H. Dausgaard'),
     escape = FALSE
-  ) |>
-  row_spec(bold_row, bold = TRUE) |>
-  kable_styling(full_width = TRUE)
+  )
 
 ```
 
